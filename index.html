@@ -5,11 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TBD Calculations</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="navBar"></div>
+    <div class="navBar" id="navBar">
+        <div class="menuIcon" onclick="toggleNav()">
+            <div class="menuBar topBar"></div>
+            <div class="menuBar middleBar"></div>
+            <div class="menuBar bottomBar"></div>
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription"><span style="font-weight:bold">Login</span> to save your records and keep track of your spending habits</p>
+            <img class="navIcon" src="Icons/login-square-arrow-button-outline.svg">
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription">View a <span style="font-weight:bold">graphical representation</span> of your spending and saving habits</p>
+            <img class="navIcon" src="Icons/three-bars-graph.svg">
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
+            <img class="navIcon" src="Icons/elemental-tip.svg">
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your questions, comments, or concerns</p>
+            <img class="navIcon" src="Icons/contact.svg">
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription">View a list of the different <span style="font-weight:bold">language and currency</span> preferences available</p>
+            <img class="navIcon" src="Icons/worlwide.svg">
+        </div>
+
+    </div>
 
     <div class="container">
         <div class="section1">
@@ -32,5 +66,7 @@
 
         </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
