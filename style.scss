@@ -9,7 +9,7 @@
     transition: 500ms ease;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .navBar {
         width: 80px !important;
     }
@@ -23,7 +23,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .menuIcon {
         display: none;
     }
@@ -61,7 +61,7 @@
 
 .navDescription {
     display: inline;
-    width: 300px;
+    width: 200px;
     margin-left: 5%;
     margin-right: 5%;
     font-family: 'Raleway';
