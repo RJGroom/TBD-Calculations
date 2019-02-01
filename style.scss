@@ -1,23 +1,24 @@
 .navBar {
+    z-index: 1;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     height: 100%;
-    width: 80px;
+    width: 70px;
     background-color: #97dbfa;
     transition: 500ms ease;
 }
 
 @media screen and (max-width: 1200px) {
     .navBar {
-        width: 80px !important;
+        width: 70px !important;
     }
 }
 
 .menuIcon {
     margin-top: 30px;
-    margin-right: 20px;
+    margin-right: 15px;
     width: 40px;
     height: 24px;
     cursor: pointer;
@@ -68,7 +69,7 @@
 }
 
 .navIcon {
-    margin-right: 20px;
+    margin-right: 15px;
     display: inline;
     width: 40px;
     height: 40px;
@@ -108,6 +109,12 @@
 .sampleGraph {
     width: 50%;
     background-color: white;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+    background-color: red;
 }
 
 .aboutSection {
