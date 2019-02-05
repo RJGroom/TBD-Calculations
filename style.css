@@ -356,6 +356,7 @@ h3 {
   position: relative;
   width: 100%;
   left: 30%;
+  overflow: hidden;
   opacity: 0;
   -webkit-transition: 1s ease-in;
   transition: 1s ease-in;
@@ -375,6 +376,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
   height: 100%;
   width: 50%;
   background-color: #465C8B;
