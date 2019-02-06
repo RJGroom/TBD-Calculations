@@ -175,6 +175,10 @@ h3 {
   color: white;
 }
 
+.navLink {
+  z-index: 1;
+}
+
 .navIcon {
   z-index: 1;
   margin-right: 15px;
@@ -294,7 +298,6 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #465C8B;
-  overflow: hidden;
   height: 100%;
   width: 50%;
   -webkit-transition: 1s ease-in;
@@ -473,6 +476,10 @@ h3 {
   color: #F7F5E6;
   font-family: 'Montserrat';
   font-size: 60px;
+}
+
+.tip-info-para {
+  margin-bottom: 7%;
 }
 
 .tip-text-content {
