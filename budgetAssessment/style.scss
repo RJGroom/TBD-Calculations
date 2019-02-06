@@ -1,0 +1,51 @@
+.main-content-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+h3 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    color: white;
+    background-color: #465C8B;
+}
+
+p {
+    margin: 0;
+}
+
+.form-section {
+    height: 100%;
+    width: 50%;
+    background-color: lightgray;
+}
+
+.dollar-sign {
+    display: inline;
+}
+
+.form-item-title {
+    margin-left: 12px;
+}
+
+.assessment-row-one {
+    display: flex;
+}
+
+.assessment-section {
+    width: 33%;
+}
+
+.assessment-row-two {
+    display: flex;
+}
+
+.report-section {
+    display: inline;
+    height: 100%;
+    width: 50%;
+    background-color: gray;
+}
