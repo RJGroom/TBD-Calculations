@@ -5,14 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
 
-    <h3>Budget Assessment</h3>
-    <p>Enter your closest estimations for the following fields (Note: it is best to
+    <!-- NAV -->
+    <div class="navBar" id="navBar">
+
+            <div class="navSection">
+                <h3 class="menu-text">Menu</h3>
+                <div class="menuIcon" onclick="toggleNav()" title = "Open Menu">
+                    <div class="menuBar topBar" id="topBar"></div>
+                    <div class="menuBar middleBar" id="middleBar"></div>
+                    <div class="menuBar bottomBar" id="bottomBar"></div>
+                </div>
+            </div>
+    
+            <div class="navSection">
+                <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
+                <a href="login.html" class="navLink">
+                    <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
+                </a>
+            </div>
+    
+            <div class="navSection">
+                <p class="navDescription">View a <span style="font-weight:bold">graphical representation</span> of your spending and saving habits</p>
+                <a href="graphs.html" class="navLink">
+                    <img class="navIcon" src="../Icons/005-graph-1.svg" title="View-Graph">
+                </a>
+            </div>
+    
+            <div class="navSection">
+                <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
+                <a href="tips.html" class="navLink">
+                    <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
+                </a>
+            </div>
+    
+            <div class="navSection">
+                <p class="navDescription"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your questions, comments, or concerns</p>
+                <a href ="contact.html" class="navLink">
+                    <img class="navIcon" src="../Icons/001-contact.svg" title="Contact">
+                </a>
+            </div>
+    
+            <div class="navSection">
+                <p class="navDescription">View a list of the different <span style="font-weight:bold">language and currency</span> preferences available</p>
+                <img class="navIcon" src="../Icons/008-worlwide.svg" title="Language-Currency">
+            </div>
+    
+        </div>
+
+    <div class="assessment-header">
+        <h3>Budget Assessment</h3>
+        <p>Enter your closest estimations for the following fields (Note: it is best to
         underestimate your income and overestimate your expenses)
-    </p>
+        </p>
+    </div>
 
     <div class="main-content-container">
 
@@ -101,12 +152,13 @@
         </div>
 
         <br>
-        <input type="button" value="Submit" onclick="printReport()">
+        <input type="button" value="Submit" onclick="printReport(); drawUserChart()">
     </form>
 
     <div class="report-section">
         <h3 class="category">Income : </h3>
         <p>Your total income is $<span id="income-report">0</span></p>
+        <p>Your monthly income is $<span id="income-report-monthly">0</span></p>
         <h3 class="category">Primary Expenses : </h3>
         <p>You spend $<span id="primary-expenses-report">0</span> on primary expenses.</p>
         <p>This is <span id="primary-expenses-rate">0</span>% of your income.</p>
@@ -121,6 +173,10 @@
         <p>This is <span id="savings-rate">0</span>% of your income.</p>
     </div>
 
+    </div>
+
+    <div class="graph-container">
+        <div class="graph" id="userChart"></div>
     </div>
 
     <script src="index.js"></script>
