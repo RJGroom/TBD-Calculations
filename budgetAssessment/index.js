@@ -1,5 +1,5 @@
 var income = 0;
-var monthlyIncome = income/12;
+var monthlyIncome = 0;
 var primaryExpenses = 0;
 var primaryExpensesRate = 0;
 var utilities = 0;
@@ -8,7 +8,7 @@ var secondaryExpenses = 0;
 var secondaryExpensesRate = 0;
 var savings = 0;
 var savingsRate = 0;
-var excessFunds = income - primaryExpenses - utilities - secondaryExpenses - savings
+var excessFunds = 0;
 
 //Open Menu Function
 function toggleNav() {
@@ -53,7 +53,9 @@ function printReport() {
     income =
     parseInt(document.getElementById("primary-income").value) + parseInt(document.getElementById("secondary-income").value);
     document.getElementById("income-report").innerHTML = income;
-    document.getElementById("income-report-monthly").innerHTML = income/12;
+
+    monthlyIncome =income/12
+    document.getElementById("income-report-monthly").innerHTML = monthlyIncome;
 
     //Primary expenses
     primaryExpenses =
@@ -67,7 +69,7 @@ function printReport() {
     document.getElementById("primary-expenses-report").innerHTML = primaryExpenses;
 
     //Primary Expenses Rate
-    primaryExpensesRate = (primaryExpenses / income) * 100;
+    primaryExpensesRate = ((primaryExpenses / monthlyIncome) * 100).toFixed();
     document.getElementById("primary-expenses-rate").innerHTML = primaryExpensesRate;
 
     //Utilities
@@ -79,7 +81,7 @@ function printReport() {
     document.getElementById("utilities-report").innerHTML = utilities;
 
     //Utilities Rate
-    utilitiesRate = (utilities / income) * 100;
+    utilitiesRate = ((utilities / monthlyIncome) * 100).toFixed();
     document.getElementById("utilities-rate").innerHTML = utilitiesRate;
 
     //Secondary Expenses
@@ -89,7 +91,7 @@ function printReport() {
     document.getElementById("secondary-expenses-report").innerHTML = secondaryExpenses;
 
     //Secondary Expenses Rate
-    secondaryExpensesRate = (secondaryExpenses / income) * 100;
+    secondaryExpensesRate = ((secondaryExpenses / monthlyIncome) * 100).toFixed();
     document.getElementById("secondary-expenses-rate").innerHTML = secondaryExpensesRate;
 
     //Savings
@@ -99,7 +101,36 @@ function printReport() {
     parseInt(document.getElementById("vacation-funds").value);
     document.getElementById("savings-report").innerHTML = savings;
 
-    savingsRate = (savings / income) * 100;
+    savingsRate = ((savings / monthlyIncome) * 100).toFixed();
     document.getElementById("savings-rate").innerHTML = savingsRate;
+
+    //Excess Funds
+    excessFunds = monthlyIncome - primaryExpenses - utilities - secondaryExpenses - savings;
+}
+
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawUserChart);
+
+function drawUserChart() {
+
+var data = new google.visualization.DataTable();
+data.addColumn('string', 'Category');
+data.addColumn('number', 'Percentage');
+data.addRows([
+    ['Primary Expenses', parseInt(((primaryExpenses / monthlyIncome) * 100))],
+    ['Utilities', parseInt(((utilities / monthlyIncome) * 100))],
+    ['Secondary Expenses', parseInt(((secondaryExpenses / monthlyIncome) * 100))],
+    ['Savings', parseInt(((savings / monthlyIncome) * 100))],
+    ['Excess Funds', excessFunds/100]
+]);
+
+var options = {
+    title: "Monthly Spending by Category",
+    backgroundColor: "#F7F5E6",
+    pieSliceBorderColor: "#F7F5E6"
+};
+
+var userChart = new google.visualization.PieChart(document.getElementById('userChart'));
+userChart.draw(data, options);
 }
 
