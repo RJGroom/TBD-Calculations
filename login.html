@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <input type = "text" name = "loginUsername" placeholder = "Username"/>
-    <input type = "password" name = "loginPassword" placeholder = "Password"/>
-    <button>login</button>
+    <form name = "login" method = "GET" action = "login.php">
+        <input type = "text" name = "loginUsername" placeholder = "Username"/>
+        <input type = "password" name = "loginPassword" placeholder = "Password"/>
+        <input type = "submit" value = "Login">
+    </form>    
     <button>register</button>
 </body>
 </html>
