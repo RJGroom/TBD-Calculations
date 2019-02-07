@@ -28,7 +28,7 @@ sampleChart.draw(data, options);
 
 function drawChart2() {
     var data = google.visualization.arrayToDataTable([
-      ['Month', 'Target Spending Goal', 'Your Spending'],
+      ['Month', 'Target Spending Goal', 'Actual Spending'],
       ['Jan',  30,      20],
       ['Feb',  60,      70],
       ['Mar',  90,       100],
@@ -36,7 +36,7 @@ function drawChart2() {
     ]);
 
     var options = {
-      title: 'Target Spending Goal vs. Your Spending',
+      title: 'Target Spending Goal vs. Actual Spending',
       curveType: 'function',
       legend: { position: 'bottom' },
       backgroundColor: "#F7F5E6"

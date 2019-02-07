@@ -1,0 +1,187 @@
+.main-content-container {
+    margin-left: 70px;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 90%;
+    color: white;
+    background-color: #465C8B;
+}
+
+p {
+    margin: 0;
+}
+
+.navBar {   
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    width: 70px;
+    transition: 500ms ease;
+}
+
+.navBar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 1200px) {
+    .navBar {
+        width: 70px !important;
+    }
+}
+
+.menu-text {
+    z-index: 1;
+    display: inline;
+    margin: 0;
+    width: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Raleway';
+    font-size: 30px;
+    color: white;
+}
+
+.menuIcon {
+    z-index: 1;
+    position: relative;
+    display: inline;
+    margin-right: 15px;
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .menuIcon {
+        display: none;
+    }
+}
+
+.menuIcon:hover .topBar{
+    width: 100%;
+}
+
+.menuBar {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: 500ms ease;
+}
+
+.topBar {
+    top: 0px;
+    width: 70%;
+    margin-bottom: 6px;
+}
+
+.middleBar {
+    top: 10px;
+}
+
+.bottomBar {
+    top: 20px;
+}
+
+.navSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0;
+    width: 380px;
+    height: 15%;
+    overflow: hidden;
+}
+
+.navDescription {
+    z-index: 1;
+    display: inline;
+    width: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Raleway';
+    color: white;
+}
+
+.navLink {
+    z-index: 1;
+}
+
+.navIcon {
+    z-index: 1;
+    margin-right: 15px;
+    display: inline;
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.navIcon:hover {
+    opacity: 1;
+}
+
+.assessment-header {
+    margin-left: 70px;
+}
+
+.form-section {
+    height: 100%;
+    width: 50%;
+    background-color: lightgray;
+}
+
+.dollar-sign {
+    display: inline;
+}
+
+.form-item-title {
+    margin-left: 12px;
+}
+
+.assessment-row-one {
+    display: flex;
+}
+
+.assessment-section {
+    width: 33%;
+}
+
+.assessment-row-two {
+    display: flex;
+}
+
+.report-section {
+    display: inline;
+    height: 100%;
+    width: 50%;
+    background-color: gray;
+}
+
+.graph-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+}
+
+.graph {
+    width: 50%;
+    height: 100%;
+    background-color: gray;
+}
