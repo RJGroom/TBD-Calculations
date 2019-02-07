@@ -117,11 +117,11 @@ var data = new google.visualization.DataTable();
 data.addColumn('string', 'Category');
 data.addColumn('number', 'Percentage');
 data.addRows([
-    ['Primary Expenses', parseInt(((primaryExpenses / monthlyIncome) * 100))],
-    ['Utilities', parseInt(((utilities / monthlyIncome) * 100))],
-    ['Secondary Expenses', parseInt(((secondaryExpenses / monthlyIncome) * 100))],
-    ['Savings', parseInt(((savings / monthlyIncome) * 100))],
-    ['Excess Funds', excessFunds/100]
+    ['Primary Expenses', primaryExpenses],
+    ['Utilities', utilities],
+    ['Secondary Expenses', secondaryExpenses],
+    ['Savings', savings],
+    ['Excess Funds', excessFunds]
 ]);
 
 var options = {
