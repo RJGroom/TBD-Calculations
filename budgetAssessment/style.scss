@@ -10,7 +10,7 @@ h3 {
     margin-bottom: 10px;
     width: 90%;
     color: white;
-    background-color: #465C8B;
+   
 }
 
 p {
@@ -147,6 +147,11 @@ p {
     background-color: lightgray;
 }
 
+.expenditure-type {
+    background-image: linear-gradient(to left,
+                      rgba(70, 91, 139, 0),
+                      rgba(70, 91, 139, 1) 88%);
+}
 .dollar-sign {
     display: inline;
 }

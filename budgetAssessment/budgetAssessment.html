@@ -59,7 +59,7 @@
         </div>
 
     <div class="assessment-header">
-        <h3>Budget Assessment</h3>
+        <h3 class="expenditure-type">&nbsp;Budget Assessment</h3>
         <p>Enter your closest estimations for the following fields (Note: it is best to
         underestimate your income and overestimate your expenses)
         </p>
@@ -72,52 +72,52 @@
         <div class="assessment-row-one">
 
         <div class="assessment-section income-section">
-            <h3>Income</h3>
-            <p class="form-item-title">Primary Income</p>
+            <h3 class="expenditure-type">&nbsp;Income</h3>
+            <p class="form-item-title">&nbsp;Primary Income</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="primary-income" id="primary-income">
-            <p class="form-item-title">Secondary Income</p>
+            <p class="form-item-title">&nbsp;Secondary Income</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="secondary-income" id="secondary-income">
         </div>
 
         <div class="assessment-section primary-expenses-section">
-            <h3>Primary Expenses</h3>
-            <p class="form-item-title">Housing Payments</p>
+            <h3 class="expenditure-type">&nbsp;Primary Expenses</h3>
+            <p class="form-item-title">&nbsp;Housing Payments</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="housing-payments" id="housing-payments">
-            <p class="form-item-title">Loans</p>
+            <p class="form-item-title">&nbsp;Loans</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="loans" id="loans">
-            <p class="form-item-title">Health Insurance</p>
+            <p class="form-item-title">&nbsp;Health Insurance</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="health-insurance" id="health-insurance">
-            <p class="form-item-title">Transportation</p>
+            <p class="form-item-title">&nbsp;Transportation</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="transportation" id="transportation">
-            <p class="form-item-title">Cell Phone Bill</p>
+            <p class="form-item-title">&nbsp;Cell Phone Bill</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="cell-phone-bill" id="cell-phone-bill">
-            <p class="form-item-title">Groceries</p>
+            <p class="form-item-title">&nbsp;Groceries</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="groceries" id="groceries">
-            <p class="form-item-title">Clothing</p>
+            <p class="form-item-title">&nbsp;Clothing</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="clothing" id="clothing">
         </div>
 
         <div class="assessment-section utilities-section">
-            <h3>Utilities</h3>
-            <p class="form-item-title">Gas</p>
+            <h3 class="expenditure-type">&nbsp;Utilities</h3>
+            <p class="form-item-title">&nbsp;Gas</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="gas" id="gas">
-            <p class="form-item-title">Electric</p>
+            <p class="form-item-title">&nbsp;Electric</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="electric" id="electric">
-            <p class="form-item-title">Water</p>
+            <p class="form-item-title">&nbsp;Water</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="water" id="water">
-            <p class="form-item-title">Cable/Internet</p>
+            <p class="form-item-title">&nbsp;Cable/Internet</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="cable-internet" id="cable-internet">
         </div>
@@ -127,24 +127,24 @@
         <div class="assessment-row-two">
 
         <div class="assessment-section seconday-expenses-section">
-            <h3>Secondary Expenses</h3>
-            <p class="form-item-title">Monthly Subscriptions</p>
+            <h3 class="expenditure-type">&nbsp;Secondary Expenses</h3>
+            <p class="form-item-title">&nbsp;Monthly Subscriptions</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="monthly-subscriptions" id="monthly-subscriptions">
-            <p class="form-item-title">Miscellaneous</p>
+            <p class="form-item-title">&nbsp;Miscellaneous</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="miscellaneous" id="miscellaneous">
         </div>
 
         <div class="assessment-section savings-section">
-            <h3>Savings</h3>
-            <p class="form-item-title">Primary Savings</p>
+            <h3 class="expenditure-type">&nbsp;Savings</h3>
+            <p class="form-item-title">&nbsp;Primary Savings</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="primary-savings" id="primary-savings">
-            <p class="form-item-title">Emergency Funds</p>
+            <p class="form-item-title">&nbsp;Emergency Funds</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="emergency-funds" id="emergency-funds">
-            <p class="form-item-title">Vacation Funds</p>
+            <p class="form-item-title">&nbsp;Vacation Funds</p>
             <p class="dollar-sign">$</p>
             <input type="number" value="0" name="vacation-funds" id="vacation-funds">
         </div>
@@ -156,21 +156,21 @@
     </form>
 
     <div class="report-section">
-        <h3 class="category">Income : </h3>
-        <p>Your total income is $<span id="income-report">0</span></p>
-        <p>Your monthly income is $<span id="income-report-monthly">0</span></p>
-        <h3 class="category">Primary Expenses : </h3>
-        <p>You spend $<span id="primary-expenses-report">0</span> on primary expenses.</p>
-        <p>This is <span id="primary-expenses-rate">0</span>% of your income.</p>
-        <h3 class="category">Utilities : </h3>
-        <p>You spend $<span id="utilities-report">0</span> on utilities.</p>
-        <p>This is <span id="utilities-rate">0</span>% of your income.</p>
-        <h3 class="category">Secondary Expenses : </h3>
-        <p>You spend $<span id="secondary-expenses-report">0</span> on secondary expenses.</p>
-        <p>This is <span id="secondary-expenses-rate">0</span>% of your income.</p>
-        <h3 class="category">Savings : </h3>
-        <p>You save $<span id="savings-report">0</span> of your monthly income.</p>
-        <p>This is <span id="savings-rate">0</span>% of your income.</p>
+        <h3 class="category">&nbsp;Income : </h3>
+        <p>&nbsp;&nbsp;&nbsp;Your total income is $<span id="income-report">0</span></p>
+        <p>&nbsp;&nbsp;&nbsp;Your monthly income is $<span id="income-report-monthly">0</span></p>
+        <h3 class="category">&nbsp;Primary Expenses : </h3>
+        <p>&nbsp;&nbsp;&nbsp;You spend $<span id="primary-expenses-report">0</span> on primary expenses.</p>
+        <p>&nbsp;&nbsp;&nbsp;This is <span id="primary-expenses-rate">0</span>% of your income.</p>
+        <h3 class="category">&nbsp;Utilities : </h3>
+        <p>&nbsp;&nbsp;&nbsp;You spend $<span id="utilities-report">0</span> on utilities.</p>
+        <p>&nbsp;&nbsp;&nbsp;This is <span id="utilities-rate">0</span>% of your income.</p>
+        <h3 class="category">&nbsp;Secondary Expenses : </h3>
+        <p>&nbsp;&nbsp;&nbsp;You spend $<span id="secondary-expenses-report">0</span> on secondary expenses.</p>
+        <p>&nbsp;&nbsp;&nbsp;This is <span id="secondary-expenses-rate">0</span>% of your income.</p>
+        <h3 class="category">&nbsp;Savings : </h3>
+        <p>&nbsp;&nbsp;&nbsp;You save $<span id="savings-report">0</span> of your monthly income.</p>
+        <p>&nbsp;&nbsp;&nbsp;This is <span id="savings-rate">0</span>% of your income.</p>
     </div>
 
     </div>
