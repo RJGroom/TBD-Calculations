@@ -54,7 +54,7 @@ function printReport() {
     parseInt(document.getElementById("primary-income").value) + parseInt(document.getElementById("secondary-income").value);
     document.getElementById("income-report").innerHTML = income;
 
-    monthlyIncome =income/12
+    monthlyIncome = (income / 12).toFixed();
     document.getElementById("income-report-monthly").innerHTML = monthlyIncome;
 
     //Primary expenses
@@ -134,3 +134,4 @@ var userChart = new google.visualization.PieChart(document.getElementById('userC
 userChart.draw(data, options);
 }
 
+ 
