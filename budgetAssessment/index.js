@@ -46,6 +46,49 @@ function toggleNav() {
     }
 }
 
+//Total Income
+function totalIncome() {
+    document.getElementById("total-income").innerHTML =
+    parseInt(document.getElementById("primary-income").value) +
+    parseInt(document.getElementById("secondary-income").value);
+}
+
+//Total Primary Expenditures
+function totalPrimaryExpenditures() {
+    document.getElementById("total-primary-expenditures").innerHTML =
+    parseInt(document.getElementById("housing-payments").value) +
+    parseInt(document.getElementById("loans").value) +
+    parseInt(document.getElementById("health-insurance").value) +
+    parseInt(document.getElementById("transportation").value) +
+    parseInt(document.getElementById("cell-phone-bill").value) +
+    parseInt(document.getElementById("groceries").value) +
+    parseInt(document.getElementById("clothing").value);
+}
+
+//Total Utilities
+function totalUtilities() {
+    document.getElementById("total-utilities").innerHTML =
+    parseInt(document.getElementById("gas").value) +
+    parseInt(document.getElementById("electric").value) +
+    parseInt(document.getElementById("water").value) +
+    parseInt(document.getElementById("cable-internet").value);
+}
+
+//Total Secondary Expenses
+function totalSecondaryExpenses() {
+    document.getElementById("total-secondary-expenses").innerHTML =
+    parseInt(document.getElementById("monthly-subscriptions").value) +
+    parseInt(document.getElementById("miscellaneous").value);
+}
+
+//Total Savings
+function totalSavings() {
+    document.getElementById("total-savings").innerHTML =
+    parseInt(document.getElementById("primary-savings").value) +
+    parseInt(document.getElementById("emergency-funds").value) +
+    parseInt(document.getElementById("vacation-funds").value);
+}
+
 
 function printReport() {
 

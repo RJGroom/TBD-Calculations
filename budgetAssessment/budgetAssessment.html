@@ -74,10 +74,10 @@
                     <h3 class="expenditure-type">Income</h3>
                     <p class="form-item-title">Primary Income</p>
                     <p class="dollar-sign">$</p>
-                    <input type="number" value="0" name="primary-income" id="primary-income">
+                    <input type="number" value="0" name="primary-income" id="primary-income" onchange="totalIncome()">
                     <p class="form-item-title">Secondary Income</p>
                     <p class="dollar-sign">$</p>
-                    <input type="number" value="0" name="secondary-income" id="secondary-income">
+                    <input type="number" value="0" name="secondary-income" id="secondary-income" onchange="totalIncome()">
                     <p class="total">Total Income: $<span id="total-income">0</span></p>
             </div>
 
@@ -85,25 +85,25 @@
                 <h3 class="expenditure-type">Primary Expenses</h3>
                 <p class="form-item-title">Housing Payments</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="housing-payments" id="housing-payments">
+                <input type="number" value="0" name="housing-payments" id="housing-payments" onchange="totalPrimaryExpenditures()">
                 <p class="form-item-title">Loans</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="loans" id="loans">
+                <input type="number" value="0" name="loans" id="loans" onchange="totalPrimaryExpenditures()">
                 <p class="form-item-title">Health Insurance</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="health-insurance" id="health-insurance">
+                <input type="number" value="0" name="health-insurance" id="health-insurance" onchange="totalPrimaryExpenditures()">
                 <p class="form-item-title">Transportation</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="transportation" id="transportation">
+                <input type="number" value="0" name="transportation" id="transportation" onchange="totalPrimaryExpenditures()">
                 <p class="form-item-title">Cell Phone Bill</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="cell-phone-bill" id="cell-phone-bill">
+                <input type="number" value="0" name="cell-phone-bill" id="cell-phone-bill" onchange="totalPrimaryExpenditures()">
                 <p class="form-item-title">Groceries</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="groceries" id="groceries">
+                <input type="number" value="0" name="groceries" id="groceries" onchange="totalPrimaryExpenditures()">
                 <p class="form-item-title">Clothing</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="clothing" id="clothing">
+                <input type="number" value="0" name="clothing" id="clothing" onchange="totalPrimaryExpenditures()">
                 <p class="total">Total Primary Expenditures: $<span id="total-primary-expenditures">0</span></p>
             </div>
 
@@ -111,16 +111,16 @@
                 <h3 class="expenditure-type">Utilities</h3>
                 <p class="form-item-title">Gas</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="gas" id="gas">
+                <input type="number" value="0" name="gas" id="gas" onchange="totalUtilities()">
                 <p class="form-item-title">Electric</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="electric" id="electric">
+                <input type="number" value="0" name="electric" id="electric" onchange="totalUtilities()">
                 <p class="form-item-title">Water</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="water" id="water">
+                <input type="number" value="0" name="water" id="water" onchange="totalUtilities()">
                 <p class="form-item-title">Cable/Internet</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="cable-internet" id="cable-internet">
+                <input type="number" value="0" name="cable-internet" id="cable-internet" onchange="totalUtilities()">
                 <p class="total">Total Utilities: $<span id="total-utilities">0</span></p>
             </div>
         
@@ -128,10 +128,10 @@
                 <h3 class="expenditure-type">Secondary Expenses</h3>
                 <p class="form-item-title">Monthly Subscriptions</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="monthly-subscriptions" id="monthly-subscriptions">
+                <input type="number" value="0" name="monthly-subscriptions" id="monthly-subscriptions" onchange="totalSecondaryExpenses()">
                 <p class="form-item-title">Miscellaneous</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="miscellaneous" id="miscellaneous">
+                <input type="number" value="0" name="miscellaneous" id="miscellaneous" onchange="totalSecondaryExpenses()">
                 <p class="total">Total Secondary Expenses: $<span id="total-secondary-expenses">0</span></p>
             </div>
         
@@ -139,13 +139,13 @@
                 <h3 class="expenditure-type">Savings</h3>
                 <p class="form-item-title">Primary Savings</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="primary-savings" id="primary-savings">
+                <input type="number" value="0" name="primary-savings" id="primary-savings" onchange="totalSavings()">
                 <p class="form-item-title">Emergency Funds</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="emergency-funds" id="emergency-funds">
+                <input type="number" value="0" name="emergency-funds" id="emergency-funds" onchange="totalSavings()">
                 <p class="form-item-title">Vacation Funds</p>
                 <p class="dollar-sign">$</p>
-                <input type="number" value="0" name="vacation-funds" id="vacation-funds">
+                <input type="number" value="0" name="vacation-funds" id="vacation-funds" onchange="totalSavings()">
                 <p class="total">Total Savings: $<span id="total-savings">0</span></p>
             </div>
 
