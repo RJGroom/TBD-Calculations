@@ -156,7 +156,7 @@ p {
 }
 
 .form-section {
-    grid-row: 2/10;
+    grid-row: 2/11;
     grid-column: 2/5;
     display: flex;
     flex-direction: column;
@@ -179,12 +179,39 @@ p {
     display: inline;
 }
 
+input {
+    margin-bottom: 10px;
+}
+
 .total {
     float: right;
 }
 
+.btn {
+    position: relative;
+    left: 40%;
+    height: 50px;
+    color: black;
+    background-color: #ffb515;
+    font-family: "Raleway";
+    font-weight: bold;
+    border: 2px solid #ffb515;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+.btn:hover {
+    background: none;
+    color: #ffb515;
+}
+
+.btn:focus {
+    outline: none;
+}
+
 .report-section {
-    grid-row: 10/15;
+    grid-row: 11/15;
     grid-column: 2/5;
     display: flex;
     flex-direction: column;

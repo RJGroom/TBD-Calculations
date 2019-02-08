@@ -186,8 +186,8 @@ p {
 
 .form-section {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 8;
-  grid-row: 2/10;
+  -ms-grid-row-span: 9;
+  grid-row: 2/11;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2/5;
@@ -219,14 +219,43 @@ p {
   display: inline;
 }
 
+input {
+  margin-bottom: 10px;
+}
+
 .total {
   float: right;
 }
 
+.btn {
+  position: relative;
+  left: 40%;
+  height: 50px;
+  color: black;
+  background-color: #ffb515;
+  font-family: "Raleway";
+  font-weight: bold;
+  border: 2px solid #ffb515;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  cursor: pointer;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.btn:hover {
+  background: none;
+  color: #ffb515;
+}
+
+.btn:focus {
+  outline: none;
+}
+
 .report-section {
-  -ms-grid-row: 10;
-  -ms-grid-row-span: 5;
-  grid-row: 10/15;
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 4;
+  grid-row: 11/15;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2/5;
