@@ -9,6 +9,7 @@ var secondaryExpensesRate = 0;
 var savings = 0;
 var savingsRate = 0;
 var excessFunds = 0;
+var excessFundsRate = 0;
 
 //Open Menu Function
 function toggleNav() {
@@ -112,7 +113,7 @@ function printReport() {
     document.getElementById("primary-expenses-report").innerHTML = primaryExpenses;
 
     //Primary Expenses Rate
-    primaryExpensesRate = ((primaryExpenses / monthlyIncome) * 100).toFixed();
+    primaryExpensesRate = ((primaryExpenses / monthlyIncome) * 100).toFixed(1);
     document.getElementById("primary-expenses-rate").innerHTML = primaryExpensesRate;
 
     //Utilities
@@ -124,7 +125,7 @@ function printReport() {
     document.getElementById("utilities-report").innerHTML = utilities;
 
     //Utilities Rate
-    utilitiesRate = ((utilities / monthlyIncome) * 100).toFixed();
+    utilitiesRate = ((utilities / monthlyIncome) * 100).toFixed(1);
     document.getElementById("utilities-rate").innerHTML = utilitiesRate;
 
     //Secondary Expenses
@@ -134,7 +135,7 @@ function printReport() {
     document.getElementById("secondary-expenses-report").innerHTML = secondaryExpenses;
 
     //Secondary Expenses Rate
-    secondaryExpensesRate = ((secondaryExpenses / monthlyIncome) * 100).toFixed();
+    secondaryExpensesRate = ((secondaryExpenses / monthlyIncome) * 100).toFixed(1);
     document.getElementById("secondary-expenses-rate").innerHTML = secondaryExpensesRate;
 
     //Savings
@@ -144,11 +145,24 @@ function printReport() {
     parseInt(document.getElementById("vacation-funds").value);
     document.getElementById("savings-report").innerHTML = savings;
 
-    savingsRate = ((savings / monthlyIncome) * 100).toFixed();
+    savingsRate = ((savings / monthlyIncome) * 100).toFixed(1);
     document.getElementById("savings-rate").innerHTML = savingsRate;
+
+    if (parseInt(document.getElementById("primary-savings").value) /
+        monthlyIncome < 0.2) {
+            document.getElementById("savings-analysis").innerHTML = "inefficient";
+    }
+    else {
+        document.getElementById("savings-analysis").innerHTML = "efficient";
+    }
 
     //Excess Funds
     excessFunds = monthlyIncome - primaryExpenses - utilities - secondaryExpenses - savings;
+    document.getElementById("excess-funds-report").innerHTML = excessFunds;
+
+    excessFundsRate = ((excessFunds / monthlyIncome) * 100).toFixed(1);
+    document.getElementById("excess-funds-rate").innerHTML = excessFundsRate;
+
 }
 
 google.charts.load('current', {packages: ['corechart']});

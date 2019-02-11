@@ -160,29 +160,36 @@
             <input type="button" value="Get Your Report" class="btn" onclick="printReport(); drawUserChart()">
 
         </form>
+    </div>
 
-        <div class="report-section">
-            <h3 class="category">Income : </h3>
-            <p>Your total income is $<span id="income-report">0</span></p>
-            <p>Your monthly income is $<span id="income-report-monthly">0</span></p>
-            <h3 class="category">Primary Expenses : </h3>
-            <p>You spend $<span id="primary-expenses-report">0</span> on primary expenses.</p>
-            <p>This is <span id="primary-expenses-rate">0</span>% of your income.</p>
-            <h3 class="category">Utilities : </h3>
-            <p>You spend $<span id="utilities-report">0</span> on utilities.</p>
-            <p>This is <span id="utilities-rate">0</span>% of your income.</p>
-            <h3 class="category">Secondary Expenses : </h3>
-            <p>You spend $<span id="secondary-expenses-report">0</span> on secondary expenses.</p>
-            <p>This is <span id="secondary-expenses-rate">0</span>% of your income.</p>
-            <h3 class="category">Savings : </h3>
-            <p>You save $<span id="savings-report">0</span> of your monthly income.</p>
-            <p>This is <span id="savings-rate">0</span>% of your income.</p>
+    <div class="report-section">
+
+        <div class="graph-report-container-one">
+            <p>Your yearly income is $<span id="income-report"></span></p>
+            <p>Your monthly income is $<span id="income-report-monthly"></span></p>
+            <br>
+            <p>You spend $<span id="primary-expenses-report"></span> on primary expenditures</p>
+            <p>This accounts for <span id="primary-expenses-rate"></span>% of your income</p>
+            <br>
+            <p>You spend $<span id="utilities-report"></span> on utilities</p>
+            <p>This accounts for <span id="utilities-rate"></span>% of your income</p>
+            <br>
+            <p>You spend $<span id="secondary-expenses-report"></span> on secondary expenditures</p>
+            <p>This accounts for <span id="secondary-expenses-rate"></span>% of your income</p>
+            <br>
+            <p>You save $<span id="savings-report"></span> each month</p>
+            <p>This accounts for <span id="savings-rate"></span>% of your income</p>
+            <p>According to the 20% rule, your primary savings rate is: <span id="savings-analysis"></span></p>
+            <br>
+            <p>You have $<span id="excess-funds-report"></span> left in excess funds</p>
+            <p>This accounts for <span id="excess-funds-rate"></span>% of your income</p>
+
         </div>
 
-        <div class="graph-container">
-            <div class="graph" id="userChart"></div>
+        <div class="graph-container-one">
+            <div class="graph-one" id="userChart"></div>
         </div>
-
+        
     </div>
 
     <script src="index.js"></script>
