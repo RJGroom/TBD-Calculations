@@ -79,10 +79,10 @@
 
             <div class="assessment-section income-section">
                     <h3 class="expenditure-type">Income</h3>
-                    <p class="form-item-title">Primary Income</p>
+                    <p class="form-item-title">Primary Income (monthly)</p>
                     <p class="dollar-sign">$</p>
                     <input type="number" value="0" min="0" name="primary-income" id="primary-income" onchange="totalIncome()">
-                    <p class="form-item-title">Secondary Income</p>
+                    <p class="form-item-title">Secondary Income (monthly)</p>
                     <p class="dollar-sign">$</p>
                     <input type="number" value="0" min="0" name="secondary-income" id="secondary-income" onchange="totalIncome()">
                     <p class="total">Total Income: $<span id="total-income">0</span></p>
@@ -157,7 +157,7 @@
             </div>
 
             <br>
-            <input type="button" value="Get Your Report" class="btn" onclick="printReport(); drawUserChart()">
+            <input type="button" value="Get Your Report" class="btn" onclick="printReport(); drawUserChart(); drawUserChartTwo()">
 
         </form>
     </div>
@@ -165,8 +165,8 @@
     <div class="report-section">
 
         <div class="graph-report-container-one">
-            <p>Your yearly income is $<span id="income-report"></span></p>
-            <p>Your monthly income is $<span id="income-report-monthly"></span></p>
+            <h3>Your Budget Report</h3>
+            <p>Your monthly income is $<span id="income-report"></span></p>
             <br>
             <p>You spend $<span id="primary-expenses-report"></span> on primary expenditures</p>
             <p>This accounts for <span id="primary-expenses-rate"></span>% of your income</p>
@@ -188,6 +188,10 @@
 
         <div class="graph-container-one">
             <div class="graph-one" id="userChart"></div>
+        </div>
+
+        <div class="graph-container-two">
+            <div class="graph-two" id="userChartTwo"></div>
         </div>
         
     </div>
