@@ -25,7 +25,7 @@
             </div>
 
             <div class="navSection">
-                <p class="navDescription">Go back to our<span style="font-weight:bold">Homepage</span></p>
+                <p class="navDescription">Go back to our <span style="font-weight:bold">homepage</span></p>
                 <a href="../index.html" class="navLink">
                     <img class="navIcon" src="../Icons/house-outline.svg" title="Home">
                 </a>
@@ -70,8 +70,9 @@
 
         <div class="assessment-header">
             <h3 class="assessment-header-title">Budget Assessment</h3>
-            <p>Enter your closest estimations for the following fields (Note: it is best to
-                underestimate your income and overestimate your expenses)
+            <p class="assessment-header-text">Please enter your closest estimations for the following fields (Note: it is best to
+                underestimate your income and overestimate your expenses). Round your estimations to the nearest whole number. If
+                an option does not apply to you, leave the value at $0.
             </p>
         </div>
 
@@ -165,24 +166,17 @@
     <div class="report-section">
 
         <div class="graph-report-container-one">
-            <h3>Your Budget Report</h3>
-            <p>Your monthly income is $<span id="income-report"></span></p>
+            <h3 class="budget-report-title">Your Budget Report</h3>
             <br>
-            <p>You spend $<span id="primary-expenses-report"></span> on primary expenditures</p>
-            <p>This accounts for <span id="primary-expenses-rate"></span>% of your income</p>
+            <p class="budget-report-text">Your monthly income is $<span id="income-report"></span></p>
             <br>
-            <p>You spend $<span id="utilities-report"></span> on utilities</p>
-            <p>This accounts for <span id="utilities-rate"></span>% of your income</p>
+            <p class="budget-report-text">You save $<span id="savings-report"></span> each month</p>
+            <p class="budget-report-text">This accounts for <span id="savings-rate"></span>% of your income</p>
+            <p class="budget-report-text">According to the 20% rule, your primary savings rate is <span id="savings-analysis"></span></p>
             <br>
-            <p>You spend $<span id="secondary-expenses-report"></span> on secondary expenditures</p>
-            <p>This accounts for <span id="secondary-expenses-rate"></span>% of your income</p>
-            <br>
-            <p>You save $<span id="savings-report"></span> each month</p>
-            <p>This accounts for <span id="savings-rate"></span>% of your income</p>
-            <p>According to the 20% rule, your primary savings rate is: <span id="savings-analysis"></span></p>
-            <br>
-            <p>You have $<span id="excess-funds-report"></span> left in excess funds</p>
-            <p>This accounts for <span id="excess-funds-rate"></span>% of your income</p>
+            <p class="budget-report-text">You have $<span id="excess-funds-report"></span> of excess funds</p>
+            <p class="budget-report-text">This accounts for <span id="excess-funds-rate"></span>% of your income</p>
+            <p class="budget-report-text" id="excess-funds-analysis"></p>
 
         </div>
 

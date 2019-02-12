@@ -185,33 +185,21 @@ function printReport() {
     //Income
     document.getElementById("income-report").innerHTML = monthlyIncome;
 
-    //Primary expenses
-    document.getElementById("primary-expenses-report").innerHTML = primaryExpenses;
-
     //Primary Expenses Rate
     primaryExpensesRate = ((primaryExpenses / monthlyIncome) * 100).toFixed(1);
-    document.getElementById("primary-expenses-rate").innerHTML = primaryExpensesRate;
-
-    //Utilities
-    document.getElementById("utilities-report").innerHTML = utilities;
 
     //Utilities Rate
     utilitiesRate = ((utilities / monthlyIncome) * 100).toFixed(1);
-    document.getElementById("utilities-rate").innerHTML = utilitiesRate;
-
-    //Secondary Expenses
-    document.getElementById("secondary-expenses-report").innerHTML = secondaryExpenses;
 
     //Secondary Expenses Rate
     secondaryExpensesRate = ((secondaryExpenses / monthlyIncome) * 100).toFixed(1);
-    document.getElementById("secondary-expenses-rate").innerHTML = secondaryExpensesRate;
 
     //Savings
-    document.getElementById("savings-report").innerHTML = savings;
+    document.getElementById("savings-report").innerHTML = primarySavings;
 
     //Savings Rate
     savingsRate = ((savings / monthlyIncome) * 100).toFixed(1);
-    document.getElementById("savings-rate").innerHTML = savingsRate;
+    document.getElementById("savings-rate").innerHTML = primarySavingsRate;
 
     //Determine efficiency of primary savings rate
     if (primarySavingsRate < 20) {
@@ -228,6 +216,14 @@ function printReport() {
     //Excess Funds Rate
     excessFundsRate = ((excessFunds / monthlyIncome) * 100).toFixed(1);
     document.getElementById("excess-funds-rate").innerHTML = excessFundsRate;
+
+    if (excessFundsRate > 20) {
+        document.getElementById("excess-funds-analysis").innerHTML = 
+        "You may want to consider investing more into your savings"
+    }
+    else {
+
+    }
 }
 
 google.charts.load('current', {packages: ['corechart']});
@@ -247,9 +243,19 @@ data.addRows([
 ]);
 
 let options = {
-    title: "Monthly Spending by Category",
-    backgroundColor: "#F7F5E6",
-    pieSliceBorderColor: "#F7F5E6"
+    title: "Monthly Spending By Category",
+    titleTextStyle: {
+        color: "white",
+        fontSize: "20",
+        bold: "false"
+    },
+    backgroundColor: "#4f3077",
+    pieSliceBorderColor: "#4f3077",
+    legend: {
+        textStyle: {
+            color: "white"
+        }
+    }
 };
 
 let userChart = new google.visualization.PieChart(document.getElementById('userChart'));
@@ -258,7 +264,7 @@ userChart.draw(data, options);
 
 function drawUserChartTwo() {
     let data = google.visualization.arrayToDataTable([
-      ["Category", "Percentage Spent On", { role: "style" } ],
+      ["Category", "Percentage Allocated", { role: "style" } ],
       ["Housing", parseFloat(housingPaymentsRate), "blue"],
       ["Loans", parseFloat(loansRate), "blue"],
       ["Health Insurance", parseFloat(healthInsuranceRate), "blue"],
@@ -289,10 +295,15 @@ function drawUserChartTwo() {
                      2]);
 
     let options = {
-      title: "Spending comparison chart",
-      height: 600,
+      height: '600',
+      backgroundColor: "#F7F5E6",
       bar: {groupWidth: "95%"},
       legend: { position: "none" },
+      chartArea: {top: '20', width: '90%', height: '70%'},
+      hAxis: {textStyle:{fontSize: '15'},
+        slantedText: 'true',
+        slantedTextAngle: '90',
+        },
     };
     let userChartTwo = new google.visualization.ColumnChart(document.getElementById("userChartTwo"));
     userChartTwo.draw(view, options);

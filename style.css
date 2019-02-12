@@ -315,7 +315,7 @@ h3 {
   position: relative;
   margin-bottom: 7%;
   width: 100%;
-  color: #F7F5E6;
+  color: white;
   font-family: 'Montserrat';
   font-size: 50px;
 }
@@ -325,7 +325,7 @@ h3 {
   position: relative;
   margin-bottom: 7%;
   width: 80%;
-  color: #F7F5E6;
+  color: #white;
   font-family: "Raleway";
   font-size: 18px;
 }
@@ -473,7 +473,7 @@ h3 {
   position: relative;
   margin-bottom: 7%;
   width: 100%;
-  color: #F7F5E6;
+  color: white;
   font-family: 'Montserrat';
   font-size: 60px;
 }
@@ -489,7 +489,7 @@ h3 {
   margin-left: 10%;
   margin-bottom: 7%;
   width: 80%;
-  color: #F7F5E6;
+  color: white;
   font-family: "Raleway";
   font-size: 18px;
   opacity: 0;
@@ -531,7 +531,7 @@ h3 {
   top: 30px;
   margin: 20px;
   font-family: "Raleway";
-  color: #F7F5E6;
+  color: white;
   font-size: 30px;
 }
 
@@ -542,7 +542,7 @@ h3 {
   width: 60%;
   font-family: "Raleway";
   font-size: 20px;
-  color: #F7F5E6;
+  color: white;
   opacity: 0;
   -webkit-animation: tipFade 5s ease infinite;
           animation: tipFade 5s ease infinite;
@@ -567,7 +567,7 @@ h3 {
 
 .dollar-sign {
   font-size: 50px;
-  color: #F7F5E6;
+  color: white;
 }
 
 .cover {
@@ -578,6 +578,120 @@ h3 {
   background-color: #4f3077;
   -webkit-animation: dollarAppear 5s infinite;
           animation: dollarAppear 5s infinite;
+}
+
+.section5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 14;
+  -ms-grid-row-span: 2;
+  grid-row: 14/16;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  background-color: #4f3077;
+}
+
+.social-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.social-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 20, 48, 0)), color-stop(90%, #201430));
+  background-image: linear-gradient(to bottom, rgba(32, 20, 48, 0), #201430 90%);
+}
+
+.social-bar-heading {
+  z-index: 1;
+  margin: 0;
+  font-family: "Raleway";
+  font-size: 40px;
+}
+
+.icon-bar {
+  z-index: 1;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 10px;
+  height: 60px;
+  width: 60px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  opacity: 0.5;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  -webkit-animation: wiggle 1s ease forwards;
+          animation: wiggle 1s ease forwards;
+}
+
+.section6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 16;
+  -ms-grid-row-span: 1;
+  grid-row: 16/17;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  background-color: #201430;
+}
+
+.footer-section {
+  position: relative;
+  left: 70px;
+  width: 20%;
+}
+
+.footer-title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "Raleway";
+  font-size: 18px;
+}
+
+.footer-section a {
+  font-family: "Raleway";
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.footer-section a:hover {
+  opacity: 1;
 }
 
 @-webkit-keyframes tipFade {
@@ -625,6 +739,44 @@ h3 {
   }
   to {
     bottom: 100%;
+  }
+}
+
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  75% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  75% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

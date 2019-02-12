@@ -136,7 +136,7 @@ p {
     grid-template-columns: 70px 1fr 1fr 1fr 70px;
     width: 100vw;
     height: 200vh;
-    background-color: pink;
+    background-color: #F7F5E6;
 }
 
 .assessment-header {
@@ -153,6 +153,11 @@ p {
     font-family: "Raleway";
     font-size: 30px;
     background-color: rgb(70, 92, 139);
+}
+
+.assessment-header-text {
+    width: 70%;
+    font-family: "Raleway";
 }
 
 .form-section {
@@ -179,12 +184,19 @@ p {
     display: inline;
 }
 
+.form-item-title {
+    position: relative;
+    left: 10px;
+    font-family: "Raleway";
+}
+
 input {
     margin-bottom: 10px;
 }
 
 .total {
     float: right;
+    font-family: "Raleway";
 }
 
 .btn {
@@ -216,18 +228,35 @@ input {
     grid-template-columns: 70px 1fr 1fr 1fr 1fr 70px;
     width: 100vw;
     height: 150vh;
-    background-color: lightgray;
+    background-color: #F7F5E6;
+}
+
+.budget-report-title {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-family: "Raleway";
+    font-size: 30px;
+}
+
+.budget-report-text {
+    position: relative;
+    top: 10%;
+    left: 10%;
+    font-family: "Raleway";
+    font-size: 18px;
+    color: white;
 }
 
 .graph-report-container-one {
     grid-row: 1/6;
     grid-column: 2/4;
-    background-color: gray;
+    background-color: rgb(70, 92, 139);
 }
 
 .graph-container-one {
     grid-row: 1/6;
-    grid-column: 4/6;
+    grid-column: 4/7;
 }
 
 .graph-one {
@@ -237,6 +266,6 @@ input {
 
 .graph-container-two {
     grid-row: 6/16;
-    grid-column: 2/6;
-    background-color: white;
+    grid-column: 2/7;
+    background-color: #F7F5E6;
 }
