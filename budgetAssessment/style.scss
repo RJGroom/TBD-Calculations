@@ -167,10 +167,12 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 
 .assessment-section {
     width: 70%
+    height: auto;
 }
 
 .expenditure-type {
@@ -251,12 +253,16 @@ input {
 .graph-report-container-one {
     grid-row: 1/6;
     grid-column: 2/4;
+    width: 100%;
+    height: 100%;
     background-color: rgb(70, 92, 139);
 }
 
 .graph-container-one {
     grid-row: 1/6;
     grid-column: 4/7;
+    width: 100%;
+    height: 100%;
 }
 
 .graph-one {

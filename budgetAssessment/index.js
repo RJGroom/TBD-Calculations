@@ -308,3 +308,8 @@ function drawUserChartTwo() {
     let userChartTwo = new google.visualization.ColumnChart(document.getElementById("userChartTwo"));
     userChartTwo.draw(view, options);
 }
+
+window.onresize = function(){
+    drawUserChart();
+    drawUserChartTwo();
+}
