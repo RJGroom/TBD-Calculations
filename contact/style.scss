@@ -1,0 +1,166 @@
+.navBar {   
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    width: 70px;
+    transition: 500ms ease;
+}
+
+.navBar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 1200px) {
+    .navBar {
+        width: 70px !important;
+    }
+}
+
+.menu-text {
+    z-index: 1;
+    display: inline;
+    margin: 0;
+    width: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Raleway';
+    font-size: 30px;
+    color: white;
+}
+
+.menuIcon {
+    z-index: 1;
+    position: relative;
+    display: inline;
+    margin-right: 15px;
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .menuIcon {
+        display: none;
+    }
+}
+
+.menuIcon:hover .topBar{
+    width: 100%;
+}
+
+.menuBar {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: 500ms ease;
+}
+
+.topBar {
+    top: 0px;
+    width: 70%;
+    margin-bottom: 6px;
+}
+
+.middleBar {
+    top: 10px;
+}
+
+.bottomBar {
+    top: 20px;
+}
+
+.navSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0;
+    width: 380px;
+    height: 15%;
+    overflow: hidden;
+}
+
+.navDescription {
+    z-index: 1;
+    display: inline;
+    width: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Raleway';
+    color: white;
+}
+
+.navLink {
+    z-index: 1;
+}
+
+.navIcon {
+    z-index: 1;
+    margin-right: 15px;
+    display: inline;
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.navIcon:hover {
+    opacity: 1;
+}
+
+.meet-the-team {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgray;
+}
+
+.profile-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 70px 1fr 1fr 1fr 70px;
+    grid-gap: 1em;
+}
+
+.profile {
+    background-color: gray;
+    overflow: hidden;
+}
+
+.profile1 {
+    width: 100%;
+    height: 100%;
+    grid-row: 2/5;
+    grid-column: 2/3;
+}
+
+.profile1::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.profile2 {
+    grid-row: 2/5;
+    grid-column: 3/4;
+}
+
+.profile3 {
+    grid-row: 2/5;
+    grid-column: 4/5;
+}
