@@ -18,7 +18,15 @@ else if($result->num_rows > 0)
 }
 else
 {
-    $sql2 = "INSERT into users (username, password) VALUES ('$Username', '$InitPassword')";
-    echo "Created User";
+    $sql = "INSERT into users (username, password) VALUES ('$Username', '$InitPassword')";
+
+    if($conn->query($sql) === TRUE)
+    {
+	    echo "Created User";
+    }
+    else
+    {
+	    echo "Sorry could not create user";
+    }
 }
 ?>
