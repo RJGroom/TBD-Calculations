@@ -212,6 +212,7 @@ p {
 
 .assessment-section {
   width: 70%;
+  height: auto;
 }
 
 .expenditure-type {
@@ -289,6 +290,7 @@ input {
   position: relative;
   top: 10%;
   left: 10%;
+  width: 90%;
   font-family: "Raleway";
   font-size: 18px;
   color: white;
