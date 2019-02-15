@@ -134,8 +134,13 @@
 }
 
 .profile {
-    background-color: gray;
+    position: relative;
     overflow: hidden;
+    background-color: pink;
+}
+
+.profile:hover .profile-overlay {
+    top: 70%;
 }
 
 .profile1 {
@@ -143,24 +148,44 @@
     height: 100%;
     grid-row: 2/5;
     grid-column: 2/3;
-}
-
-.profile1::after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: black;
-    opacity: 0.5;
+    background-image: url('./Images/adult-beard-boy-220453.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .profile2 {
     grid-row: 2/5;
     grid-column: 3/4;
+    background-image: url('./Images/business-businessman-contemporary-532220.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .profile3 {
     grid-row: 2/5;
     grid-column: 4/5;
+    background-image: url('./Images/beard-dirty-grunge-35183.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 100%;
+    height: 30%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    transition: 500ms ease;
+}
+
+.profile-name {
+    font-family: "Raleway";
+    font-size: 20px;
+    color: white;
+}
+
+.profile-about {
+    font-family: "Raleway";
+    color: white;
 }
