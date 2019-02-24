@@ -1,0 +1,118 @@
+.profile-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+  -ms-grid-columns: 70px (1fr)[10] 70px;
+      grid-template-columns: 70px repeat(10, 1fr) 70px;
+  grid-gap: 1em;
+  height: 200vh;
+  width: 100vw;
+  background-color: #F7F5E6;
+}
+
+.profile-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid gray;
+}
+
+.profile-header {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+}
+
+.sign-out-link {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-main-info {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  grid-row: 2/6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
+}
+
+.main-info-heading {
+  font-size: 30px;
+}
+
+.main-info-para {
+  margin: 20px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.spending-input {
+  height: 50px;
+  font-size: 30px;
+}
+
+.spending-input:focus {
+  outline: none;
+}
+
+.spending-input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.spending-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.profile-tips {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 5;
+  grid-row: 6/11;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
+}
+
+.profile-graph-one {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2/5;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 6;
+  grid-column: 6/12;
+}
+
+.profile-graph-two {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  grid-row: 5/8;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 6;
+  grid-column: 6/12;
+}
+
+.profile-graph-three {
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 3;
+  grid-row: 8/11;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 6;
+  grid-column: 6/12;
+}
+/*# sourceMappingURL=profile.css.map */
