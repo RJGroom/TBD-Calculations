@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == TRUE)
+{
+    echo "Welcome, " . $_SESSION['username'] . "!<br/>";
+}
+else
+{
+    echo "Welcome, Guest";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +24,6 @@
     <script src="Charts.js"></script>
 </head>
 <body>
-
     <div class="logo">tbg</div>
 
     <div class="navBar" id="navBar">
@@ -191,6 +201,7 @@
                 <a href="#">Subscribe To Email</a>
                 <br>
                 <a href="#">FAQ</a>
+                <br>
             </div>
 
             <div class="footer-section">

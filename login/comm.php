@@ -2,9 +2,9 @@
 
 	$servername = "localhost";
 	$dbname = "tbgcalcs";
-	$username = "root";
-	$password = "";
-  $conn = new mysqli($servername, $username, $password, $dbname);
+	$dbusername = "root";
+	$dbpassword = "";
+  $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
   if($conn->connect_error)
   {
