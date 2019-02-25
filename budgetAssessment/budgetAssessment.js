@@ -181,7 +181,7 @@ function totalSavings() {
 
 
 function printReport() {
-
+   
     //Income
     document.getElementById("income-report").innerHTML = monthlyIncome;
 
@@ -224,6 +224,8 @@ function printReport() {
     else {
 
     }
+    document.getElementById('reportModal').style.opacity = "1";
+    document.getElementById('reportModal').style.zIndex = "1";
 }
 
 google.charts.load('current', {packages: ['corechart']});
@@ -283,7 +285,6 @@ function drawUserChartTwo() {
       ["Vacation Funds", parseFloat(vacationFundsRate), "green"],
       ["ExcessFunds", parseFloat(excessFundsRate), "purple"]
 
-
     ]);
 
     let view = new google.visualization.DataView(data);
@@ -307,6 +308,11 @@ function drawUserChartTwo() {
     };
     let userChartTwo = new google.visualization.ColumnChart(document.getElementById("userChartTwo"));
     userChartTwo.draw(view, options);
+}
+
+function closeReport() {
+    document.getElementById('reportModal').style.opacity = "0";
+    document.getElementById('reportModal').style.zIndex = "-1";
 }
 
 window.onresize = function(){

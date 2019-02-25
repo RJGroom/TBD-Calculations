@@ -7,8 +7,11 @@
     <title>Profile</title>
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./profile.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="profileCharts.js"></script>
 </head>
 <body>
+
    <div class="profile-container">
 
     <div class="profile-header profile-section">
@@ -19,22 +22,28 @@
     <div class="profile-main-info profile-section">
         <h4 class="main-info-heading">Welcome, "Jonah"</h4>
         <p class="main-info-para">Your monthly income is <span style="color: #465C8B">$5000</span></p>
-        <p class="main-info-para">You save <span style="color: #465C8B">$1000</span> each month which amounts to <span style="color: #465C8B">10%</span> of your income.</p>
-        <p class="main-info-para">You have <span style="color: #465C8B">$1290</span> left of your <span style="color: #465C8B">$4000</span> of excess funds</p>
-        <input
-            class="spending-input"
-            type="number"
-            value="0"
-            min="0"
-        />
+        <p class="main-info-para">You save <span style="color: #465C8B">1000</span> each month which amounts to <span style="color: #465C8B">10%</span> of your income.</p>
+        <p class="main-info-para">You have <span id="leftoverExcessFunds" style="color: #465C8B"></span> left of your <span id="excessFunds" style="color: #465C8B"></span> of excess funds</p>
+
+        <p class="main-info-para">Input recent spendings: </p>
+        <p class="main-info-para">$
+                <input
+                class="spending-input"
+                id="spendingInput"
+                type="number"
+                value="0"
+                min="0"
+            />
+        </p>
+        <button onclick="calculateExcessFunds()">Confirm</button>
     </div>
 
     <div class="profile-tips profile-section">
-        <h4>Tips tailored for you</h4>
+        <h4 class="tips-heading">Tips tailored for you</h4>
     </div>
 
     <div class="profile-graph-one profile-section">
-        <h4>Monthly Spending by Category</h4>
+        <div class="sample-chart" id="sampleChart"></div>
     </div>
 
     <div class="profile-graph-two profile-section">
@@ -42,9 +51,47 @@
     </div>
 
     <div class="profile-graph-three profile-section">
-        <h4>Target Spending Goal vs. Your Spending</h4>
+        <div class="sample-chart" id="sampleLineChart"></div>
+    </div>
+
+    <div class="open-update-data-tab" onclick="openUpdateData()">
+        <h3 class="open-update-data-icon">O</h3>
+    </div>
+
+    <div class="update-data" id="updateData">
+        <h3 class="close-update-data-tab" onclick="closeUpdateData()">X</h3>
+
+        <h3>Income</h3>
+        <input class="update-input" placeholder="Primary monthly income" />
+        <input class="update-input" placeholder="Secondary monthly income" />
+
+        <h3>Primary expenses</h3>
+        <input class="update-input" placeholder="Housing payments" />
+        <input class="update-input" placeholder="Loans" />
+        <input class="update-input" placeholder="Health insurance" />
+        <input class="update-input" placeholder="Transportation" />
+        <input class="update-input" placeholder="Cell Phone Bill" />
+        <input class="update-input" placeholder="Groceries" />
+        <input class="update-input" placeholder="Clothing" />
+
+        <h3>Utilities</h3>
+        <input class="update-input" placeholder="Gas" />
+        <input class="update-input" placeholder="Electric" />
+        <input class="update-input" placeholder="Water" />
+        <input class="update-input" placeholder="Cable/Internet" />
+
+        <h3>Secondary expenses</h3>
+        <input class="update-input" placeholder="Monthly subscriptions" />
+        <input class="update-input" placeholder="Miscellaneous" />
+
+        <h3>Savings</h3>
+        <input class="update-input" placeholder="Primary savings" />
+        <input class="update-input" placeholder="Emergency funds" />
+        <input class="update-input" placeholder="Vacation funds" />
     </div>
 
    </div>
+
+   <script src="profile.js"></script>
 </body>
 </html>

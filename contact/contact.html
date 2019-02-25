@@ -1,67 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto"
+        rel="stylesheet">
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-        <div class="navBar" id="navBar">
 
-                <div class="navSection">
-                    <h3 class="menu-text">Menu</h3>
-                    <div class="menuIcon" onclick="toggleNav()" title = "Open Menu">
-                        <div class="menuBar topBar" id="topBar"></div>
-                        <div class="menuBar middleBar" id="middleBar"></div>
-                        <div class="menuBar bottomBar" id="bottomBar"></div>
-                    </div>
-                </div>
-    
-                <div class="navSection">
-                    <p class="navDescription">Go back to our <span style="font-weight:bold">homepage</span></p>
-                    <a href="../index.html" class="navLink">
-                        <img class="navIcon" src="../Icons/house-outline.svg" title="Home">
-                    </a>
-                </div>
-        
-                <div class="navSection">
-                    <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
-                    <a href="login.html" class="navLink">
-                        <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
-                    </a>
-                </div>
-        
-                <div class="navSection">
-                    <p class="navDescription">View a <span style="font-weight:bold">graphical representation</span> of your spending and saving habits</p>
-                    <a href="graphs.html" class="navLink">
-                        <img class="navIcon" src="../Icons/005-graph-1.svg" title="View-Graph">
-                    </a>
-                </div>
-        
-                <div class="navSection">
-                    <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
-                    <a href="tips.html" class="navLink">
-                        <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
-                    </a>
-                </div>
-        
-                <div class="navSection">
-                    <p class="navDescription"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your questions, comments, or concerns</p>
-                    <a href ="contact.html" class="navLink">
-                        <img class="navIcon" src="../Icons/001-contact.svg" title="Contact">
-                    </a>
-                </div>
-        
-                <div class="navSection">
-                    <p class="navDescription">View a list of the different <span style="font-weight:bold">language and currency</span> preferences available</p>
-                    <img class="navIcon" src="../Icons/008-worlwide.svg" title="Language-Currency">
-                </div>
-        
+<body>
+    <div class="navBar" id="navBar">
+
+        <div class="navSection">
+            <h3 class="menu-text">Menu</h3>
+            <div class="menuIcon" onclick="toggleNav()" title="Open Menu">
+                <div class="menuBar topBar" id="topBar"></div>
+                <div class="menuBar middleBar" id="middleBar"></div>
+                <div class="menuBar bottomBar" id="bottomBar"></div>
             </div>
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription">Go back to our <span style="font-weight:bold">homepage</span></p>
+            <a href="../index.html" class="navLink">
+                <img class="navIcon" src="../Icons/house-outline.svg" title="Home">
+            </a>
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track
+                of your spending habits</p>
+            <a href="login.html" class="navLink">
+                <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
+            </a>
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription">View a <span style="font-weight:bold">graphical representation</span> of your
+                spending and saving habits</p>
+            <a href="graphs.html" class="navLink">
+                <img class="navIcon" src="../Icons/005-graph-1.svg" title="View-Graph">
+            </a>
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to
+                help improve your spending habits</p>
+            <a href="tips.html" class="navLink">
+                <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
+            </a>
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your
+                questions, comments, or concerns</p>
+            <a href="contact.html" class="navLink">
+                <img class="navIcon" src="../Icons/001-contact.svg" title="Contact">
+            </a>
+        </div>
+
+        <div class="navSection">
+            <p class="navDescription">View a list of the different <span style="font-weight:bold">language and
+                    currency</span> preferences available</p>
+            <img class="navIcon" src="../Icons/008-worlwide.svg" title="Language-Currency">
+        </div>
+
+    </div>
+
+    <div class="contact-form-section">
+        <form class="contact-form">
+            <h3 class="contact-form-heading">Questions, Comments, Concerts? Contact Us.</h3>
+            <p class="contact-form-line">
+                Hello, my name is
+                <input class="contact-form-input" type="text" placeholder="Enter Name" />
+            </p>
+            <p class="contact-form-line">
+                You can reach me at
+                <input class="contact-form-input" type="text" placeholder="Enter E-mail" />
+            </p>
+            <p class="contact-form-line">
+                I am contacting you because...
+            </p>
+            <textarea class="contact-form-textarea" placeholder="Enter your message"></textarea>
+            <div class="contact-submit-wrapper">
+                <button class="contact-submit">Send Message</button>
+            </div>
+        </form>
+    </div>
 
     <div class="meet-the-team">
         <h3 class="meet-the-team-heading">Meet the team</h3>
@@ -69,25 +98,25 @@
             <div class="profile profile1">
                 <div class="profile-overlay">
                     <h3 class="profile-name">Ryan Groom</h3>
-                    <p class="profile-about">Here is a small blurb about this individual. Maybe some content
-                        about attending Indiana University of Pennsylvania, Coding interests etc...
-                    </p>
+                    <p class="profile-about">Senior at Indiana University of Pennsylvania</p>
+                    <p class="profile-about">Favors front-end web development</p>
+                    <p class="profile-about">E-mail: email@example.com</p>
                 </div>
             </div>
             <div class="profile profile2">
                 <div class="profile-overlay">
                     <h3 class="profile-name">Jonah Downs</h3>
-                    <p class="profile-about">Here is a small blurb about this individual. Maybe some content
-                        about attending Indiana University of Pennsylvania, Coding interests etc...
-                    </p>
+                    <p class="profile-about">Senior at Indiana University of Pennsylvania</p>
+                    <p class="profile-about">Favors java programming</p>
+                    <p class="profile-about">E-mail: email@example.com</p>
                 </div>
             </div>
             <div class="profile profile3">
                 <div class="profile-overlay">
                     <h3 class="profile-name">Eric Ritchie</h3>
-                    <p class="profile-about">Here is a small blurb about this individual. Maybe some content
-                        about attending Indiana University of Pennsylvania, Coding interests etc...
-                    </p>
+                    <p class="profile-about">Senior at Indiana University of Pennslyvania</p>
+                    <p class="profile-about">Favors java programming</p>
+                    <p class="profile-about">E-mail: email@example.com</p>
                 </div>
             </div>
         </div>
@@ -95,4 +124,5 @@
 
     <script src="contact.js"></script>
 </body>
+
 </html>

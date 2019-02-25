@@ -148,13 +148,29 @@ p {
 .main-content-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[10];
-      grid-template-rows: repeat(10, 1fr);
+  -ms-grid-rows: (1fr)[14];
+      grid-template-rows: repeat(14, 1fr);
   -ms-grid-columns: 70px 1fr 1fr 1fr 70px;
       grid-template-columns: 70px 1fr 1fr 1fr 70px;
   width: 100vw;
-  height: 200vh;
-  background-color: #F7F5E6;
+  height: 300vh;
+}
+
+.budget-assessment-page-header {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 70%;
+  background-image: url("./Images/accounting-budget-calculate-3305.jpg");
+  background-size: cover;
+  background-position: top;
 }
 
 .assessment-header {
@@ -168,17 +184,26 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-row: 1;
+  -ms-grid-row: 3;
   -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-row: 3/4;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2/5;
 }
 
 .assessment-header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 70%;
-  text-align: center;
+  height: 50px;
   font-family: "Raleway";
   font-size: 30px;
   background-color: #465c8b;
@@ -187,12 +212,13 @@ p {
 .assessment-header-text {
   width: 70%;
   font-family: "Raleway";
+  font-size: 1em;
 }
 
 .form-section {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 9;
-  grid-row: 2/11;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 11;
+  grid-row: 4/15;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2/5;
@@ -216,6 +242,15 @@ p {
 }
 
 .expenditure-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 100%;
+  text-indent: 10px;
   font-family: "Raleway";
   font-size: 30px;
   background-image: -webkit-gradient(linear, left top, right top, from(#465c8b), color-stop(90%, rgba(70, 92, 139, 0)));
@@ -224,16 +259,42 @@ p {
 
 .dollar-sign {
   display: inline;
+  font-size: 1.3em;
+  color: gray;
 }
 
 .form-item-title {
   position: relative;
   left: 10px;
   font-family: "Raleway";
+  font-size: 1em;
 }
 
 input {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  height: 26px;
+  border: none;
+  border-bottom: 1px solid gray;
+  color: gray;
+  font-size: 1.3em;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+input:focus {
+  outline: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .total {
@@ -248,6 +309,7 @@ input {
   color: black;
   background-color: #ffb515;
   font-family: "Raleway";
+  font-size: 1em;
   font-weight: bold;
   border: 2px solid #ffb515;
   -webkit-transform: translate(-50%);
@@ -266,6 +328,19 @@ input {
   outline: none;
 }
 
+.report-modal {
+  opacity: 0;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
 .report-section {
   display: -ms-grid;
   display: grid;
@@ -276,6 +351,26 @@ input {
   width: 100vw;
   height: 150vh;
   background-color: #F7F5E6;
+}
+
+.close-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .budget-report-title {
@@ -313,8 +408,8 @@ input {
   -ms-grid-row-span: 5;
   grid-row: 1/6;
   -ms-grid-column: 4;
-  -ms-grid-column-span: 3;
-  grid-column: 4/7;
+  -ms-grid-column-span: 2;
+  grid-column: 4/6;
   width: 100%;
   height: 100%;
 }

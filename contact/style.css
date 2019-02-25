@@ -134,6 +134,83 @@
   opacity: 1;
 }
 
+.contact-form-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 70px 1fr 70px;
+      grid-template-columns: 70px 1fr 70px;
+  height: 50vh;
+  width: 100vw;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  width: 100%;
+}
+
+.contact-form-heading {
+  font-family: 'Raleway';
+  font-size: 30px;
+}
+
+.contact-form-line {
+  width: 500px;
+  margin: 5px;
+  font-family: 'Raleway';
+  font-size: 1.5em;
+}
+
+.contact-form-input {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+input:focus {
+  outline: none;
+}
+
+.contact-form-textarea {
+  width: 500px;
+  height: 100px;
+  font-family: 'Raleway';
+  font-size: 1.5em;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.contact-submit-wrapper {
+  position: relative;
+  width: 500px;
+}
+
+.contact-submit {
+  position: absolute;
+  margin: 5px;
+  right: 0;
+}
+
 .meet-the-team {
   display: -ms-grid;
   display: grid;
@@ -144,7 +221,6 @@
   grid-gap: 1em;
   height: 100vh;
   width: 100vw;
-  background-color: lightgray;
 }
 
 .meet-the-team-heading {
@@ -185,7 +261,7 @@
 }
 
 .profile:hover .profile-overlay {
-  top: 70%;
+  top: 75%;
 }
 
 .profile1 {
@@ -197,7 +273,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  background-image: url("./Images/avatar.jpg");
+  background-image: url("./Images/PersonAnon.png");
   background-size: cover;
   background-position: center;
 }
@@ -209,7 +285,7 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  background-image: url("./Images/avatar.jpg");
+  background-image: url("./Images/PersonAnon.png");
   background-size: cover;
   background-position: center;
 }
@@ -221,7 +297,7 @@
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  background-image: url("./Images/avatar.jpg");
+  background-image: url("./Images/PersonAnon.png");
   background-size: cover;
   background-position: center;
 }
@@ -229,7 +305,7 @@
 .profile-overlay {
   position: absolute;
   top: 100%;
-  height: 30%;
+  height: 25%;
   width: 100%;
   background-color: black;
   opacity: 0.7;
@@ -238,13 +314,20 @@
 }
 
 .profile-name {
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: "Raleway";
   font-size: 20px;
   color: white;
+  text-indent: 20px;
 }
 
 .profile-about {
+  margin: 2px;
   font-family: "Raleway";
   color: white;
+  text-indent: 20px;
 }
 /*# sourceMappingURL=style.css.map */

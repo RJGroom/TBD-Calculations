@@ -5,14 +5,13 @@
     grid-gap: 1em;
     height: 200vh;
     width: 100vw;
-    background-color: #F7F5E6;
 }
 
 .profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid gray;
+    border: 2px solid white;
 }
 
 .profile-header {
@@ -26,6 +25,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    color: white;
 }
 
 .profile-main-info {
@@ -44,7 +44,8 @@
 }
 
 .spending-input {
-    height: 50px;
+    height: 30px;
+    width: 200px;
     font-size: 30px;
 }
 
@@ -67,9 +68,19 @@ input::-webkit-inner-spin-button {
     grid-column: 2/6;
 }
 
+.tips-heading {
+    font-size: 30px;
+}
+
 .profile-graph-one {
     grid-row: 2/5;
     grid-column: 6/12;
+}
+
+.sample-chart {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .profile-graph-two {
@@ -80,4 +91,43 @@ input::-webkit-inner-spin-button {
 .profile-graph-three {
     grid-row: 8/11;
     grid-column: 6/12;
+}
+
+.open-update-data-tab {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.open-update-data-icon {
+    font-size: 30px;
+    margin: 0;
+    color: white;
+}
+
+.update-data {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    right: -100vw;
+    background-color: white;
+    opacity: 0.8;
+    transition: 1s ease;
+}
+
+.update-input {
+    margin-left: 20px;
+    width: 200px;
+}
+
+.close-update-data-tab {
+    margin: 0;
+    font-size: 30px;
+    cursor: pointer;
 }
