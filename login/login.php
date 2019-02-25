@@ -18,7 +18,7 @@
         $row =  mysqli_fetch_array($query);
         $id = $row['id'];
         $db_password = $row['password'];
-
+        
         if($Password == $db_password)
         {
             $_SESSION['username'] = $Username;
@@ -31,7 +31,7 @@
             echo "Login failed. Please check that your username and password are both correct.";
         }
     }
-    
+
 ?>
 
 <!DOCTYPE html>
