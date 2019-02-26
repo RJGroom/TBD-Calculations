@@ -1,4 +1,5 @@
-<!-- <?php
+ <?php
+/*
 session_start();
 if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == TRUE)
 {
@@ -8,7 +9,8 @@ else
 {
     echo "Welcome, Guest";
 }
-?> -->
+**/
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +42,7 @@ else
 
         <div class="navSection">
             <p class="navDescription">Go back to our <span style="font-weight:bold">homepage</span></p>
-            <a href="./index.html" class="navLink">
+            <a href="./index.php" class="navLink">
                 <img class="navIcon" src="Icons/house-outline.svg" title="Home">
             </a>
         </div>
@@ -173,7 +175,7 @@ else
         <div class="section6">
             <div class="footer-section">
                 <h3 class="footer-title">Navigation</h3>
-                <a href="./index.html">Home</a>
+                <a href="./index.php">Home</a>
                 <br>
                 <a href="./login/login.html">Login</a>
                 <br>
