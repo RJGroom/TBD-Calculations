@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./profile.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -15,15 +16,14 @@
    <div class="profile-container">
 
     <div class="profile-header profile-section">
-        <h4>Header Content</h4>
         <a class="sign-out-link" href="#home">Sign Out</a>
     </div>
 
     <div class="profile-main-info profile-section">
         <h4 class="main-info-heading">Welcome, "Jonah"</h4>
-        <p class="main-info-para">Your monthly income is <span style="color: #465C8B">$5000</span></p>
-        <p class="main-info-para">You save <span style="color: #465C8B">1000</span> each month which amounts to <span style="color: #465C8B">10%</span> of your income.</p>
-        <p class="main-info-para">You have <span id="leftoverExcessFunds" style="color: #465C8B"></span> left of your <span id="excessFunds" style="color: #465C8B"></span> of excess funds</p>
+        <p class="main-info-para">Your monthly income is <span style="color: white">$5000</span></p>
+        <p class="main-info-para">You save <span style="color: white">1000</span> each month which amounts to <span style="color: white">10%</span> of your income.</p>
+        <p class="main-info-para">You have <span id="leftoverExcessFunds" style="color: white"></span> left of your <span id="excessFunds" style="color: white"></span> of excess funds</p>
 
         <p class="main-info-para">Input recent spendings: </p>
         <p class="main-info-para">$
@@ -35,11 +35,18 @@
                 min="0"
             />
         </p>
-        <button onclick="calculateExcessFunds()">Confirm</button>
+        <button class="confirm-btn" onclick="calculateExcessFunds()">Confirm</button>
     </div>
 
     <div class="profile-tips profile-section">
         <h4 class="tips-heading">Tips tailored for you</h4>
+        <p class="tip-item">Here is a tip</p>
+        <p class="tip-item">Here is a tip</p>
+        <p class="tip-item">Here is a tip</p>
+        <p class="tip-item">Here is a tip</p>
+        <p class="tip-item">Here is a tip</p>
+        <p class="tip-item">Here is a tip</p>
+        <p class="tip-item">Here is a tip</p>
     </div>
 
     <div class="profile-graph-one profile-section">
@@ -47,7 +54,7 @@
     </div>
 
     <div class="profile-graph-two profile-section">
-        <h4>Breakdown of All Spending</h4>
+        <div class="sample-chart" id="sampleChartThree"></div>
     </div>
 
     <div class="profile-graph-three profile-section">

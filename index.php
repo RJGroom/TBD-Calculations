@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == TRUE)
 {
@@ -8,7 +8,8 @@ else
 {
     echo "Welcome, Guest";
 }
-?>
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +47,7 @@ else
 
         <div class="navSection">
             <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
-            <a href="/profile/profile.html" class="navLink">
+            <a href="./profile/profile.html" class="navLink">
                 <img class="navIcon" src="Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>

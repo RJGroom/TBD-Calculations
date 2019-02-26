@@ -1,3 +1,13 @@
+.logo {
+    z-index: 1;
+    position: fixed;
+    top: 35px;
+    right: 50px;
+    color: white;
+    font-family: 'Lato';
+    font-size: 30px;
+}
+
 .navBar {   
     z-index: 1;
     position: fixed;
@@ -118,21 +128,69 @@
     opacity: 1;
 }
 
-.contact-form-section {
+.contact-header {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 70px 1fr 70px;
-    height: 50vh;
+    grid-gap: 1em;
+    height: 20vh;
     width: 100vw;
+    background-image: url('../Images/adults-business-coffee-1323592.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-faq {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 70px 1fr 70px;
+    padding: 20px;
+    background-color: #465C8B;
+}
+
+.faq-header {
+    margin: 5px;
+    grid-column: 2/3;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 60px;
+    color: white;
+}
+
+.faq-block {
+    margin: 0;
+    grid-column: 2/3;
+}
+
+.faq-para {
+    margin-left: 20px;
+    font-family: 'Raleway';
+    font-size: 1.2em;
+    color: white;
+}
+
+.contact-form-section {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 70px 1fr 1fr 1fr 1fr 70px;
+    height: 60vh;
+    width: 100vw;
+    background-color: #F7F5E6;
+}
+
+.contact-image {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    background-image: url('./Images/apple-coffee-computer-7372.jpg');
+    background-size: cover;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     grid-row: 1/2;
-    grid-column: 2/3;
+    grid-column: 4/6;
     width: 100%;
 }
 
@@ -151,7 +209,9 @@
 .contact-form-input {
     border: none;
     border-bottom: 1px solid gray;
+    background: none;
 }
+
 
 input:focus {
     outline: none;
@@ -159,7 +219,7 @@ input:focus {
 
 .contact-form-textarea {
     width: 500px;
-    height: 100px;
+    height: 150px;
     font-family: 'Raleway';
     font-size: 1.5em;
 }
@@ -177,25 +237,42 @@ textarea:focus {
     position: absolute;
     margin: 5px;
     right: 0;
+    height: 40px;
+    color: black;
+    background-color: #ffb515;
+    font-family: "Raleway";
+    font-weight: bold;
+    border: 2px solid #ffb515;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.contact-submit:hover {
+    background: none;
+    color: #ffb515;
 }
 
 .meet-the-team {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 70px 1fr 1fr 1fr 70px;
     grid-gap: 1em;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
+    background-color: #4f3077;
+    background-image: linear-gradient(to bottom, rgba(32, 20, 48, 0),
+    rgba(32, 20, 48, 1) 90%);
 }
 
 .meet-the-team-heading {
     margin: 0;
     position: relative;
-    top: 80%;
+    top: 60%;
     grid-row: 1/2;
     grid-column: 2/5;
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Raleway';
+    color: white;
 }
 
 .profile-container {
@@ -204,6 +281,7 @@ textarea:focus {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
     grid-row: 2/5;
     grid-column: 2/5;
 }
@@ -211,7 +289,7 @@ textarea:focus {
 .profile {
     position: relative;
     overflow: hidden;
-    background-color: pink;
+    background-color:#ffb515;
 }
 
 .profile:hover .profile-overlay {
@@ -268,4 +346,46 @@ textarea:focus {
     font-family: "Raleway";
     color: white;
     text-indent: 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 70px 1fr 70px;
+    background-color: rgb(32, 20, 48);
+    height: 30vh;
+    width: 100vw;
+}
+
+.footer-section-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.footer-section {
+    width: 20%;
+}
+
+.footer-title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: "Raleway";
+    font-size: 18px;
+    color: white;
+}
+
+.footer-section a {
+    font-family: "Raleway";
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+.footer-section a:hover {
+    opacity: 1;
 }
