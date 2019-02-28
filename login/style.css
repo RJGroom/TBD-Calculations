@@ -1,4 +1,57 @@
 p {
+  margin: 0;
+  font-family: 'raleway';
+  font-size: 20px;
+}
+
+.registrationForm {
+  position: relative;
+  left: 130px;
+  top: 65px;
+}
+
+.loginForm {
+  position: relative;
+  left: 130px;
+  top: 60px;
+}
+
+.loginInput {
+  margin-bottom: 5px;
+  font-family: 'raleway';
+}
+
+.loginInput::-webkit-input-placeholder {
+  font-family: 'raleway';
+}
+
+.loginInput:-ms-input-placeholder {
+  font-family: 'raleway';
+}
+
+.loginInput::-ms-input-placeholder {
+  font-family: 'raleway';
+}
+
+.loginInput::placeholder {
+  font-family: 'raleway';
+}
+
+.registerInput {
+  font-family: 'raleway';
+}
+
+.btns {
+  font-family: 'raleway';
+}
+
+.gap {
   margin: 5px;
+}
+
+.registerBtn {
+  position: relative;
+  left: 130px;
+  top: 60px;
 }
 /*# sourceMappingURL=style.css.map */

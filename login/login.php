@@ -39,15 +39,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
 </head>
 <body>
-    <form action = "login.php" method = "post">
-        <input type = "text" name = "username" placeholder = "Username"/><br/>
-        <input type = "password" name = "password" placeholder = "Password"/><br/>
-        <input name = "login" type = "submit" value = "Login"/>
-    </form>    
-    <a href = "./registration.php"><button>Register</button></a>
+    <form class="loginForm" action= "login.php" method= "post">
+        <p>Username:</p>
+        <input class= "loginInput" type= "text" name= "username" placeholder= "Username" size= "27"/><br/>
+        <p>Password:</p>
+        <input class= "loginInput" type= "password" name= "password" placeholder= "Password" size= "27"><br/>
+        <input class= "loginInput" name= "login" type= "submit" value= "Login"/><br/>
+    </form>  
+    <a href= "./registration.php"><button class= "btns registerBtn">Register</button></a>
 </body>
 </html>
