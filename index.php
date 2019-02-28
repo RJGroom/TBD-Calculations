@@ -49,7 +49,7 @@ else
 
         <div class="navSection">
             <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
-            <a href="./profile/profile.html" class="navLink">
+            <a href="./login/login.php" class="navLink">
                 <img class="navIcon" src="Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>

@@ -48,6 +48,6 @@
         <input type = "password" name = "password" placeholder = "Password"/><br/>
         <input name = "login" type = "submit" value = "Login"/>
     </form>    
-    <a href = "register.html"><button>Register</button></a>
+    <a href = "./registration.php"><button>Register</button></a>
 </body>
 </html>
