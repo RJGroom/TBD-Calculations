@@ -2,6 +2,9 @@
 include 'comm.php';
 
 $Username = $_REQUEST['initUsername'];
+$FirstName = $_REQUEST['FirstName'];
+$LastName = $_REQUEST['LastName'];
+$Email = $_REQUEST['Email'];
 $InitPassword = $_REQUEST['initPassword'];
 $ConPassword = $_REQUEST['confirmPassword'];
 
@@ -18,7 +21,7 @@ else if($result->num_rows > 0)
 }
 else
 {
-    $sql = "INSERT into users (username, password) VALUES ('$Username', '$InitPassword')";
+    $sql = "INSERT into users (username, password, fName, lName, email) VALUES ('$Username', '$InitPassword', '$FirstName', '$LastName', '$Email')  ";
 
     if($conn->query($sql) === TRUE)
     {
