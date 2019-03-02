@@ -12,6 +12,7 @@
     <p class="registrationHeader">Register</p>
     <form class= "registrationForm" name="register" method="GET" action="register.php">
         <!--<input type = "text" name = "email" placeholder = "Email Address"/><br/>-->
+        <p class="gap"></p>
         <p class="inputHeader userName">Username:</p>
         <input class="loginInput registerInput" type="text" name="initUsername" placeholder="Username" size="27"/><br/>
         <p class="inputHeader firstName">First Name:</p>
@@ -26,6 +27,7 @@
         <input class="registerInput" type="password" name="confirmPassword" placeholder="Confirm Password" size="27"/><br/>
         <p class="gap"></p>
         <input class="registerBtn" type="submit" value="Register"/>
+        <p class="gap"></p>
     </form>
 </body>
 </html>

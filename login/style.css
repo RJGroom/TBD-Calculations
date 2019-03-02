@@ -1,3 +1,4 @@
+@charset "UTF-8";
 p {
   margin: 0;
   font-family: 'raleway';
@@ -5,30 +6,77 @@ p {
 }
 
 .registrationPage {
-  background-color: #465C8B;
+  position: absolute;
+  background-image: url("C:xampphtdocsTBGCalculationsImages\alone-bills-calculator-1253591.jpg");
+  opacity: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 .registrationHeader {
+  margin-top: 90px;
+  margin-left: 150px;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   font-weight: bolder;
-  margin-left: 75px;
-  margin-top: 20px;
   font-size: 28px;
+  background-color: #465b8b;
+  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
+  background-image: linear-gradient(to right, #465b8b, 0);
 }
 
 .registrationForm {
-  position: relative;
-  left: 80px;
-  top: 25px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 140px;
+  margin-top: 100px;
+  background-color: #465b8b;
+  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
+  background-image: linear-gradient(to right, #465b8b, 0);
+}
+
+.gap {
+  margin: 10px;
+}
+
+.inputHeader {
+  margin-left: 80px;
 }
 
 .loginPage {
-  background-color: #465C8B;
+  background-image: url("./C:xampphtdocsTBGCalculationsImages­ults-book-business-297755.jpg");
+  background-size: cover;
+  opacity: .8;
 }
 
 .loginForm {
   position: relative;
   left: 80px;
   top: 20px;
+  background-color: #465b8b;
+  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
+  background-image: linear-gradient(to right, #465b8b, 0);
 }
 
 .loginHeader {
@@ -36,6 +84,9 @@ p {
   margin-left: 75px;
   margin-top: 20px;
   font-size: 28px;
+  background-color: #465b8b;
+  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
+  background-image: linear-gradient(to right, #465b8b, 0);
 }
 
 .loginInput {
@@ -61,7 +112,8 @@ p {
 
 .registerInput {
   font-family: 'raleway';
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+  margin-left: 80px;
 }
 
 .loginBtn {
@@ -86,10 +138,6 @@ p {
 
 .loginBtn:focus {
   outline: none;
-}
-
-.gap {
-  margin: 5px;
 }
 
 .registerBtnLogin {
@@ -119,7 +167,7 @@ p {
 
 .registerBtn {
   position: relative;
-  left: 36px;
+  left: 151px;
   color: black;
   background-color: #ffb515;
   font-family: "Raleway";
