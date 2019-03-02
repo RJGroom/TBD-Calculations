@@ -25,8 +25,7 @@ else
 
     if($conn->query($sql) === TRUE)
     {
-	    echo "Created User";
-    }
+        header("Location: ../index.php");   }
     else
     {
 	    echo "Sorry could not create user";

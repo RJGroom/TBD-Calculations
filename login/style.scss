@@ -4,16 +4,39 @@ p {
     font-size: 20px;
 }
 
+.registrationPage {    
+    background-color: #465C8B;
+    
+}
+
+.registrationHeader {
+    font-weight: bolder;
+    margin-left: 75px; 
+    margin-top: 20px;
+    font-size: 28px;
+}
+
 .registrationForm {
     position: relative;
-    left: 130px;
-    top: 65px;
+    left: 80px;
+    top: 25px;
+}
+
+.loginPage {
+    background-color: #465C8B;
 }
 
 .loginForm {
     position: relative;
-    left: 130px;
-    top: 60px;
+    left: 80px;
+    top: 20px;
+}
+
+.loginHeader {
+    font-weight: bolder;
+    margin-left: 75px; 
+    margin-top: 20px;
+    font-size: 28px;
 }
 
 .loginInput {
@@ -27,17 +50,77 @@ p {
 
 .registerInput {
     font-family: 'raleway';
+    margin-bottom: 3px;
 }
 
-.btns {
-    font-family: 'raleway';
+.loginBtn {
+    position: relative;
+    left: 27px;
+    color: black;
+    background-color: #ffb515;
+    font-family: "Raleway";
+    font-weight: bold;
+    border: 2px solid #ffb515;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+.loginBtn:hover {
+    background: none;
+    color: #ffb515;
+}
+
+.loginBtn:focus {
+    outline: none;
 }
 
 .gap{
     margin: 5px;
 }
+
+.registerBtnLogin {
+    position: relative;
+    left: 116px;
+    top: 20px;
+    color: black;
+    background-color: #ffb515;
+    font-family: "Raleway";
+    font-weight: bold;
+    border: 2px solid #ffb515;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+
+.registerBtnLogin:hover {
+    background: none;
+    color: #ffb515;
+}
+
+.registerBtnLogin:focus {
+    outline: none;
+}
+
 .registerBtn {
     position: relative;
-    left: 130px;
-    top: 60px;
+    left: 36px;
+    color: black;
+    background-color: #ffb515;
+    font-family: "Raleway";
+    font-weight: bold;
+    border: 2px solid #ffb515;
+    transform: translate(-50%);
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+.registerBtn:hover {
+    background: none;
+    color: #ffb515;
+}
+
+.registerBtn:focus {
+    outline: none;
 }

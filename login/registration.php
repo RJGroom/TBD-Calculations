@@ -8,7 +8,8 @@
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="registrationPage">
+    <p class="registrationHeader">Register</p>
     <form class= "registrationForm" name="register" method="GET" action="register.php">
         <!--<input type = "text" name = "email" placeholder = "Email Address"/><br/>-->
         <p class="inputHeader userName">Username:</p>
@@ -24,7 +25,7 @@
         <p class="inputHeader confirmPassword">Confirm Password</p>
         <input class="registerInput" type="password" name="confirmPassword" placeholder="Confirm Password" size="27"/><br/>
         <p class="gap"></p>
-        <input class="btns" type="submit" value="Register"/>
+        <input class="registerBtn" type="submit" value="Register"/>
     </form>
 </body>
 </html>

@@ -44,14 +44,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
-<body>
+<body class="loginPage">
+    <p class="loginHeader">Login</p>
     <form class="loginForm" action= "login.php" method= "post">
         <p>Username:</p>
         <input class= "loginInput" type= "text" name= "username" placeholder= "Username" size= "27"/><br/>
         <p>Password:</p>
         <input class= "loginInput" type= "password" name= "password" placeholder= "Password" size= "27"><br/>
-        <input class= "loginInput" name= "login" type= "submit" value= "Login"/><br/>
+        <input class= "loginInput loginBtn" name= "login" type= "submit" value= "Login"/><br/>
     </form>  
-    <a href= "./registration.php"><button class= "btns registerBtn">Register</button></a>
+    <a href= "./registration.php"><button class="registerBtnLogin">Register</button></a>
 </body>
 </html>
