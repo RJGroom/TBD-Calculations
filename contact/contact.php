@@ -29,7 +29,7 @@
 
         <div class="navSection">
             <p class="navDescription">Go back to our <span style="font-weight:bold">homepage</span></p>
-            <a href="../index.html" class="navLink">
+            <a href="../index.php" class="navLink">
                 <img class="navIcon" src="../Icons/house-outline.svg" title="Home">
             </a>
         </div>
@@ -37,7 +37,7 @@
         <div class="navSection">
             <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track
                 of your spending habits</p>
-            <a href="login.html" class="navLink">
+            <a href="../login/login.php" class="navLink">
                 <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>
@@ -45,7 +45,7 @@
         <div class="navSection">
             <p class="navDescription">View a <span style="font-weight:bold">graphical representation</span> of your
                 spending and saving habits</p>
-            <a href="graphs.html" class="navLink">
+            <a href="../graphs/graphs.php" class="navLink">
                 <img class="navIcon" src="../Icons/005-graph-1.svg" title="View-Graph">
             </a>
         </div>
@@ -53,7 +53,7 @@
         <div class="navSection">
             <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to
                 help improve your spending habits</p>
-            <a href="tips.html" class="navLink">
+            <a href="../tips/tips.html" class="navLink">
                 <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
             </a>
         </div>
@@ -61,7 +61,7 @@
         <div class="navSection">
             <p class="navDescription"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your
                 questions, comments, or concerns</p>
-            <a href="contact.html" class="navLink">
+            <a href="./contact.php" class="navLink">
                 <img class="navIcon" src="../Icons/001-contact.svg" title="Contact">
             </a>
         </div>
