@@ -44,18 +44,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
+
 <body class="loginPage">
-    <p class="loginHeader">Login</p>
+
+<!-- Nav Bar -->
+<div class="navBar" id="navBar">
+
+    <div class="navSection">
+        <h3 class="menu-text">Menu</h3>
+        <div class="menuIcon" onclick="toggleNav()" title = "Open Menu">
+            <div class="menuBar topBar" id="topBar"></div>
+            <div class="menuBar middleBar" id="middleBar"></div>
+            <div class="menuBar bottomBar" id="bottomBar"></div>
+        </div>
+    </div>
+
+    <div class="navSection">
+        <p class="navDescription">Go back to our <span style="font-weight:bold">homepage</span></p>
+        <a href="../index.php" class="navLink">
+            <img class="navIcon" src="../Icons/house-outline.svg" title="Home">
+        </a>
+    </div>
+
+    <div class="navSection">
+        <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
+        <a href="./login.php" class="navLink">
+            <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
+        </a>
+    </div>
+
+    <div class="navSection">
+        <p class="navDescription">View a <span style="font-weight:bold">graphical representation</span> of your spending and saving habits</p>
+        <a href="../graphs/graphs.php" class="navLink">
+            <img class="navIcon" src="../Icons/005-graph-1.svg" title="View-Graph">
+        </a>
+    </div>
+
+    <div class="navSection">
+        <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
+        <a href="../tips/tips.html" class="navLink">
+            <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
+        </a>
+    </div>
+
+    <div class="navSection">
+        <p class="navDescription"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your questions, comments, or concerns</p>
+        <a href ="../contact/contact.php" class="navLink">
+            <img class="navIcon" src="../Icons/001-contact.svg" title="Contact">
+        </a>
+    </div>
+
+    <div class="navSection">
+        <p class="navDescription">View a list of the different <span style="font-weight:bold">language and currency</span> preferences available</p>
+        <img class="navIcon" src="../Icons/008-worlwide.svg" title="Language-Currency">
+    </div>
+
+</div>
+
     <form class="loginForm" action= "login.php" method= "post">
-        <p>Username:</p>
+        <p class="loginHeader">Login</p>
+        <p class="login-input-title">Username:</p>
         <input class= "loginInput" type= "text" name= "username" placeholder= "Username" size= "27"/><br/>
-        <p>Password:</p>
+        <p class= "login-input-title">Password:</p>
         <input class= "loginInput" type= "password" name= "password" placeholder= "Password" size= "27"><br/>
         <input class= "loginInput loginBtn" name= "login" type= "submit" value= "Login"/><br/>
     </form>  
     <a href= "./registration.php"><button class="registerBtnLogin">Register</button></a>
+    
+    <script src="login.js"></script>
 </body>
 </html>

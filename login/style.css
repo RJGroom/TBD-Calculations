@@ -1,3 +1,123 @@
+.navBar {
+  z-index: 1;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+  width: 70px;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.navBar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.menu-text {
+  z-index: 1;
+  display: inline;
+  margin: 0;
+  width: 200px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: 'Raleway';
+  font-size: 30px;
+  color: white;
+}
+
+.menuIcon {
+  z-index: 1;
+  position: relative;
+  display: inline;
+  margin-right: 15px;
+  width: 40px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.menuBar {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.topBar {
+  top: 0px;
+  width: 70%;
+  margin-bottom: 6px;
+}
+
+.middleBar {
+  top: 10px;
+}
+
+.bottomBar {
+  top: 20px;
+}
+
+.navSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 0;
+  width: 380px;
+  height: 15%;
+  overflow: hidden;
+}
+
+.navDescription {
+  z-index: 1;
+  display: inline;
+  width: 200px;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: 'Raleway';
+  color: white;
+}
+
+.navLink {
+  z-index: 1;
+}
+
+.navIcon {
+  z-index: 1;
+  margin-right: 15px;
+  display: inline;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+  cursor: pointer;
+}
+
+.navIcon:hover {
+  opacity: 1;
+}
+
 p {
   margin: 0;
   font-family: 'raleway';
@@ -56,25 +176,54 @@ p {
 }
 
 .loginPage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 70px 1fr 70px;
+      grid-template-columns: 70px 1fr 70px;
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
   opacity: .8;
 }
 
 .loginForm {
-  position: relative;
-  left: 80px;
-  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
   background-color: #465b8b;
   background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
   background-image: linear-gradient(to right, #465b8b, 0);
 }
 
 .loginHeader {
+  float: left;
   font-weight: bolder;
-  margin-left: 75px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 28px;
+  width: 229px;
   background-color: #465b8b;
+}
+
+.login-input-title {
+  width: 229px;
 }
 
 .loginInput {
