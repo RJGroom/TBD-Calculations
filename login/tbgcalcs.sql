@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 03, 2019 at 08:22 PM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Host: localhost
+-- Generation Time: Mar 03, 2019 at 08:33 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,8 +44,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`username`, `password`, `id`, `isAdmin`, `fName`, `lName`, `email`) VALUES
 ('jonah_downs', 'password', 1, 1, 'Jonah', 'Downs', 'jonah.c.downs@gmail.com'),
-('ritchie_rich', 'animetitties', 4, 1, '', '', ''),
-('ryan_groom', 'epicfortnitekill', 6, 1, '', '', ''),
+('ritchey_rich', 'animetitties', 4, 1, 'Eric', 'Ritchey', ''),
+('ryan_groom', 'epicfortnitekill', 6, 1, 'Ryan', 'Groom', 'RJGroomy@yahoo.com'),
 ('the_room', 'ohhimark', 7, 0, 'Tommy', 'Wisseau', 'wisseau@tommy.gov');
 
 --
