@@ -1,4 +1,3 @@
-@charset "UTF-8";
 p {
   margin: 0;
   font-family: 'raleway';
@@ -6,20 +5,16 @@ p {
 }
 
 .registrationPage {
-  position: absolute;
-  background-image: url("C:xampphtdocsTBGCalculationsImages\alone-bills-calculator-1253591.jpg");
-  opacity: 1;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  height: 100%;
-  width: 100%;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  background-image: url("./Images/alone-bills-calculator-1253591.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 .registrationHeader {
@@ -32,11 +27,9 @@ p {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 28px;
   background-color: #465b8b;
-  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
-  background-image: linear-gradient(to right, #465b8b, 0);
 }
 
 .registrationForm {
@@ -52,8 +45,6 @@ p {
   margin-left: 140px;
   margin-top: 100px;
   background-color: #465b8b;
-  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
-  background-image: linear-gradient(to right, #465b8b, 0);
 }
 
 .gap {
@@ -65,7 +56,6 @@ p {
 }
 
 .loginPage {
-  background-image: url("./C:xampphtdocsTBGCalculationsImages­ults-book-business-297755.jpg");
   background-size: cover;
   opacity: .8;
 }
@@ -85,8 +75,6 @@ p {
   margin-top: 20px;
   font-size: 28px;
   background-color: #465b8b;
-  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
-  background-image: linear-gradient(to right, #465b8b, 0);
 }
 
 .loginInput {
