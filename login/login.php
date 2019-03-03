@@ -1,7 +1,10 @@
 <?php
     session_start();
-
-    if(isset($_POST['login']))
+    if(empty($_POST['username']))
+    {
+        echo "Please fill in all fields.";
+    }
+    else if(isset($_POST['login']))
     {
         include_once("comm.php");
         $Username = strip_tags($_POST['username']);
