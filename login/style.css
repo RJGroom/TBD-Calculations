@@ -179,15 +179,15 @@ p {
 .loginPage {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr, 1fr, 1fr;
-      grid-template-rows: 1fr, 1fr, 1fr;
+  -ms-grid-rows: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
   -ms-grid-columns: 70px 1fr 1fr 1fr 70px;
       grid-template-columns: 70px 1fr 1fr 1fr 70px;
   width: 100vw;
   height: 100vh;
   background-image: url("./Images/adult-book-business-297755.jpg");
   background-size: cover;
-  opacity: .6;
+  background-position: relative;
 }
 
 .loginForm {
@@ -201,22 +201,23 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-grid-row: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-row: 2;
   -ms-grid-row-span: 1;
-  grid-row: 1/2;
+  grid-row: 2/3;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  background-color: white;
+  background-color: #465b8b;
 }
 
 .loginHeader {
   float: left;
   font-weight: bolder;
   margin-bottom: 20px;
+  margin-top: 20px;
   font-size: 28px;
   width: 229px;
   background-color: #465b8b;
@@ -277,11 +278,20 @@ p {
   outline: none;
 }
 
+.register-div {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  position: relative;
+}
+
 .registerBtnLogin {
-  position: flex;
-  left: 120px;
-  top: 20px;
+  position: relative;
   color: black;
+  text-decoration: none;
   background-color: #ffb515;
   font-family: "Raleway";
   font-weight: bold;
@@ -291,6 +301,8 @@ p {
   cursor: pointer;
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
+  left: 50%;
+  top: 62%;
 }
 
 .registerBtnLogin:hover {
