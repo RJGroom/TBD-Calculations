@@ -131,8 +131,9 @@ p {
       grid-template-rows: repeat(4, 1fr);
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  background-image: url("./Images/alone-bills-calculator-1253591.jpg");
+  background-image: url("./Images/chart-data-desk-590022.jpg");
   background-size: cover;
+  opacity: .8;
   height: 100vh;
   width: 100vw;
 }
@@ -178,14 +179,15 @@ p {
 .loginPage {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -ms-grid-columns: 70px 1fr 70px;
-      grid-template-columns: 70px 1fr 70px;
+  -ms-grid-rows: 1fr, 1fr, 1fr;
+      grid-template-rows: 1fr, 1fr, 1fr;
+  -ms-grid-columns: 70px 1fr 1fr 1fr 70px;
+      grid-template-columns: 70px 1fr 1fr 1fr 70px;
   width: 100vw;
   height: 100vh;
+  background-image: url("./Images/adult-book-business-297755.jpg");
   background-size: cover;
-  opacity: .8;
+  opacity: .6;
 }
 
 .loginForm {
@@ -205,12 +207,10 @@ p {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 3;
   -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  background-color: #465b8b;
-  background-image: -webkit-gradient(linear, left top, right top, from(#465b8b), to(0));
-  background-image: linear-gradient(to right, #465b8b, 0);
+  grid-column: 3/4;
+  background-color: white;
 }
 
 .loginHeader {
@@ -278,8 +278,8 @@ p {
 }
 
 .registerBtnLogin {
-  position: relative;
-  left: 116px;
+  position: flex;
+  left: 120px;
   top: 20px;
   color: black;
   background-color: #ffb515;

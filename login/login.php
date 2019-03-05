@@ -113,8 +113,7 @@
         <input class= "loginInput" type= "password" name= "password" placeholder= "Password" size= "27"><br/>
         <input class= "loginInput loginBtn" name= "login" type= "submit" value= "Login"/><br/>
     </form>  
-    <a href= "./registration.php"><button class="registerBtnLogin">Register</button></a>
-    
+    <a href= "./register.php"><button class="registerBtnLogin">Register</button></a>
     <script src="login.js"></script>
 </body>
 </html>
