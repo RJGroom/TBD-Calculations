@@ -104,7 +104,7 @@
     </div>
 
 </div>
-
+<div class="register-div">
     <form class="loginForm" action= "login.php" method= "post">
         <p class="loginHeader">Login</p>
         <p class="login-input-title">Username:</p>
@@ -112,11 +112,9 @@
         <p class= "login-input-title">Password:</p>
         <input class= "loginInput" type= "password" name= "password" placeholder= "Password" size= "27"><br/>
         <input class= "loginInput loginBtn" name= "login" type= "submit" value= "Login"/><br/>
-    </form>  
-
-    <div class="register-div">
+    </form>
     <a href= "./register.php"><button class="registerBtnLogin">Register</button></a>
-    </div>
+</div>
 
     <script src="login.js"></script>
 </body>

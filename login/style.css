@@ -204,13 +204,6 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  background-color: #465b8b;
 }
 
 .loginHeader {
@@ -286,23 +279,22 @@ p {
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   position: relative;
+  background-color: #465b8b;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .registerBtnLogin {
-  position: relative;
   color: black;
   text-decoration: none;
   background-color: #ffb515;
   font-family: "Raleway";
   font-weight: bold;
   border: 2px solid #ffb515;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
   cursor: pointer;
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
-  left: 50%;
-  top: 62%;
 }
 
 .registerBtnLogin:hover {
