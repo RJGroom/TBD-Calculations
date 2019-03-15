@@ -1,3 +1,52 @@
+<?php
+/*
+session_start();
+include '../login/comm.php';
+
+function getUserData($id)
+{
+    $array = array();
+    $query = mysqli_query($conn, "SELECT * FROM 'users' WHERE 'id'=" .$id);
+    while ($r = mysqli_fetch_assoc($query))
+    {
+        $array['username'] = $r['username'];
+        $array['password'] = $r['password'];
+        $array['id'] = $r['id'];
+        $array['isAdmin'] = $r['isAdmin'];
+        $array['fName'] = $r['fName'];
+        $array['lName'] = $r['lName'];
+        $array['email'] = $r['email'];
+    }
+    return $array;
+}
+
+function getId($username)
+{
+    $query = mysqli_query($conn, "SELECT 'id' FROM 'users' WHERE 'username'='" .$username."'");
+    while ($r = mysqli_fetch_assoc($query))
+    {
+        return $r['id'];
+    }
+}
+*/
+?>
+
+
+<?php
+/*
+if(isset($_SESSION['username'])) 
+{
+    $userData = getUserData(getId($_SESSION['username']));
+}
+*/
+?>
+
+<?php 
+/*
+echo $userData['username'] 
+*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
