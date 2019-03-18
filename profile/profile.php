@@ -1,50 +1,15 @@
 <?php
-/*
 session_start();
-include '../login/comm.php';
-
-function getUserData($id)
-{
-    $array = array();
-    $query = mysqli_query($conn, "SELECT * FROM 'users' WHERE 'id'=" .$id);
-    while ($r = mysqli_fetch_assoc($query))
-    {
-        $array['username'] = $r['username'];
-        $array['password'] = $r['password'];
-        $array['id'] = $r['id'];
-        $array['isAdmin'] = $r['isAdmin'];
-        $array['fName'] = $r['fName'];
-        $array['lName'] = $r['lName'];
-        $array['email'] = $r['email'];
-    }
-    return $array;
-}
-
-function getId($username)
-{
-    $query = mysqli_query($conn, "SELECT 'id' FROM 'users' WHERE 'username'='" .$username."'");
-    while ($r = mysqli_fetch_assoc($query))
-    {
-        return $r['id'];
-    }
-}
-*/
+require('../login/comm.php');
+require('functions.php');
 ?>
 
 
 <?php
-/*
 if(isset($_SESSION['username'])) 
 {
-    $userData = getUserData(getId($_SESSION['username']));
+    $userData = getUserData($conn, $_SESSION['username']);
 }
-*/
-?>
-
-<?php 
-/*
-echo $userData['username'] 
-*/
 ?>
 
 <!DOCTYPE html>
@@ -120,11 +85,11 @@ echo $userData['username']
         </div>
 
     <div class="profile-header profile-section">
-        <a class="sign-out-link" href="#home">Sign Out</a>
+        <a class="sign-out-link" href="../login/logout.php">Sign Out</a>
     </div>
 
     <div class="profile-main-info profile-section">
-        <h4 class="main-info-heading">Welcome, "Jonah"</h4>
+        <h4 class="main-info-heading">Welcome, <?php echo $userData['fName'] ?> </h4>
         <p class="main-info-para">Your monthly income is <span style="color: white">$5000</span></p>
         <p class="main-info-para">You save <span style="color: white">1000</span> each month which amounts to <span style="color: white">10%</span> of your income.</p>
         <p class="main-info-para">You have <span id="leftoverExcessFunds" style="color: white"></span> left of your <span id="excessFunds" style="color: white"></span> of excess funds</p>

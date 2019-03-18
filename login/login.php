@@ -2,7 +2,7 @@
     session_start();
     if(empty($_POST['username']))
     {
-        echo "Please fill in all fields.";
+        //echo "Please fill in all fields.";
     }
     else if(isset($_POST['login']))
     {
@@ -27,7 +27,7 @@
             $_SESSION['username'] = $Username;
             $_SESSION['id'] = $id;
             $_SESSION['isLoggedIn'] = TRUE;
-            header("Location: ../index.php");
+            header("Location: ../profile/profile.php");
         }
         else
         {
