@@ -79,11 +79,10 @@ function drawChart2() {
                      2]);
 
     let options = {
-      height: '460',
-      backgroundColor: "#F7F5E6",
+      height: '520',
       bar: {groupWidth: "95%"},
       legend: { position: "none" },
-      chartArea: {top: '20', width: '90%', height: '70%'},
+      chartArea: {top: '20', width: '90%', height: '60%'},
       hAxis: {textStyle:{fontSize: '15'},
         slantedText: 'true',
         slantedTextAngle: '90',

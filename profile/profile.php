@@ -8,6 +8,7 @@ require('functions.php');
 <?php
 if(isset($_SESSION['username'])) 
 {
+    $userInfo = getUserInfo($conn, $_SESSION['username']);
     $userData = getUserData($conn, $_SESSION['username']);
 }
 ?>
@@ -84,15 +85,23 @@ if(isset($_SESSION['username']))
     
         </div>
 
-    <div class="profile-header profile-section">
-        <a class="sign-out-link" href="../login/logout.php">Sign Out</a>
-    </div>
-
     <div class="profile-main-info profile-section">
-        <h4 class="main-info-heading">Welcome, <?php echo $userData['fName'] ?> </h4>
-        <p class="main-info-para">Your monthly income is <span style="color: white">$5000</span></p>
-        <p class="main-info-para">You save <span style="color: white">1000</span> each month which amounts to <span style="color: white">10%</span> of your income.</p>
-        <p class="main-info-para">You have <span id="leftoverExcessFunds" style="color: white"></span> left of your <span id="excessFunds" style="color: white"></span> of excess funds</p>
+        <h4 class="main-info-heading">Welcome, <?php echo $userInfo['fName'] ?> </h4>
+        <p>Not you?
+            <a class="sign-out-link" href="../login/logout.php">Sign Out</a>
+        </p>
+        <p class="main-info-para">Monthly Income: <span style="font-weight: bold">$<?php echo $userData['primaryIncome'] + $userData['secondaryIncome'] ?></span></p>
+        <p class="main-info-para">Monthly Savings: <span style="font-weight: bold">$<?php echo $userData['primarySavings'] ?></span> <br />
+        saving <span style="font-weight: bold"> 
+        
+        <?php 
+            if($userData['primaryIncome'] > 0) {
+            echo round(($userData['primarySavings'] / ($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 2);
+            }
+        ?>%</span> 
+
+         of your income</p>
+        <p class="main-info-para">You have <span style="font-weight: bold">$<?php echo $userData['leftoverExcessFunds'] ?></span> left of your <span style="font-weight: bold">$<?php echo $userData['excessFunds'] ?></span> of excess funds</p>
 
         <p class="main-info-para">Input recent spendings: </p>
         <p class="main-info-para">$
@@ -104,18 +113,7 @@ if(isset($_SESSION['username']))
                 min="0"
             />
         </p>
-        <button class="confirm-btn" onclick="calculateExcessFunds()">Confirm</button>
-    </div>
-
-    <div class="profile-tips profile-section">
-        <h4 class="tips-heading">Tips tailored for you</h4>
-        <p class="tip-item">Here is a tip</p>
-        <p class="tip-item">Here is a tip</p>
-        <p class="tip-item">Here is a tip</p>
-        <p class="tip-item">Here is a tip</p>
-        <p class="tip-item">Here is a tip</p>
-        <p class="tip-item">Here is a tip</p>
-        <p class="tip-item">Here is a tip</p>
+        <button class="confirm-btn" onclick="">Confirm</button>
     </div>
 
     <div class="profile-graph-one profile-section">
@@ -131,42 +129,73 @@ if(isset($_SESSION['username']))
     </div>
 
     <div class="open-update-data-tab" onclick="openUpdateData()">
-        <h3 class="open-update-data-icon">O</h3>
+        <p class="open-update-data-text">Update Data</p>
     </div>
 
     <div class="update-data" id="updateData">
-        <h3 class="close-update-data-tab" onclick="closeUpdateData()">X</h3>
 
-        <form class="updateDataForm" action="profile.php" method="post">
-            <h3>Income</h3>
-            <input class="update-input" placeholder="Primary monthly income" name="primaryIncome" />
+    <h3 class="close-update-data-tab" onclick="closeUpdateData()">X</h3>
+        <form class="updateDataForm" action="profile.php" method="post" name="updateDataForm">
+
+        <div class="form-container">
+        <div class="update-data-column-one">
+            <h3 class="update-header">Income</h3>
+            <label class="input-header">Primary Income</label> <br />
+            <input class="update-input" placeholder="Primary monthly income" name="primaryIncome" /> <br />
+            <label class="input-header">Secondary Income</label> <br />
             <input class="update-input" placeholder="Secondary monthly income" name="secondaryIncome" />
+        </div>
 
-            <h3>Primary expenses</h3>
-            <input class="update-input" placeholder="Housing payments" name="housing" />
-            <input class="update-input" placeholder="Loans" name="loans" />
-            <input class="update-input" placeholder="Health insurance" name="healthInsurance" />
-            <input class="update-input" placeholder="Transportation" name="transportation" />
-            <input class="update-input" placeholder="Cell Phone Bill" name="cellphoneBill"/>
-            <input class="update-input" placeholder="Groceries" name="groceries" />
+        <div class="update-data-column-two">
+            <h3 class="update-header">Primary expenses</h3>
+            <label class="input-header">Housing Payments</label> <br />
+            <input class="update-input" placeholder="Housing payments" name="housing" /> <br />
+            <label class="input-header">Loans</label> <br />
+            <input class="update-input" placeholder="Loans" name="loans" /> <br />
+            <label class="input-header">Health Insurance</label> <br />
+            <input class="update-input" placeholder="Health insurance" name="healthInsurance" /> <br />
+            <label class="input-header">Transportation</label> <br />
+            <input class="update-input" placeholder="Transportation" name="transportation" /> <br />
+            <label class="input-header">Cellphone Bill</label> <br />
+            <input class="update-input" placeholder="Cell Phone Bill" name="cellphoneBill"/> <br />
+            <label class="input-header">Groceries</label> <br />
+            <input class="update-input" placeholder="Groceries" name="groceries" /> <br />
+            <label class="input-header">Clothing</label> <br />
             <input class="update-input" placeholder="Clothing" name="clothing" />
+        </div>
 
-            <h3>Utilities</h3>
-            <input class="update-input" placeholder="Gas" name="gas" />
-            <input class="update-input" placeholder="Electric" name="electric" />
-            <input class="update-input" placeholder="Water" name="water" />
+        <div class="update-data-column-three">
+            <h3 class="update-header">Utilities</h3>
+            <label class="input-header">Gas</label> <br />
+            <input class="update-input" placeholder="Gas" name="gas" /> <br />
+            <label class="input-header">Electric</label> <br />
+            <input class="update-input" placeholder="Electric" name="electric" /> <br />
+            <label class="input-header">Water</label> <br />
+            <input class="update-input" placeholder="Water" name="water" /> <br />
+            <label class="input-header">Cable/Internet</label> <br />
             <input class="update-input" placeholder="Cable/Internet" name="cableInternet" />
+        </div>
 
-            <h3>Secondary expenses</h3>
-            <input class="update-input" placeholder="Monthly subscriptions" name="monthlySubscriptions" />
+        <div class="update-data-column-four">
+            <h3 class="update-header">Secondary expenses</h3>
+            <label class="input-header">Monthly Subscriptions</label> <br />
+            <input class="update-input" placeholder="Monthly subscriptions" name="monthlySubscriptions" /> <br />
+            <label class="input-header">Miscellaneous</label> <br />
             <input class="update-input" placeholder="Miscellaneous" name="miscellaneous" />  
+        </div>
 
-            <h3>Savings</h3>
-            <input class="update-input" placeholder="Primary savings" name="primarySavings" />
-            <input class="update-input" placeholder="Emergency funds" name="emergencyFunds" />
+        <div class="update-data-column-five">
+            <h3 class="update-header">Savings</h3>
+            <label class="input-header">Primary Savings</label> <br />
+            <input class="update-input" placeholder="Primary savings" name="primarySavings" /> <br />
+            <label class="input-header">Emergency Funds</label> <br />
+            <input class="update-input" placeholder="Emergency funds" name="emergencyFunds" /> <br />
+            <label class="input-header">Vacation Funds</label> <br />
             <input class="update-input" placeholder="Vacation funds" name="vacationFunds" />
 
-            <input type="submit" value="Update">
+            <input class="update-submit" type="submit" value="Update Data">
+        </div>
+        </div>
         </form>
     </div>
 
@@ -174,6 +203,14 @@ if(isset($_SESSION['username']))
 
    <?php
  
+ if(isset($_POST['primaryIncome']) && isset($_POST['secondaryIncome'])
+ && isset($_POST['housing']) && isset($_POST['loans']) && isset($_POST['healthInsurance'])
+ && isset($_POST['transportation']) && isset($_POST['cellphoneBill']) && isset($_POST['groceries'])
+ && isset($_POST['clothing']) && isset($_POST['gas']) && isset($_POST['electric'])
+ && isset($_POST['water']) && isset($_POST['cableInternet']) && isset($_POST['monthlySubscriptions'])
+ && isset($_POST['miscellaneous']) && isset($_POST['primarySavings']) && isset($_POST['emergencyFunds'])
+ && isset($_POST['vacationFunds']))
+ {
     $primaryIncome = $_POST['primaryIncome'];
     $secondaryIncome = $_POST['secondaryIncome'];
     $housing = $_POST['housing'];
@@ -192,6 +229,11 @@ if(isset($_SESSION['username']))
     $primarySavings = $_POST['primarySavings'];
     $emergencyFunds = $_POST['emergencyFunds'];
     $vacationFunds = $_POST['vacationFunds'];
+    
+    $excessFunds = $primaryIncome + $secondaryIncome - $housing - $loans - $healthInsurance -
+                   $transportation - $cellphoneBill - $groceries - $clothing - $gas -
+                   $electric - $water - $cableInternet - $monthlySubscriptions -
+                   $miscellaneous - $primarySavings - $emergencyFunds - $vacationFunds;
 
     $sql = "UPDATE expenses SET
             primaryIncome = $primaryIncome,
@@ -211,17 +253,42 @@ if(isset($_SESSION['username']))
             miscellaneous = $miscellaneous,
             primarySavings= $primarySavings,
             emergencyFunds = $emergencyFunds,
-            vacationFunds = $vacationFunds
+            vacationFunds = $vacationFunds,
+            excessFunds = $excessFunds,
+            leftoverExcessFunds = $excessFunds
 
             WHERE username = '" . $_SESSION['username'] . "'";
 
        if (mysqli_query($conn, $sql)) {
-           echo "sucess";
        }
        else {
-           echo "Failure to update";
        }
+    }
 ?>
+    <script type="text/javascript">
+    
+    let primaryIncome = "<?= $primaryIncome ?>";
+    let secondaryIncome = "<?= $secondaryIncome ?>";
+    let housing = "<?= $housing?>";
+    let loans = "<?= $loans ?>";
+    let healthInsurance = "<?= $healthInsurance ?>";
+    let transportation = "<?= $transportation ?>";
+    let cellphoneBill = "<?= $cellphoneBill ?>";
+    let groceries = "<?= $groceries ?>";
+    let clothing = "<?= $clothing ?>";
+    let gas = "<?= $gas ?>";
+    let electric = "<?= $electric ?>";
+    let water = "<?= $water ?>";
+    let cableInternet = "<?= $cableInternet ?>";
+    let monthlySubscriptions = "<?= $monthlySubscriptions ?>";
+    let miscellaneous = "<?= $miscellaneous ?>";
+    let primarySavings = "<?= $primarySavings?>";
+    let emergencyFunds = "<?= $emergencyFunds ?>";
+    let vacationFunds = "<?= $vacationFunds ?>";
+    let excessFunds = "<?= $excessFunds ?>";
+    
+    </script>
+
 
    <script src="profile.js"></script>
 </body>
