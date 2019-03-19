@@ -177,9 +177,15 @@
   font-size: 1em;
 }
 
+.spending-calculator {
+  position: relative;
+  width: 90%;
+  border: 1px solid black;
+}
+
 .spending-input {
   height: 30px;
-  width: 200px;
+  width: 100px;
   font-size: 30px;
 }
 
@@ -198,6 +204,10 @@ input::-webkit-inner-spin-button {
 }
 
 .confirm-btn {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 40px;
   color: black;
   background-color: #ffb515;

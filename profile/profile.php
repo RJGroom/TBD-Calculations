@@ -90,6 +90,7 @@ if(isset($_SESSION['username']))
         <p>Not you?
             <a class="sign-out-link" href="../login/logout.php">Sign Out</a>
         </p>
+        <h3>Your Info:</h3>
         <p class="main-info-para">Monthly Income: <span style="font-weight: bold">$<?php echo $userData['primaryIncome'] + $userData['secondaryIncome'] ?></span></p>
         <p class="main-info-para">Monthly Savings: <span style="font-weight: bold">$<?php echo $userData['primarySavings'] ?></span> <br />
         saving <span style="font-weight: bold"> 
@@ -98,11 +99,24 @@ if(isset($_SESSION['username']))
             if($userData['primaryIncome'] > 0) {
             echo round(($userData['primarySavings'] / ($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 2);
             }
-        ?>%</span> 
+        ?>%</span> of your income</p>
 
-         of your income</p>
+        <p class="main-info-para">You pay <span style="font-weight: bold">$<?php echo $userData['gas'] +
+                                                                                    $userData['electric'] +
+                                                                                    $userData['water'] +
+                                                                                    $userData['cableInternet']
+        
+        ?></span> in utilities every month <br />
+
         <p class="main-info-para">You have <span style="font-weight: bold">$<?php echo $userData['leftoverExcessFunds'] ?></span> left of your <span style="font-weight: bold">$<?php echo $userData['excessFunds'] ?></span> of excess funds</p>
 
+        <p class="main-info-para">You are saving <span style="font-weight: bold">$<?php echo $userData['vacationFunds'] ?></span> every month towards your next vacation <br />
+
+        <br />
+        <br />
+        <br />
+        <h3>Funds Calculator</h3>
+        <div class="spending-calculator">
         <p class="main-info-para">Input recent spendings: </p>
         <p class="main-info-para">$
                 <input
@@ -111,9 +125,11 @@ if(isset($_SESSION['username']))
                 type="number"
                 value="0"
                 min="0"
+                size= "10"
             />
         </p>
         <button class="confirm-btn" onclick="">Confirm</button>
+        </div>
     </div>
 
     <div class="profile-graph-one profile-section">
@@ -141,57 +157,57 @@ if(isset($_SESSION['username']))
         <div class="update-data-column-one">
             <h3 class="update-header">Income</h3>
             <label class="input-header">Primary Income</label> <br />
-            <input class="update-input" placeholder="Primary monthly income" name="primaryIncome" /> <br />
+            <input class="update-input" placeholder="Primary monthly income" name="primaryIncome" value="<?php echo $userData['primaryIncome'] ?>"/> <br />
             <label class="input-header">Secondary Income</label> <br />
-            <input class="update-input" placeholder="Secondary monthly income" name="secondaryIncome" />
+            <input class="update-input" placeholder="Secondary monthly income" name="secondaryIncome" value="<?php echo $userData['secondaryIncome'] ?>" />
         </div>
 
         <div class="update-data-column-two">
             <h3 class="update-header">Primary expenses</h3>
             <label class="input-header">Housing Payments</label> <br />
-            <input class="update-input" placeholder="Housing payments" name="housing" /> <br />
+            <input class="update-input" placeholder="Housing payments" name="housing" value="<?php echo $userData['housing'] ?>" /> <br />
             <label class="input-header">Loans</label> <br />
-            <input class="update-input" placeholder="Loans" name="loans" /> <br />
+            <input class="update-input" placeholder="Loans" name="loans" value="<?php echo $userData['loans'] ?>"/> <br />
             <label class="input-header">Health Insurance</label> <br />
-            <input class="update-input" placeholder="Health insurance" name="healthInsurance" /> <br />
+            <input class="update-input" placeholder="Health insurance" name="healthInsurance" value="<?php echo $userData['healthInsurance'] ?>" /> <br />
             <label class="input-header">Transportation</label> <br />
-            <input class="update-input" placeholder="Transportation" name="transportation" /> <br />
+            <input class="update-input" placeholder="Transportation" name="transportation" value="<?php echo $userData['transportation'] ?>" /> <br />
             <label class="input-header">Cellphone Bill</label> <br />
-            <input class="update-input" placeholder="Cell Phone Bill" name="cellphoneBill"/> <br />
+            <input class="update-input" placeholder="Cell Phone Bill" name="cellphoneBill" value="<?php echo $userData['cellphoneBill'] ?>" /> <br />
             <label class="input-header">Groceries</label> <br />
-            <input class="update-input" placeholder="Groceries" name="groceries" /> <br />
+            <input class="update-input" placeholder="Groceries" name="groceries" value="<?php echo $userData['groceries'] ?>" /> <br />
             <label class="input-header">Clothing</label> <br />
-            <input class="update-input" placeholder="Clothing" name="clothing" />
+            <input class="update-input" placeholder="Clothing" name="clothing" value="<?php echo $userData['clothing'] ?>" />
         </div>
 
         <div class="update-data-column-three">
             <h3 class="update-header">Utilities</h3>
             <label class="input-header">Gas</label> <br />
-            <input class="update-input" placeholder="Gas" name="gas" /> <br />
+            <input class="update-input" placeholder="Gas" name="gas" value="<?php echo $userData['gas'] ?>" /> <br />
             <label class="input-header">Electric</label> <br />
-            <input class="update-input" placeholder="Electric" name="electric" /> <br />
+            <input class="update-input" placeholder="Electric" name="electric" value="<?php echo $userData['electric'] ?>" /> <br />
             <label class="input-header">Water</label> <br />
-            <input class="update-input" placeholder="Water" name="water" /> <br />
+            <input class="update-input" placeholder="Water" name="water" value="<?php echo $userData['water'] ?>" /> <br />
             <label class="input-header">Cable/Internet</label> <br />
-            <input class="update-input" placeholder="Cable/Internet" name="cableInternet" />
+            <input class="update-input" placeholder="Cable/Internet" name="cableInternet" value="<?php echo $userData['cableInternet'] ?>" />
         </div>
 
         <div class="update-data-column-four">
             <h3 class="update-header">Secondary expenses</h3>
             <label class="input-header">Monthly Subscriptions</label> <br />
-            <input class="update-input" placeholder="Monthly subscriptions" name="monthlySubscriptions" /> <br />
+            <input class="update-input" placeholder="Monthly subscriptions" name="monthlySubscriptions" value="<?php echo $userData['monthlySubscriptions'] ?>" /> <br />
             <label class="input-header">Miscellaneous</label> <br />
-            <input class="update-input" placeholder="Miscellaneous" name="miscellaneous" />  
+            <input class="update-input" placeholder="Miscellaneous" name="miscellaneous" value="<?php echo $userData['miscellaneous'] ?>" />  
         </div>
 
         <div class="update-data-column-five">
             <h3 class="update-header">Savings</h3>
             <label class="input-header">Primary Savings</label> <br />
-            <input class="update-input" placeholder="Primary savings" name="primarySavings" /> <br />
+            <input class="update-input" placeholder="Primary savings" name="primarySavings" value="<?php echo $userData['primarySavings'] ?>" /> <br />
             <label class="input-header">Emergency Funds</label> <br />
-            <input class="update-input" placeholder="Emergency funds" name="emergencyFunds" /> <br />
+            <input class="update-input" placeholder="Emergency funds" name="emergencyFunds" value="<?php echo $userData['emergencyFunds'] ?>" /> <br />
             <label class="input-header">Vacation Funds</label> <br />
-            <input class="update-input" placeholder="Vacation funds" name="vacationFunds" />
+            <input class="update-input" placeholder="Vacation funds" name="vacationFunds" value="<?php echo $userData['vacationFunds'] ?>" />
 
             <input class="update-submit" type="submit" value="Update Data">
         </div>
@@ -260,35 +276,12 @@ if(isset($_SESSION['username']))
             WHERE username = '" . $_SESSION['username'] . "'";
 
        if (mysqli_query($conn, $sql)) {
+        echo "<meta http-equiv='refresh' content='0'>";
        }
        else {
        }
     }
 ?>
-    <script type="text/javascript">
-    
-    let primaryIncome = "<?= $primaryIncome ?>";
-    let secondaryIncome = "<?= $secondaryIncome ?>";
-    let housing = "<?= $housing?>";
-    let loans = "<?= $loans ?>";
-    let healthInsurance = "<?= $healthInsurance ?>";
-    let transportation = "<?= $transportation ?>";
-    let cellphoneBill = "<?= $cellphoneBill ?>";
-    let groceries = "<?= $groceries ?>";
-    let clothing = "<?= $clothing ?>";
-    let gas = "<?= $gas ?>";
-    let electric = "<?= $electric ?>";
-    let water = "<?= $water ?>";
-    let cableInternet = "<?= $cableInternet ?>";
-    let monthlySubscriptions = "<?= $monthlySubscriptions ?>";
-    let miscellaneous = "<?= $miscellaneous ?>";
-    let primarySavings = "<?= $primarySavings?>";
-    let emergencyFunds = "<?= $emergencyFunds ?>";
-    let vacationFunds = "<?= $vacationFunds ?>";
-    let excessFunds = "<?= $excessFunds ?>";
-    
-    </script>
-
 
    <script src="profile.js"></script>
 </body>
