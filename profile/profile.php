@@ -87,10 +87,10 @@ if(isset($_SESSION['username']))
 
     <div class="profile-main-info profile-section">
         <h4 class="main-info-heading">Welcome, <?php echo $userInfo['fName'] ?> </h4>
-        <p>Not you?
+        <p class="not-you-para">Not you?
             <a class="sign-out-link" href="../login/logout.php">Sign Out</a>
         </p>
-        <h3>Your Info:</h3>
+        <h3 class="info-header">Your Info:</h3>
         <p class="main-info-para">Monthly Income: <span style="font-weight: bold">$<?php echo $userData['primaryIncome'] + $userData['secondaryIncome'] ?></span></p>
         <p class="main-info-para">Monthly Savings: <span style="font-weight: bold">$<?php echo $userData['primarySavings'] ?></span> <br />
         saving <span style="font-weight: bold"> 
@@ -115,7 +115,7 @@ if(isset($_SESSION['username']))
         <br />
         <br />
         <br />
-        <h3>Funds Calculator</h3>
+        <h3 class="info-header">Funds Calculator</h3>
         <div class="spending-calculator">
         <p class="main-info-para">Input recent spendings: </p>
         <p class="main-info-para">$
@@ -207,13 +207,16 @@ if(isset($_SESSION['username']))
             <label class="input-header">Emergency Funds</label> <br />
             <input class="update-input" placeholder="Emergency funds" name="emergencyFunds" value="<?php echo $userData['emergencyFunds'] ?>" /> <br />
             <label class="input-header">Vacation Funds</label> <br />
-            <input class="update-input" placeholder="Vacation funds" name="vacationFunds" value="<?php echo $userData['vacationFunds'] ?>" />
+            <input class="update-input" placeholder="Vacation funds" name="vacationFunds" value="<?php echo $userData['vacationFunds'] ?>" /> <br />
 
             <input class="update-submit" type="submit" value="Update Data">
         </div>
         </div>
         </form>
     </div>
+        <div class="profile-tips-section">
+            <h3>Profile tips section</h3>
+        </div>
 
    </div>
 

@@ -127,12 +127,12 @@
 .profile-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[12];
-      grid-template-rows: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[15];
+      grid-template-rows: repeat(15, 1fr);
   -ms-grid-columns: 70px (1fr)[10] 70px;
       grid-template-columns: 70px repeat(10, 1fr) 70px;
   grid-gap: 1em;
-  height: 200vh;
+  height: 250vh;
   width: 100vw;
   background-color: #465C8B;
 }
@@ -150,11 +150,20 @@
           align-items: center;
 }
 
+.not-you-para {
+  font-family: 'Raleway';
+}
+
 .sign-out-link {
   text-decoration: none;
+  font-family: 'Raleway';
   margin: 10px;
   text-align: center;
   font-size: 1em;
+}
+
+.info-header {
+  font-family: 'Raleway';
 }
 
 .profile-main-info {
@@ -168,12 +177,14 @@
 .main-info-heading {
   margin-top: 1em;
   margin-bottom: 0;
+  font-family: 'Raleway';
   font-size: 26px;
 }
 
 .main-info-para {
   margin: 10px;
   text-align: center;
+  font-family: 'Raleway';
   font-size: 1em;
 }
 
@@ -208,7 +219,7 @@ input::-webkit-inner-spin-button {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 40px;
+  height: 35px;
   color: black;
   background-color: #ffb515;
   font-family: "Raleway";
@@ -217,6 +228,7 @@ input::-webkit-inner-spin-button {
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
   cursor: pointer;
+  bottom: 3px;
 }
 
 .confirm-btn:hover {
@@ -257,6 +269,16 @@ input::-webkit-inner-spin-button {
   grid-column: 4/12;
 }
 
+.profile-tips-section {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 3;
+  grid-row: 13/16;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4/12;
+  background-color: white;
+}
+
 .open-update-data-tab {
   position: fixed;
   height: 60px;
@@ -272,8 +294,10 @@ input::-webkit-inner-spin-button {
 .form-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 70px 1fr 1fr 1fr 1fr 1fr 70px;
-      grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr 70px;
+  -ms-grid-columns: 100px 1fr 1fr 1fr 1fr 1fr 70px;
+      grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 70px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .update-data-column-one {
@@ -309,6 +333,8 @@ input::-webkit-inner-spin-button {
 .open-update-data-text {
   position: relative;
   top: 50%;
+  font-family: 'Raleway';
+  left: 5px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   font-size: 1.2em;
@@ -317,6 +343,7 @@ input::-webkit-inner-spin-button {
 
 .update-data {
   position: fixed;
+  font-family: 'Raleway';
   height: 100vh;
   width: 100vw;
   right: -100vw;
@@ -336,7 +363,7 @@ input::-webkit-inner-spin-button {
 .update-input {
   position: relative;
   margin-left: 20px;
-  width: 200px;
+  width: 150px;
   border: 1px solid black;
   margin: 1px;
 }
@@ -364,7 +391,9 @@ input::-webkit-inner-spin-button {
 
 .close-update-data-tab {
   position: relative;
-  left: 70px;
+  font-family: 'Raleway';
+  top: 15px;
+  left: 100px;
   margin: 0;
   font-size: 30px;
   cursor: pointer;

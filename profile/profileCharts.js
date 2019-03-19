@@ -79,7 +79,6 @@ function drawChart2() {
                      2]);
 
     let options = {
-      height: '520',
       bar: {groupWidth: "95%"},
       legend: { position: "none" },
       chartArea: {top: '20', width: '90%', height: '60%'},
