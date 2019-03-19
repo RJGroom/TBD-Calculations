@@ -24,7 +24,6 @@ if(isset($_SESSION['username']))
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="profile.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="profileCharts.js"></script>
 </head>
 <body>
 
@@ -285,7 +284,157 @@ if(isset($_SESSION['username']))
        }
     }
 ?>
+   
+   
+   <script type="text/javascript" src="profile.js"></script>
 
-   <script src="profile.js"></script>
+    <!-- Google Charts Script -->
+    <script type="text/javascript">
+    let primaryIncome = <? echo $userData['primaryIncome'] ?>;
+    let secondaryIncome = <? echo $userData['secondaryIncome'] ?>;
+    let housing = <?php echo $userData['housing'] ?>;
+    let loans = <?php echo $userData['loans'] ?>;
+    let healthInsurance = <?php echo $userData['healthInsurance'] ?>;
+    let transportation = <?php echo $userData['transportation'] ?>;
+    let cellphoneBill = <?php echo $userData['cellphoneBill'] ?>;
+    let groceries = <?php echo $userData['groceries'] ?>;
+    let clothing = <?php echo $userData['clothing'] ?>;
+    let gas = <?php echo $userData['gas'] ?>;
+    let electric = <?php echo $userData['electric'] ?>;
+    let water = <?php echo $userData['water'] ?>;
+    let cableInternet = <?php echo $userData['cableInternet'] ?>;
+    let monthlySubscriptions = <?php echo $userData['monthlySubscriptions'] ?>;
+    let miscellaneous = <?php echo $userData['miscellaneous'] ?>;
+    let primarySavings= <?php echo $userData['primarySavings'] ?>;
+    let emergencyFunds = <?php echo $userData['emergencyFunds'] ?>;
+    let vacationFunds = <?php echo $userData['vacationFunds'] ?>;
+    let excessFunds = <?php echo $userData['excessFunds'] ?>;
+    let leftoverExcessFunds = <?php echo $userData['leftoverExcessFunds'] ?>;
+
+    let housingRate = (housing/(primaryIncome + secondaryIncome)) * 100;
+    let loansRate = (loans/(primaryIncome + secondaryIncome)) * 100;
+    let healthInsuranceRate = (healthInsurance/(primaryIncome + secondaryIncome)) * 100;
+    let transportationRate = (transportation/(primaryIncome + secondaryIncome)) * 100;
+    let cellphoneBillRate = (cellphoneBill/(primaryIncome + secondaryIncome)) * 100;
+    let groceriesRate = (groceries/(primaryIncome + secondaryIncome)) * 100;
+    let clothingRate = (clothing/(primaryIncome + secondaryIncome)) * 100;
+    let gasRate = (gas/(primaryIncome + secondaryIncome)) * 100;
+    let electricRate = (electric/(primaryIncome + secondaryIncome)) * 100;
+    let waterRate = (water/(primaryIncome + secondaryIncome)) * 100;
+    let cableInternetRate = (cableInternet/(primaryIncome + secondaryIncome)) * 100;
+    let monthlySubscriptionsRate = (monthlySubscriptions/(primaryIncome + secondaryIncome)) * 100;
+    let miscellaneousRate = (miscellaneous/(primaryIncome + secondaryIncome)) * 100;
+    let primarySavingsRate = (primarySavings/(primaryIncome + secondaryIncome)) * 100;
+    let emergencyFundsRate = (emergencyFunds/(primaryIncome + secondaryIncome)) * 100;
+    let vacationFundsRate = (vacationFunds/(primaryIncome + secondaryIncome)) * 100;
+    let excessFundsRate = (excessFunds/(primaryIncome + secondaryIncome)) * 100;
+    let leftoverExcessFundsRate = (leftoverExcessFunds/(primaryIncome + secondaryIncome)) * 100;
+
+    let primaryExpenses = housing + loans + healthInsurance + transportation + cellphoneBill + groceries + clothing;
+    let utilities = gas + electric + water + cableInternet;
+    let secondaryExpenses = monthlySubscriptions + miscellaneous;
+    let savings = primarySavings + emergencyFunds + vacationFunds;
+
+
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawChart2);
+    google.charts.setOnLoadCallback(drawChart3);
+
+    function drawChart() {
+
+        let data = new google.visualization.DataTable();
+        data.addColumn('string', 'Category');
+        data.addColumn('number', 'Percentage');
+        data.addRows([
+            ['Primary Expenses', primaryExpenses],
+            ['Monthly Utilities', utilities],
+            ['Secondary Expenses', secondaryExpenses],
+            ['Monthly Savings', savings],
+            ['Excess Funds', excessFunds]
+        ]);
+
+let options = {
+    title: "Monthly Spending by Category",
+    backgroundColor: "white",
+    pieSliceBorderColor: "white"
+};
+
+let sampleChart = new google.visualization.PieChart(document.getElementById('sampleChart'));
+sampleChart.draw(data, options);
+}
+
+function drawChart2() {
+    let data = google.visualization.arrayToDataTable([
+      ['Month', 'Target Spending Goal', 'Your Spending'],
+      ['Jan',  30,      20],
+      ['Feb',  60,      70],
+      ['Mar',  90,       100],
+      ['Apr',  120,      110]
+    ]);
+
+    let options = {
+      title: 'Target Spending Goal vs. Your Spending',
+      curveType: 'function',
+      legend: { position: 'bottom' },
+      backgroundColor: "white"
+    };
+
+    let chart = new google.visualization.LineChart(document.getElementById('sampleLineChart'));
+    chart.draw(data, options);
+  }
+
+  function drawChart3() {
+    let data = google.visualization.arrayToDataTable([
+      ["Category", "Percentage Allocated", { role: "style" } ],
+      ["Housing", housingRate, "blue"],
+      ["Loans", loansRate, "blue"],
+      ["Health Insurance", healthInsuranceRate, "blue"],
+      ["Transportation", transportationRate, "blue"],
+      ["Cell Phone", cellphoneBillRate, "blue"],
+      ["Groceries", groceriesRate, "blue"],
+      ["Clothing", clothingRate, "blue"],
+      ["Gas", gasRate, "red"],
+      ["Electric", electricRate, "red"],
+      ["Water", waterRate, "red"],
+      ["Cable/Internet", cableInternetRate, "red"],
+      ["Monthly Subscriptions", monthlySubscriptionsRate, "orange"],
+      ["Miscellaneous", miscellaneousRate, "orange"],
+      ["Primary Savings", primarySavingsRate, "green"],
+      ["Emergency Funds", emergencyFundsRate, "green"],
+      ["Vacation Funds", vacationFundsRate, "green"],
+      ["ExcessFunds", excessFundsRate, "purple"]
+
+    ]);
+
+    let view = new google.visualization.DataView(data);
+    view.setColumns([0, 1,
+                     { calc: "stringify",
+                       sourceColumn: 1,
+                       type: "string",
+                       role: "annotation" },
+                     2]);
+
+    let options = {
+      bar: {groupWidth: "95%"},
+      legend: { position: "none" },
+      chartArea: {top: '20', width: '90%', height: '60%'},
+      hAxis: {textStyle:{fontSize: '15'},
+        slantedText: 'true',
+        slantedTextAngle: '90',
+        },
+    };
+    let sampleChartThree = new google.visualization.ColumnChart(document.getElementById("sampleChartThree"));
+    sampleChartThree.draw(view, options);
+}
+
+
+  window.onresize = function(){
+      drawChart3();
+      drawChart2();
+      drawChart();
+  }
+
+    </script>
 </body>
 </html>

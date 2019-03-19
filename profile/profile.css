@@ -398,4 +398,9 @@ input::-webkit-inner-spin-button {
   font-size: 30px;
   cursor: pointer;
 }
+
+.testText {
+  width: 100vw;
+  text-align: center;
+}
 /*# sourceMappingURL=profile.css.map */
