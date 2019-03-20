@@ -1,24 +1,43 @@
-let excessFunds = 4000;
-let leftoverExcessFunds = excessFunds;
+//Open Menu Function
+function toggleNav() {
+    let nav = document.getElementById('navBar');
+    let topBar = document.getElementById('topBar');
+    let middleBar = document.getElementById('middleBar');
+    let bottomBar = document.getElementById('bottomBar');
 
-document.getElementById('leftoverExcessFunds').innerHTML = leftoverExcessFunds;
-document.getElementById('excessFunds').innerHTML = excessFunds;
+    if (nav.style.width == "23%") {
+        nav.style.width = "70px";
+        topBar.style.width = "";
 
-const calculateExcessFunds = () => {
-   let input = document.getElementById('spendingInput').value;
-    if (input <= leftoverExcessFunds) {
-        leftoverExcessFunds = leftoverExcessFunds - input;
-        document.getElementById('leftoverExcessFunds').innerHTML = leftoverExcessFunds;
+        bottomBar.style.transform = "rotate(0deg)";
+        topBar.style.transform = "rotate(0deg)";
+        middleBar.style.opacity = "1";
+
+        setTimeout (function(){
+            bottomBar.style.top = "20px";
+            topBar.style.top = "0px";
+        }, 500)
+
     }
     else {
-        window.alert('You do not have enough leftover funds');
+        nav.style.width = "23%";
+        topBar.style.width= "100%";
+
+        topBar.style.top = "10px";
+        bottomBar.style.top = "10px";
+
+        setTimeout (function(){
+            middleBar.style.opacity = "0";
+            topBar.style.transform = "rotate(45deg)";
+            bottomBar.style.transform = "rotate(-45deg)";
+        }, 500)
     }
 }
 
 const openUpdateData = () => {
     document.getElementById('updateData').style.right = "0";
-}
+};
 
 const closeUpdateData = () => {
     document.getElementById('updateData').style.right = "-100vw";
-}
+};

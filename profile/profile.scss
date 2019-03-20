@@ -106,10 +106,10 @@
 
 .profile-container {
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(15, 1fr);
     grid-template-columns: 70px repeat(10, 1fr) 70px;
     grid-gap: 1em;
-    height: 200vh;
+    height: 250vh;
     width: 100vw;
     background-color: #465C8B;
 }
@@ -118,50 +118,56 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid white;
 }
 
-.profile-header {
-    position: relative;
-    font-family: 'raleway';
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 70px 1fr 70px;
-    grid-gap: 1em;
-    height: 20vh;
-    width: 100vw;
-    background-image: url('../Images/adults-business-coffee-1323592.jpg');
-    background-size: cover;
+.not-you-para {
+    font-family: 'Raleway';
+
 }
 
 .sign-out-link {
     text-decoration: none;
     font-family: 'Raleway';
-    position: absolute;
-    bottom: 0;
-    right: 10px;
-    color: white;
+    margin: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.info-header {
+    font-family: 'Raleway';
 }
 
 .profile-main-info {
-    grid-row: 2/6;
-    grid-column: 2/6;
+    position: fixed;
+    left: 70px;
+    height: 100vh;
+    width: 18vw;
+    background-color: white;
 }
 
 .main-info-heading {
-    margin: 0;
-    font-size: 30px;
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-family: 'Raleway';
+    font-size: 26px;
 }
 
 .main-info-para {
     margin: 10px;
     text-align: center;
-    font-size: 26px;
+    font-family: 'Raleway';
+    font-size: 1em;
+}
+
+.spending-calculator {
+    position: relative;
+    width: 90%;
+    border: 1px solid black;
 }
 
 .spending-input {
     height: 30px;
-    width: 200px;
+    width: 100px;
     font-size: 30px;
 }
 
@@ -180,7 +186,10 @@ input::-webkit-inner-spin-button {
 }
 
 .confirm-btn {
-    height: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 35px;
     color: black;
     background-color: #ffb515;
     font-family: "Raleway";
@@ -188,6 +197,7 @@ input::-webkit-inner-spin-button {
     border: 2px solid #ffb515;
     transition: 500ms ease;
     cursor: pointer;
+    bottom: 3px;
 }
 
 .confirm-btn:hover {
@@ -195,24 +205,9 @@ input::-webkit-inner-spin-button {
     color: #ffb515;
 }
 
-.profile-tips {
-    grid-row: 6/11;
-    grid-column: 2/6;
-}
-
-.tips-heading {
-    font-size: 30px;
-}
-
-.tip-item {
-    color: white;
-    font-family: 'Raleway';
-    font-size: 1.5em;
-}
-
 .profile-graph-one {
-    grid-row: 2/5;
-    grid-column: 6/12;
+    grid-row: 1/5;
+    grid-column: 4/12;
 }
 
 .sample-chart {
@@ -222,57 +217,118 @@ input::-webkit-inner-spin-button {
 }
 
 .profile-graph-two {
-    grid-row: 5/8;
-    grid-column: 6/12;
+    grid-row: 5/9;
+    grid-column: 4/12;
 }
 
 .profile-graph-three {
-    grid-row: 8/11;
-    grid-column: 6/12;
+    grid-row: 9/13;
+    grid-column: 4/12;
+}
+
+.profile-tips-section {
+    grid-row: 13/16;
+    grid-column: 4/12;
+    background-color: white;
 }
 
 .open-update-data-tab {
     position: fixed;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 100px;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
+    background-color: #ffb515;
 }
 
-.open-update-data-icon {
-    font-size: 30px;
+.update-data-form {
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 70px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.update-data-column-one {
+    grid-column: 2/3;
+}
+
+.update-data-column-two {
+    grid-column: 3/4;
+}
+
+.update-data-column-three {
+    grid-column: 4/5;
+}
+
+.update-data-column-four {
+    grid-column: 5/6;
+}
+
+.update-data-column-five {
+    grid-column: 6/7;
+}
+
+.open-update-data-text {
+    position: relative;
+    top: 50%;
+    font-family: 'Raleway';
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
     margin: 0;
-    color: white;
 }
 
 .update-data {
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'Raleway';
     height: 100vh;
     width: 100vw;
     right: -100vw;
     background-color: white;
-    opacity: 0.8;
     transition: 1s ease;
 }
 
+.update-header {
+    position: relative;
+}
+
+.input-header {
+    position: relative;
+}
+
 .update-input {
+    position: relative;
     margin-left: 20px;
-    width: 200px;
+    width: 150px;
     border: 1px solid black;
     margin: 1px;
 }
 
 .update-input::placeholder {
-    color: black;
+    color: gray;
+}
+
+.update-submit {
+    position: relative;
+    margin-top: 10px;
 }
 
 .close-update-data-tab {
+    position: relative;
+    font-family: 'Raleway';
+    top: 15px;
+    left: 100px;
     margin: 0;
     font-size: 30px;
     cursor: pointer;
+}
+
+.testText {
+    width: 100vw;
+    text-align: center;
 }

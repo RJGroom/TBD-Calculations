@@ -127,12 +127,12 @@
 .profile-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[10];
-      grid-template-rows: repeat(10, 1fr);
+  -ms-grid-rows: (1fr)[15];
+      grid-template-rows: repeat(15, 1fr);
   -ms-grid-columns: 70px (1fr)[10] 70px;
       grid-template-columns: 70px repeat(10, 1fr) 70px;
   grid-gap: 1em;
-  height: 200vh;
+  height: 250vh;
   width: 100vw;
   background-color: #465C8B;
 }
@@ -148,57 +148,55 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid white;
 }
 
-.profile-header {
-  position: relative;
-  font-family: 'raleway';
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -ms-grid-columns: 70px 1fr 70px;
-      grid-template-columns: 70px 1fr 70px;
-  grid-gap: 1em;
-  height: 20vh;
-  width: 100vw;
-  background-image: url("../Images/adults-business-coffee-1323592.jpg");
-  background-size: cover;
+.not-you-para {
+  font-family: 'Raleway';
 }
 
 .sign-out-link {
   text-decoration: none;
   font-family: 'Raleway';
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  color: white;
+  margin: 10px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.info-header {
+  font-family: 'Raleway';
 }
 
 .profile-main-info {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
-  grid-row: 2/6;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2/6;
+  position: fixed;
+  left: 70px;
+  height: 100vh;
+  width: 18vw;
+  background-color: white;
 }
 
 .main-info-heading {
-  margin: 0;
-  font-size: 30px;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-family: 'Raleway';
+  font-size: 26px;
 }
 
 .main-info-para {
   margin: 10px;
   text-align: center;
-  font-size: 26px;
+  font-family: 'Raleway';
+  font-size: 1em;
+}
+
+.spending-calculator {
+  position: relative;
+  width: 90%;
+  border: 1px solid black;
 }
 
 .spending-input {
   height: 30px;
-  width: 200px;
+  width: 100px;
   font-size: 30px;
 }
 
@@ -217,7 +215,11 @@ input::-webkit-inner-spin-button {
 }
 
 .confirm-btn {
-  height: 40px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 35px;
   color: black;
   background-color: #ffb515;
   font-family: "Raleway";
@@ -226,6 +228,7 @@ input::-webkit-inner-spin-button {
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
   cursor: pointer;
+  bottom: 3px;
 }
 
 .confirm-btn:hover {
@@ -233,32 +236,13 @@ input::-webkit-inner-spin-button {
   color: #ffb515;
 }
 
-.profile-tips {
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 5;
-  grid-row: 6/11;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2/6;
-}
-
-.tips-heading {
-  font-size: 30px;
-}
-
-.tip-item {
-  color: white;
-  font-family: 'Raleway';
-  font-size: 1.5em;
-}
-
 .profile-graph-one {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  grid-row: 2/5;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 6;
-  grid-column: 6/12;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1/5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4/12;
 }
 
 .sample-chart {
@@ -269,86 +253,154 @@ input::-webkit-inner-spin-button {
 
 .profile-graph-two {
   -ms-grid-row: 5;
-  -ms-grid-row-span: 3;
-  grid-row: 5/8;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 6;
-  grid-column: 6/12;
+  -ms-grid-row-span: 4;
+  grid-row: 5/9;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4/12;
 }
 
 .profile-graph-three {
-  -ms-grid-row: 8;
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 4;
+  grid-row: 9/13;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4/12;
+}
+
+.profile-tips-section {
+  -ms-grid-row: 13;
   -ms-grid-row-span: 3;
-  grid-row: 8/11;
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 6;
-  grid-column: 6/12;
+  grid-row: 13/16;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
+  grid-column: 4/12;
+  background-color: white;
 }
 
 .open-update-data-tab {
   position: fixed;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 100px;
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
+  background-color: #ffb515;
 }
 
-.open-update-data-icon {
-  font-size: 30px;
+.form-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 1fr 1fr 1fr 1fr 70px;
+      grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 70px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.update-data-column-one {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.update-data-column-two {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.update-data-column-three {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+}
+
+.update-data-column-four {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5/6;
+}
+
+.update-data-column-five {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+}
+
+.open-update-data-text {
+  position: relative;
+  top: 50%;
+  font-family: 'Raleway';
+  left: 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.2em;
   margin: 0;
-  color: white;
 }
 
 .update-data {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-family: 'Raleway';
   height: 100vh;
   width: 100vw;
   right: -100vw;
   background-color: white;
-  opacity: 0.8;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
+.update-header {
+  position: relative;
+}
+
+.input-header {
+  position: relative;
+}
+
 .update-input {
+  position: relative;
   margin-left: 20px;
-  width: 200px;
+  width: 150px;
   border: 1px solid black;
   margin: 1px;
 }
 
 .update-input::-webkit-input-placeholder {
-  color: black;
+  color: gray;
 }
 
 .update-input:-ms-input-placeholder {
-  color: black;
+  color: gray;
 }
 
 .update-input::-ms-input-placeholder {
-  color: black;
+  color: gray;
 }
 
 .update-input::placeholder {
-  color: black;
+  color: gray;
+}
+
+.update-submit {
+  position: relative;
+  margin-top: 10px;
 }
 
 .close-update-data-tab {
+  position: relative;
+  font-family: 'Raleway';
+  top: 15px;
+  left: 100px;
   margin: 0;
   font-size: 30px;
   cursor: pointer;
+}
+
+.testText {
+  width: 100vw;
+  text-align: center;
 }
 /*# sourceMappingURL=profile.css.map */
