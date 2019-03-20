@@ -199,7 +199,6 @@ p {
 
 .loginBtn {
     position: relative;
-    
     left: 27px;
     color: black;
     background-color: #ffb515;
@@ -229,7 +228,9 @@ p {
 }
 
 .registerBtnLogin {
-    color: black;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     text-decoration: none;
     background-color: #ffb515;
     font-family: "Raleway";

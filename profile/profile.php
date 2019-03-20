@@ -1,50 +1,15 @@
 <?php
-/*
 session_start();
-include '../login/comm.php';
-
-function getUserData($id)
-{
-    $array = array();
-    $query = mysqli_query($conn, "SELECT * FROM 'users' WHERE 'id'=" .$id);
-    while ($r = mysqli_fetch_assoc($query))
-    {
-        $array['username'] = $r['username'];
-        $array['password'] = $r['password'];
-        $array['id'] = $r['id'];
-        $array['isAdmin'] = $r['isAdmin'];
-        $array['fName'] = $r['fName'];
-        $array['lName'] = $r['lName'];
-        $array['email'] = $r['email'];
-    }
-    return $array;
-}
-
-function getId($username)
-{
-    $query = mysqli_query($conn, "SELECT 'id' FROM 'users' WHERE 'username'='" .$username."'");
-    while ($r = mysqli_fetch_assoc($query))
-    {
-        return $r['id'];
-    }
-}
-*/
+require('../login/comm.php');
+require('functions.php');
 ?>
 
 
 <?php
-/*
 if(isset($_SESSION['username'])) 
 {
-    $userData = getUserData(getId($_SESSION['username']));
+    $userData = getUserData($conn, $_SESSION['username']);
 }
-*/
-?>
-
-<?php 
-/*
-echo $userData['username'] 
-*/
 ?>
 
 <!DOCTYPE html>
@@ -120,11 +85,11 @@ echo $userData['username']
         </div>
 
     <div class="profile-header profile-section">
-        <a class="sign-out-link" href="#home">Sign Out</a>
+        <a class="sign-out-link" href="../login/logout.php">Sign Out</a>
     </div>
 
     <div class="profile-main-info profile-section">
-        <h4 class="main-info-heading">Welcome, "Jonah"</h4>
+        <h4 class="main-info-heading">Welcome, <?php echo $userData['fName'] ?> </h4>
         <p class="main-info-para">Your monthly income is <span style="color: white">$5000</span></p>
         <p class="main-info-para">You save <span style="color: white">1000</span> each month which amounts to <span style="color: white">10%</span> of your income.</p>
         <p class="main-info-para">You have <span id="leftoverExcessFunds" style="color: white"></span> left of your <span id="excessFunds" style="color: white"></span> of excess funds</p>
@@ -172,36 +137,91 @@ echo $userData['username']
     <div class="update-data" id="updateData">
         <h3 class="close-update-data-tab" onclick="closeUpdateData()">X</h3>
 
-        <h3>Income</h3>
-        <input class="update-input" placeholder="Primary monthly income" />
-        <input class="update-input" placeholder="Secondary monthly income" />
+        <form class="updateDataForm" action="profile.php" method="post">
+            <h3>Income</h3>
+            <input class="update-input" placeholder="Primary monthly income" name="primaryIncome" />
+            <input class="update-input" placeholder="Secondary monthly income" name="secondaryIncome" />
 
-        <h3>Primary expenses</h3>
-        <input class="update-input" placeholder="Housing payments" />
-        <input class="update-input" placeholder="Loans" />
-        <input class="update-input" placeholder="Health insurance" />
-        <input class="update-input" placeholder="Transportation" />
-        <input class="update-input" placeholder="Cell Phone Bill" />
-        <input class="update-input" placeholder="Groceries" />
-        <input class="update-input" placeholder="Clothing" />
+            <h3>Primary expenses</h3>
+            <input class="update-input" placeholder="Housing payments" name="housing" />
+            <input class="update-input" placeholder="Loans" name="loans" />
+            <input class="update-input" placeholder="Health insurance" name="healthInsurance" />
+            <input class="update-input" placeholder="Transportation" name="transportation" />
+            <input class="update-input" placeholder="Cell Phone Bill" name="cellphoneBill"/>
+            <input class="update-input" placeholder="Groceries" name="groceries" />
+            <input class="update-input" placeholder="Clothing" name="clothing" />
 
-        <h3>Utilities</h3>
-        <input class="update-input" placeholder="Gas" />
-        <input class="update-input" placeholder="Electric" />
-        <input class="update-input" placeholder="Water" />
-        <input class="update-input" placeholder="Cable/Internet" />
+            <h3>Utilities</h3>
+            <input class="update-input" placeholder="Gas" name="gas" />
+            <input class="update-input" placeholder="Electric" name="electric" />
+            <input class="update-input" placeholder="Water" name="water" />
+            <input class="update-input" placeholder="Cable/Internet" name="cableInternet" />
 
-        <h3>Secondary expenses</h3>
-        <input class="update-input" placeholder="Monthly subscriptions" />
-        <input class="update-input" placeholder="Miscellaneous" />
+            <h3>Secondary expenses</h3>
+            <input class="update-input" placeholder="Monthly subscriptions" name="monthlySubscriptions" />
+            <input class="update-input" placeholder="Miscellaneous" name="miscellaneous" />  
 
-        <h3>Savings</h3>
-        <input class="update-input" placeholder="Primary savings" />
-        <input class="update-input" placeholder="Emergency funds" />
-        <input class="update-input" placeholder="Vacation funds" />
+            <h3>Savings</h3>
+            <input class="update-input" placeholder="Primary savings" name="primarySavings" />
+            <input class="update-input" placeholder="Emergency funds" name="emergencyFunds" />
+            <input class="update-input" placeholder="Vacation funds" name="vacationFunds" />
+
+            <input type="submit" value="Update">
+        </form>
     </div>
 
    </div>
+
+   <?php
+ 
+    $primaryIncome = $_POST['primaryIncome'];
+    $secondaryIncome = $_POST['secondaryIncome'];
+    $housing = $_POST['housing'];
+    $loans = $_POST['loans'];
+    $healthInsurance = $_POST['healthInsurance'];
+    $transportation = $_POST['transportation'];
+    $cellphoneBill = $_POST['cellphoneBill'];
+    $groceries = $_POST['groceries'];
+    $clothing = $_POST['clothing'];
+    $gas = $_POST['gas'];
+    $electric = $_POST['electric'];
+    $water = $_POST['water'];
+    $cableInternet = $_POST['cableInternet'];
+    $monthlySubscriptions = $_POST['monthlySubscriptions'];
+    $miscellaneous = $_POST['miscellaneous'];
+    $primarySavings = $_POST['primarySavings'];
+    $emergencyFunds = $_POST['emergencyFunds'];
+    $vacationFunds = $_POST['vacationFunds'];
+
+    $sql = "UPDATE expenses SET
+            primaryIncome = $primaryIncome,
+            secondaryIncome = $secondaryIncome,
+            housing = $housing,
+            loans = $loans,
+            healthInsurance = $healthInsurance,
+            transportation = $transportation,
+            cellphoneBill = $cellphoneBill,
+            groceries = $groceries,
+            clothing = $clothing,
+            gas = $gas,
+            electric = $electric,
+            water = $water,
+            cableInternet = $cableInternet,
+            monthlySubscriptions = $monthlySubscriptions,
+            miscellaneous = $miscellaneous,
+            primarySavings= $primarySavings,
+            emergencyFunds = $emergencyFunds,
+            vacationFunds = $vacationFunds
+
+            WHERE username = '" . $_SESSION['username'] . "'";
+
+       if (mysqli_query($conn, $sql)) {
+           echo "sucess";
+       }
+       else {
+           echo "Failure to update";
+       }
+?>
 
    <script src="profile.js"></script>
 </body>

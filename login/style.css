@@ -286,7 +286,10 @@ p {
 }
 
 .registerBtnLogin {
-  color: black;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-decoration: none;
   background-color: #ffb515;
   font-family: "Raleway";

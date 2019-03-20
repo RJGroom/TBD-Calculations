@@ -2,7 +2,7 @@
     session_start();
     if(empty($_POST['username']))
     {
-        echo "Please fill in all fields.";
+        //echo "Please fill in all fields.";
     }
     else if(isset($_POST['login']))
     {
@@ -27,7 +27,7 @@
             $_SESSION['username'] = $Username;
             $_SESSION['id'] = $id;
             $_SESSION['isLoggedIn'] = TRUE;
-            header("Location: ../index.php");
+            header("Location: ../profile/profile.php");
         }
         else
         {
@@ -113,7 +113,7 @@
         <input class= "loginInput" type= "password" name= "password" placeholder= "Password" size= "27"><br/>
         <input class= "loginInput loginBtn" name= "login" type= "submit" value= "Login"/><br/>
     </form>
-    <a href= "./register.php"><button class="registerBtnLogin">Register</button></a>
+    <a href= "./registration.php"><button class="registerBtnLogin">Register</button></a>
 </div>
 
     <script src="login.js"></script>
