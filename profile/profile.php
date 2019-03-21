@@ -25,6 +25,7 @@ if(isset($_SESSION['username']))
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="profile.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="profile.js"></script>
 </head>
 <body>
 
@@ -61,6 +62,7 @@ if(isset($_SESSION['username']))
                    $transportation - $cellphoneBill - $groceries - $clothing - $gas -
                    $electric - $water - $cableInternet - $monthlySubscriptions -
                    $miscellaneous - $primarySavings - $emergencyFunds - $vacationFunds;
+
     $sql = "UPDATE expenses SET
             primaryIncome = $primaryIncome,
             secondaryIncome = $secondaryIncome,
@@ -83,6 +85,7 @@ if(isset($_SESSION['username']))
             excessFunds = $excessFunds,
             leftoverExcessFunds = $excessFunds
             WHERE username = '" . $_SESSION['username'] . "'";
+
        if (mysqli_query($conn, $sql)) {
         echo "<meta http-equiv='refresh' content='0'>";
        }
@@ -90,12 +93,10 @@ if(isset($_SESSION['username']))
        }
     }
 ?>
-   
-   
-   <script type="text/javascript" src="profile.js"></script>
 
     <!-- Google Charts Script -->
     <script type="text/javascript">
+
     let primaryIncome = <? echo $userData['primaryIncome'] ?>;
     let secondaryIncome = <? echo $userData['secondaryIncome'] ?>;
     let housing = <?php echo $userData['housing'] ?>;
@@ -138,10 +139,12 @@ if(isset($_SESSION['username']))
     let utilities = gas + electric + water + cableInternet;
     let secondaryExpenses = monthlySubscriptions + miscellaneous;
     let savings = primarySavings + emergencyFunds + vacationFunds;
+
     google.charts.load('current', {packages: ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     google.charts.setOnLoadCallback(drawChart2);
     google.charts.setOnLoadCallback(drawChart3);
+    
     function drawChart() {
         let data = new google.visualization.DataTable();
         data.addColumn('string', 'Category');
