@@ -2,6 +2,7 @@
 session_start();
 require('../login/comm.php');
 require('functions.php');
+//
 ?>
 
 
@@ -60,7 +61,6 @@ if(isset($_SESSION['username']))
                    $transportation - $cellphoneBill - $groceries - $clothing - $gas -
                    $electric - $water - $cableInternet - $monthlySubscriptions -
                    $miscellaneous - $primarySavings - $emergencyFunds - $vacationFunds;
-
     $sql = "UPDATE expenses SET
             primaryIncome = $primaryIncome,
             secondaryIncome = $secondaryIncome,
@@ -82,9 +82,7 @@ if(isset($_SESSION['username']))
             vacationFunds = $vacationFunds,
             excessFunds = $excessFunds,
             leftoverExcessFunds = $excessFunds
-
             WHERE username = '" . $_SESSION['username'] . "'";
-
        if (mysqli_query($conn, $sql)) {
         echo "<meta http-equiv='refresh' content='0'>";
        }
@@ -118,7 +116,6 @@ if(isset($_SESSION['username']))
     let vacationFunds = <?php echo $userData['vacationFunds'] ?>;
     let excessFunds = <?php echo $userData['excessFunds'] ?>;
     let leftoverExcessFunds = <?php echo $userData['leftoverExcessFunds'] ?>;
-
     let housingRate = (housing/(primaryIncome + secondaryIncome)) * 100;
     let loansRate = (loans/(primaryIncome + secondaryIncome)) * 100;
     let healthInsuranceRate = (healthInsurance/(primaryIncome + secondaryIncome)) * 100;
@@ -137,20 +134,15 @@ if(isset($_SESSION['username']))
     let vacationFundsRate = (vacationFunds/(primaryIncome + secondaryIncome)) * 100;
     let excessFundsRate = (excessFunds/(primaryIncome + secondaryIncome)) * 100;
     let leftoverExcessFundsRate = (leftoverExcessFunds/(primaryIncome + secondaryIncome)) * 100;
-
     let primaryExpenses = housing + loans + healthInsurance + transportation + cellphoneBill + groceries + clothing;
     let utilities = gas + electric + water + cableInternet;
     let secondaryExpenses = monthlySubscriptions + miscellaneous;
     let savings = primarySavings + emergencyFunds + vacationFunds;
-
-
     google.charts.load('current', {packages: ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     google.charts.setOnLoadCallback(drawChart2);
     google.charts.setOnLoadCallback(drawChart3);
-
     function drawChart() {
-
         let data = new google.visualization.DataTable();
         data.addColumn('string', 'Category');
         data.addColumn('number', 'Percentage');
@@ -161,17 +153,14 @@ if(isset($_SESSION['username']))
             ['Monthly Savings', savings],
             ['Excess Funds', excessFunds]
         ]);
-
 let options = {
     title: "Monthly Spending by Category",
     backgroundColor: "white",
     pieSliceBorderColor: "white"
 };
-
 let sampleChart = new google.visualization.PieChart(document.getElementById('sampleChart'));
 sampleChart.draw(data, options);
 }
-
 function drawChart2() {
     let data = google.visualization.arrayToDataTable([
       ['Month', 'Target Spending Goal', 'Your Spending'],
@@ -180,18 +169,15 @@ function drawChart2() {
       ['Mar',  90,       100],
       ['Apr',  120,      110]
     ]);
-
     let options = {
       title: 'Target Spending Goal vs. Your Spending',
       curveType: 'function',
       legend: { position: 'bottom' },
       backgroundColor: "white"
     };
-
     let chart = new google.visualization.LineChart(document.getElementById('sampleLineChart'));
     chart.draw(data, options);
   }
-
   function drawChart3() {
     let data = google.visualization.arrayToDataTable([
       ["Category", "Percentage Allocated", { role: "style" } ],
@@ -212,9 +198,7 @@ function drawChart2() {
       ["Emergency Funds", emergencyFundsRate, "green"],
       ["Vacation Funds", vacationFundsRate, "green"],
       ["ExcessFunds", excessFundsRate, "purple"]
-
     ]);
-
     let view = new google.visualization.DataView(data);
     view.setColumns([0, 1,
                      { calc: "stringify",
@@ -222,7 +206,6 @@ function drawChart2() {
                        type: "string",
                        role: "annotation" },
                      2]);
-
     let options = {
       bar: {groupWidth: "95%"},
       legend: { position: "none" },
@@ -235,14 +218,11 @@ function drawChart2() {
     let sampleChartThree = new google.visualization.ColumnChart(document.getElementById("sampleChartThree"));
     sampleChartThree.draw(view, options);
 }
-
-
   window.onresize = function(){
       drawChart3();
       drawChart2();
       drawChart();
   }
-
     </script>
 
 
@@ -454,13 +434,11 @@ function drawChart2() {
                     $userData['clothing'] - $userData['gas'] - $userData['electric'] - $userData['water'] - 
                     $userData['cableInternet'] - $userData['monthlySubscriptions'] - $userData['miscellaneous'] - 
                     $userData['primarySavings'] - $userData['emergencyFunds'] - $userData['vacationFunds'];
-
                     if (($excessFunds/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100 > 20)
                     {
                         echo "You currently have more than 20% of your total income leftover, you may want to consider investing
                         more into your savings or emergency funds";
                     }
-
                 ?>
             </p>
         </div>
