@@ -140,6 +140,8 @@ if(isset($_SESSION['username']))
     let secondaryExpenses = monthlySubscriptions + miscellaneous;
     let savings = primarySavings + emergencyFunds + vacationFunds;
 
+    console.log(primaryExpenses);
+
     google.charts.load('current', {packages: ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     google.charts.setOnLoadCallback(drawChart2);
@@ -417,7 +419,7 @@ function drawChart2() {
         <div class="profile-tips-section">
             <h3>Profile tips section</h3>
             <p>According to the 20% rule, you should save at least 20% of your total income.</p>
-            <p> You are currently saving <?php echo round(($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 0) ?>% </p>
+            <p> You are currently saving <?php echo round(($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 0) ?>% of your income.</p>
             <p> <?php 
                     if (($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100 < 20) {
                         echo "You need to save $" . ((($userData['primaryIncome'] + $userData['secondaryIncome']) * 0.2) - $userData['primarySavings']) . " more each month to satisfy the 20% rule.";
@@ -444,6 +446,7 @@ function drawChart2() {
                     }
                 ?>
             </p>
+            <p>Always keep your budgeting information up to date.</p>
         </div>
 
    </div>
