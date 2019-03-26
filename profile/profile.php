@@ -97,8 +97,8 @@ if(isset($_SESSION['username']))
     <!-- Google Charts Script -->
     <script type="text/javascript">
 
-    let primaryIncome = <? echo $userData['primaryIncome'] ?>;
-    let secondaryIncome = <? echo $userData['secondaryIncome'] ?>;
+    let primaryIncome = <?php echo $userData['primaryIncome'] ?>;
+    let secondaryIncome = <?php echo $userData['secondaryIncome'] ?>;
     let housing = <?php echo $userData['housing'] ?>;
     let loans = <?php echo $userData['loans'] ?>;
     let healthInsurance = <?php echo $userData['healthInsurance'] ?>;
@@ -139,6 +139,8 @@ if(isset($_SESSION['username']))
     let utilities = gas + electric + water + cableInternet;
     let secondaryExpenses = monthlySubscriptions + miscellaneous;
     let savings = primarySavings + emergencyFunds + vacationFunds;
+
+   
 
     google.charts.load('current', {packages: ['corechart']});
     google.charts.setOnLoadCallback(drawChart);
