@@ -375,7 +375,7 @@ textarea:focus {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  background-image: url("./Images/PersonAnon.png");
+  background-image: url("./Images/PersonAnon.jpg");
   background-size: cover;
   background-position: center;
 }

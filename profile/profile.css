@@ -279,6 +279,18 @@ input::-webkit-inner-spin-button {
   background-color: white;
 }
 
+.profile-tips-header {
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.profile-tips {
+  margin-left: 1em;
+  font-family: 'Raleway';
+}
+
 .open-update-data-tab {
   position: fixed;
   height: 60px;

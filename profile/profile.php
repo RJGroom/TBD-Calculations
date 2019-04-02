@@ -330,7 +330,8 @@ function drawChart2() {
                 size= "10"
             />
         </p>
-        <button class="confirm-btn" onclick="">Confirm</button>
+
+        <button class="confirm-btn" onclick="updateSpending(document.getElementById('spendingInput').value)">Confirm</button>
         </div>
     </div>
 
@@ -417,10 +418,10 @@ function drawChart2() {
         </form>
     </div>
         <div class="profile-tips-section">
-            <h3>Profile tips section</h3>
-            <p>According to the 20% rule, you should save at least 20% of your total income.</p>
-            <p> You are currently saving <?php echo round(($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 0) ?>% of your income. </p>
-            <p> <?php 
+            <h3 class="profile-tips-header">Profile tips section</h3>
+            <p class="profile-tips">According to the 20% rule, you should save at least 20% of your total income.</p>
+            <p class="profile-tips"> You are currently saving <?php echo round(($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 0) ?>% of your income. </p>
+            <p class="profile-tips"> <?php 
                     if (($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100 < 20) {
                         echo "You need to save $" . ((($userData['primaryIncome'] + $userData['secondaryIncome']) * 0.2) - $userData['primarySavings']) . " more each month to satisfy the 20% rule.";
                     }
@@ -432,7 +433,7 @@ function drawChart2() {
                  ?>
             </p>
 
-            <p> <?php
+            <p class="profile-tips"> <?php
                     $excessFunds = $userData['primaryIncome'] + $userData['secondaryIncome'] - 
                     $userData['housing'] - $userData['loans'] - $userData['healthInsurance'] -
                     $userData['transportation'] - $userData['cellphoneBill'] - $userData['groceries'] - 
@@ -447,7 +448,7 @@ function drawChart2() {
                 ?>
             </p>
 
-            <p>Always keep your budgeting information up to date</p>
+            <p class="profile-tips">Always keep your budgeting information up to date</p>
         </div>
 
    </div>
