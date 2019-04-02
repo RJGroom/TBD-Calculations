@@ -1,3 +1,21 @@
+<?php
+require('../login/comm.php');
+
+$blogPosts;
+$sql = "SELECT * FROM blog";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    while($row = $result->fetch_assoc()) {
+        $blogPosts['title'] = $row['title'];
+        $blogPosts['subtitle'] = $row['subtitle'];
+        $blogPosts['date'] = $row['date'];
+        $blogPosts['author'] = $row['author'];
+        $blogPosts['article'] = $row['article'];
+        $blogPosts['id'] = $row['id'];
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +82,19 @@
 
     </div>
 
+    <div class="blog-container">
+
+
+    <div class="blog-article-container">
+        <h3 class="blog-title"> <?php echo $blogPosts['title'] ?> </h3>
+        <h4 class="blog-subtitle"> <?php echo $blogPosts['subtitle'] ?> </h4>
+        <div class="date-author-container">
+            <p class="blog-date"><span style="font-weight: bold">Date:</span> <?php echo $blogPosts['date'] ?> </p>
+            <p class="blog-author"><span style="font-weight: bold">Author:</span> <?php echo $blogPosts['author'] ?> </p>
+        </div>
+        <p class="blog-article"> <?php echo $blogPosts['article'] ?> </p>
+    </div>
+    </div>
 
     <script src="tips.js"></script>
 
