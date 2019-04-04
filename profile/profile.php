@@ -268,7 +268,7 @@ function drawChart2() {
     
          <div class="navSection">
              <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
-             <a href="../tips/tips.html" class="navLink">
+             <a href="../tips/tips.php" class="navLink">
                  <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
              </a>
          </div>
@@ -393,6 +393,8 @@ function drawChart2() {
             <input class="update-input" placeholder="Water" name="water" value="<?php echo $userData['water'] ?>" /> <br />
             <label class="input-header">Cable/Internet</label> <br />
             <input class="update-input" placeholder="Cable/Internet" name="cableInternet" value="<?php echo $userData['cableInternet'] ?>" />
+            
+            <input class="update-submit" type="submit" value="Update Data">
         </div>
 
         <div class="update-data-column-four">
@@ -412,7 +414,6 @@ function drawChart2() {
             <label class="input-header">Vacation Funds</label> <br />
             <input class="update-input" placeholder="Vacation funds" name="vacationFunds" value="<?php echo $userData['vacationFunds'] ?>" /> <br />
 
-            <input class="update-submit" type="submit" value="Update Data">
         </div>
         </div>
         </form>

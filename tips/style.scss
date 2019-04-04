@@ -112,25 +112,36 @@
     opacity: 1;
 }
 
+.tips-page-header {
+
+}
+
+.tips-page-header-text {
+    margin: 0;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
 .blog-container {
     display: grid;
-    grid-template-columns: 70px 1fr 70px;
-    width: 100vw;
+    grid-template-columns: 70px 5fr 2fr 70px;
+    width: 100%;
 }
 
 .blog-article-container {
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 1em;
+    border-bottom: 1px solid gray;
 }
 
 .blog-article {
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
-    width: 50%;
+    width: 70%;
 }
 
 .blog-title {
@@ -155,6 +166,15 @@
 }
 
 .blog-text {
+}
+
+.about-author-container {
+    grid-column: 3/4;
+    margin: 1em;
+}
+
+.about-author-header {
+    margin: 0;
 }
 
 .form-container {

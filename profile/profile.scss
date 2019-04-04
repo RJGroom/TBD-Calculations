@@ -255,8 +255,7 @@ input::-webkit-inner-spin-button {
     background-color: #ffb515;
 }
 
-.update-data-form {
-}
+
 
 .form-container {
     display: grid;
@@ -301,24 +300,29 @@ input::-webkit-inner-spin-button {
     height: 100vh;
     width: 100vw;
     right: -100vw;
-    background-color: white;
+    background-color: #465C8B;
+    opacity: 0.9;
     transition: 1s ease;
 }
 
 .update-header {
     position: relative;
+    color: white;
 }
 
 .input-header {
     position: relative;
+    margin-top: 5px;
+    color: white;
 }
 
 .update-input {
     position: relative;
     margin-left: 20px;
     width: 150px;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 1px;
+
 }
 
 .update-input::placeholder {
@@ -327,7 +331,20 @@ input::-webkit-inner-spin-button {
 
 .update-submit {
     position: relative;
-    margin-top: 10px;
+    margin-top: 200px;
+    width: 75%;
+    color: black;
+    background-color: #ffb515;
+    font-family: "Raleway";
+    font-weight: bold;
+    border: 2px solid #ffb515;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.update-submit:hover {
+    background: none;
+    color: #ffb515;
 }
 
 .close-update-data-tab {
@@ -338,6 +355,8 @@ input::-webkit-inner-spin-button {
     margin: 0;
     font-size: 30px;
     cursor: pointer;
+    opacity: .8;
+    color: white;
 }
 
 .testText {

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tips</title>
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>

@@ -27,6 +27,7 @@ if (mysqli_num_rows($result) > 0) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tips</title>
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -85,6 +86,11 @@ if (mysqli_num_rows($result) > 0) {
 
     </div>
 
+
+    <div class="tips-page-header">
+        <h3 class="tips-page-header-text">Budgeting Tips and Advice</h3>
+    </div>
+
     <div class="blog-container">
 
     <!-- Post One -->
@@ -100,6 +106,37 @@ if (mysqli_num_rows($result) > 0) {
         </div>
     </div>
 
+    <div class="about-author-container">
+        <h3 class="about-author-header">About the author</h3>
+
+        <p>
+            <?php 
+                if ($blogData[0]['author'] == 'Ryan Groom') {
+                    echo 'Ryan Groom <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Economics Minor <br />';
+                }
+                else if ($blogData[0]['author'] == 'Jonah Downs') {
+                    echo 'Jonah Downs';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Communications Media Minor <br />';
+                }
+                else if ($blogData[0]['author'] == 'Eric Ritchey') {
+                    echo 'Eric Ritchey <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Economics Minor <br />';
+                }
+                else {
+                    echo 'No author data provided';
+                }
+            ?>
+        </p>
+
+    </div>
+
     <!-- Post Two -->
     <div class="blog-article-container">
         <div class="blog-article">
@@ -111,6 +148,37 @@ if (mysqli_num_rows($result) > 0) {
             </div>
             <p class="blog-text"> <?php echo $blogData[1]['article'] ?> </p>
         </div>
+    </div>
+
+    <div class="about-author-container">
+        <h3 class="about-author-header">About the author</h3>
+
+        <p>
+            <?php 
+                if ($blogData[1]['author'] == 'Ryan Groom') {
+                    echo 'Ryan Groom <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Economics Minor <br />';
+                }
+                else if ($blogData[1]['author'] == 'Jonah Downs') {
+                    echo 'Jonah Downs';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Communications Media Minor <br />';
+                }
+                else if ($blogData[1]['author'] == 'Eric Ritchey') {
+                    echo 'Eric Ritchey <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Biology Minor <br />';
+                }
+                else {
+                    echo 'No author data provided';
+                }
+            ?>
+        </p>
+
     </div>
 
     <!-- Post Three -->
@@ -126,6 +194,36 @@ if (mysqli_num_rows($result) > 0) {
         </div>
     </div>
 
+    <div class="about-author-container">
+        <h3 class="about-author-header">About the author</h3>
+
+        <p>
+            <?php 
+                if ($blogData[2]['author'] == 'Ryan Groom') {
+                    echo 'Ryan Groom <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Economics Minor <br />';
+                }
+                else if ($blogData[2]['author'] == 'Jonah Downs') {
+                    echo 'Jonah Downs';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Communications Media Minor <br />';
+                }
+                else if ($blogData[2]['author'] == 'Eric Ritchey') {
+                    echo 'Eric Ritchey <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Biology Minor <br />';
+                }
+                else {
+                    echo 'No author data provided';
+                }
+            ?>
+        </p>
+
+    </div>
     <!-- Post Four -->
     <div class="blog-article-container">
         <div class="blog-article">
@@ -137,6 +235,37 @@ if (mysqli_num_rows($result) > 0) {
             </div>
             <p class="blog-text"> <?php echo $blogData[3]['article'] ?> </p>
         </div>
+    </div>
+
+    <div class="about-author-container">
+        <h3 class="about-author-header">About the author</h3>
+
+        <p>
+            <?php 
+                if ($blogData[3]['author'] == 'Ryan Groom') {
+                    echo 'Ryan Groom <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Economics Minor <br />';
+                }
+                else if ($blogData[3]['author'] == 'Jonah Downs') {
+                    echo 'Jonah Downs';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Communications Media Minor <br />';
+                }
+                else if ($blogData[3]['author'] == 'Eric Ritchey') {
+                    echo 'Eric Ritchey <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Biology Minor <br />';
+                }
+                else {
+                    echo 'No author data provided';
+                }
+            ?>
+        </p>
+
     </div>
 
     <!-- Post Five -->
@@ -152,6 +281,36 @@ if (mysqli_num_rows($result) > 0) {
         </div>
     </div>
 
+    <div class="about-author-container">
+        <h3 class="about-author-header">About the author</h3>
+
+        <p>
+            <?php 
+                if ($blogData[4]['author'] == 'Ryan Groom') {
+                    echo 'Ryan Groom <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Economics Minor <br />';
+                }
+                else if ($blogData[4]['author'] == 'Jonah Downs') {
+                    echo 'Jonah Downs';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Communications Media Minor <br />';
+                }
+                else if ($blogData[4]['author'] == 'Eric Ritchey') {
+                    echo 'Eric Ritchey <br />';
+                    echo 'Indiana University of Pennsylvania <br />';
+                    echo 'Computer Science Major <br />';
+                    echo 'Biology Minor <br />';
+                }
+                else {
+                    echo 'No author data provided';
+                }
+            ?>
+        </p>
+
+    </div>
 
 
     </div>
