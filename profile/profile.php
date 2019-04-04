@@ -2,7 +2,6 @@
 session_start();
 require('../login/comm.php');
 require('functions.php');
-//
 ?>
 
 
@@ -321,17 +320,24 @@ function drawChart2() {
         <div class="spending-calculator">
         <p class="main-info-para">Input recent spendings: </p>
         <p class="main-info-para">$
+            <form method="POST" action="">
                 <input
                 class="spending-input"
-                id="spendingInput"
+                name="spending"
                 type="number"
                 value="0"
                 min="0"
                 size= "10"
-            />
+                />
+            </form>
         </p>
 
-        <button class="confirm-btn" onclick="updateSpending(document.getElementById('spendingInput').value)">Confirm</button>
+        <?php 
+            $spending = $_POST['spending'];
+
+            $leftoverExcessFunds
+        ?>
+
         </div>
     </div>
 

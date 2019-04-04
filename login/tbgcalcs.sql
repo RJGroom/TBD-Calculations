@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 19, 2019 at 05:23 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Apr 04, 2019 at 07:37 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.1.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `tbgcalcs`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `title` text NOT NULL,
+  `subtitle` text NOT NULL,
+  `date` date NOT NULL,
+  `author` text NOT NULL,
+  `article` text NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`title`, `subtitle`, `date`, `author`, `article`, `id`) VALUES
+('Here is Blog Post One', 'this is the subtitle', '2019-04-02', 'Groom, Ryan', 'Here is my first blog post. This will contain information about budgeting, and useful tips for our webpage visitors.', 1),
+('Blog Title two', 'Here is a subtitle', '2019-04-03', 'Ryan Groom', 'This is my second article!', 2),
+('HERE IS POST THREE', 'Subtitle', '2019-04-03', 'Jonah Downs', 'Hey everybody, here is my third blog post!!!!!!!!!!!!!', 3),
+('NEW POST', 'here is the fourth', '2019-04-04', 'Eric', 'Here is the most recent post!', 4),
+('How to Manage your Money', 'for beginners', '2019-04-04', 'Ryan Groom', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan tortor posuere ac ut consequat. Quam viverra orci sagittis eu volutpat. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut. Fermentum iaculis eu non diam phasellus. Tortor vitae purus faucibus ornare suspendisse sed nisi. A pellentesque sit amet porttitor eget dolor morbi. Nisl rhoncus mattis rhoncus urna. Quis hendrerit dolor magna eget. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Dolor purus non enim praesent. Vehicula ipsum a arcu cursus vitae congue. Amet risus nullam eget felis eget. Porta non pulvinar neque laoreet suspendisse interdum consectetur. Neque ornare aenean euismod elementum nisi quis eleifend quam. Ut aliquam purus sit amet luctus venenatis lectus. Non diam phasellus vestibulum lorem sed risus ultricies tristique.', 5),
+('Here is budgeting advice', 'This is the subtitle', '2019-04-04', 'Eric Ritchey', 'This is the most recent post to the database', 6),
+('Here is a title', 'Ghani', '2019-04-04', 'Ryan Groom', 'Write article here Write article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article hereWrite article here', 7);
 
 -- --------------------------------------------------------
 
@@ -93,6 +121,12 @@ INSERT INTO `users` (`username`, `password`, `id`, `isAdmin`, `fName`, `lName`, 
 --
 
 --
+-- Indexes for table `blog`
+--
+ALTER TABLE `blog`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `expenses`
 --
 ALTER TABLE `expenses`
@@ -107,6 +141,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `blog`
+--
+ALTER TABLE `blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
