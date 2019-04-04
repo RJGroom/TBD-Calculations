@@ -1,17 +1,20 @@
 <?php
 require('../login/comm.php');
 
-$blogPosts;
-$sql = "SELECT * FROM blog";
+$blogData;
+$sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 5";
 $result = mysqli_query($conn, $sql);
+$i = 0;
 if (mysqli_num_rows($result) > 0) {
     while($row = $result->fetch_assoc()) {
-        $blogPosts['title'] = $row['title'];
-        $blogPosts['subtitle'] = $row['subtitle'];
-        $blogPosts['date'] = $row['date'];
-        $blogPosts['author'] = $row['author'];
-        $blogPosts['article'] = $row['article'];
-        $blogPosts['id'] = $row['id'];
+        $blogData[$i]['title'] = $row['title'];
+        $blogData[$i]['subtitle'] = $row['subtitle'];
+        $blogData[$i]['date'] = $row['date'];
+        $blogData[$i]['author'] = $row['author'];
+        $blogData[$i]['article'] = $row['article'];
+        $blogData[$i]['id'] = $row['id'];
+
+        $i++;
     }
 }
 ?>
@@ -84,16 +87,73 @@ if (mysqli_num_rows($result) > 0) {
 
     <div class="blog-container">
 
-
+    <!-- Post One -->
     <div class="blog-article-container">
-        <h3 class="blog-title"> <?php echo $blogPosts['title'] ?> </h3>
-        <h4 class="blog-subtitle"> <?php echo $blogPosts['subtitle'] ?> </h4>
-        <div class="date-author-container">
-            <p class="blog-date"><span style="font-weight: bold">Date:</span> <?php echo $blogPosts['date'] ?> </p>
-            <p class="blog-author"><span style="font-weight: bold">Author:</span> <?php echo $blogPosts['author'] ?> </p>
+        <div class="blog-article">
+            <h3 class="blog-title"> <?php echo $blogData[0]['title'] ?> </h3>
+            <h4 class="blog-subtitle"> <?php echo $blogData[0]['subtitle'] ?> </h4>
+            <div class="date-author-container">
+                <p class="blog-date"><span style="font-weight: bold">Date:</span> <?php echo $blogData[0]['date'] ?> </p>
+                <p class="blog-author"><span style="font-weight: bold">Author:</span> <?php echo $blogData[0]['author'] ?> </p>
+            </div>
+            <p class="blog-text"> <?php echo $blogData[0]['article'] ?> </p>
         </div>
-        <p class="blog-article"> <?php echo $blogPosts['article'] ?> </p>
     </div>
+
+    <!-- Post Two -->
+    <div class="blog-article-container">
+        <div class="blog-article">
+            <h3 class="blog-title"> <?php echo $blogData[1]['title'] ?> </h3>
+            <h4 class="blog-subtitle"> <?php echo $blogData[1]['subtitle'] ?> </h4>
+            <div class="date-author-container">
+                <p class="blog-date"><span style="font-weight: bold">Date:</span> <?php echo $blogData[1]['date'] ?> </p>
+                <p class="blog-author"><span style="font-weight: bold">Author:</span> <?php echo $blogData[1]['author'] ?> </p>
+            </div>
+            <p class="blog-text"> <?php echo $blogData[1]['article'] ?> </p>
+        </div>
+    </div>
+
+    <!-- Post Three -->
+    <div class="blog-article-container">
+        <div class="blog-article">
+            <h3 class="blog-title"> <?php echo $blogData[2]['title'] ?> </h3>
+            <h4 class="blog-subtitle"> <?php echo $blogData[2]['subtitle'] ?> </h4>
+            <div class="date-author-container">
+                <p class="blog-date"><span style="font-weight: bold">Date:</span> <?php echo $blogData[2]['date'] ?> </p>
+                <p class="blog-author"><span style="font-weight: bold">Author:</span> <?php echo $blogData[2]['author'] ?> </p>
+            </div>
+            <p class="blog-text"> <?php echo $blogData[2]['article'] ?> </p>
+        </div>
+    </div>
+
+    <!-- Post Four -->
+    <div class="blog-article-container">
+        <div class="blog-article">
+            <h3 class="blog-title"> <?php echo $blogData[3]['title'] ?> </h3>
+            <h4 class="blog-subtitle"> <?php echo $blogData[3]['subtitle'] ?> </h4>
+            <div class="date-author-container">
+                <p class="blog-date"><span style="font-weight: bold">Date:</span> <?php echo $blogData[3]['date'] ?> </p>
+                <p class="blog-author"><span style="font-weight: bold">Author:</span> <?php echo $blogData[3]['author'] ?> </p>
+            </div>
+            <p class="blog-text"> <?php echo $blogData[3]['article'] ?> </p>
+        </div>
+    </div>
+
+    <!-- Post Five -->
+    <div class="blog-article-container">
+        <div class="blog-article">
+            <h3 class="blog-title"> <?php echo $blogData[4]['title'] ?> </h3>
+            <h4 class="blog-subtitle"> <?php echo $blogData[4]['subtitle'] ?> </h4>
+            <div class="date-author-container">
+                <p class="blog-date"><span style="font-weight: bold">Date:</span> <?php echo $blogData[4]['date'] ?> </p>
+                <p class="blog-author"><span style="font-weight: bold">Author:</span> <?php echo $blogData[4]['author'] ?> </p>
+            </div>
+            <p class="blog-text"> <?php echo $blogData[4]['article'] ?> </p>
+        </div>
+    </div>
+
+
+
     </div>
 
     <script src="tips.js"></script>
