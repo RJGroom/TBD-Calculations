@@ -329,13 +329,21 @@ function drawChart2() {
                 min="0"
                 size= "10"
                 />
+
+                <input type="submit" value="Submit" />
             </form>
         </p>
 
+        <!-- WORK IN THISSSS -->
         <?php 
             $spending = $_POST['spending'];
 
-            $leftoverExcessFunds
+            $leftoverExcessFunds = $leftoverExcessFunds - $spending;
+
+            $sql = "INSERT INTO expenses (leftoverExcessFunds)
+            VALUE ('$leftoverExcessFunds')";
+
+            $result = mysqli_query($conn, $sql);
         ?>
 
         </div>
