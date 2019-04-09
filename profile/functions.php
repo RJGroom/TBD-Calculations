@@ -62,4 +62,35 @@ function getUserData($conn, $username) {
     }
 }
 
+function getUserSpending($conn, $username) {
+    $userSpending;
+    $sql = "SELECT januarySpending, februarySpending, marchSpending, aprilSpending, maySpending,
+    juneSpending, julySpending, augustSpending, septemberSpending, octoberSpending, novemberSpending, decemberSpending
+    FROM spending WHERE username ='" . $username . "'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        while($row = $result->fetch_assoc()) {
+            $userSpending['januarySpending'] = $row['januarySpending'];
+            $userSpending['februarySpending'] = $row['februarySpending'];
+            $userSpending['marchSpending'] = $row['marchSpending'];
+            $userSpending['aprilSpending'] = $row['aprilSpending'];
+            $userSpending['maySpending'] = $row['maySpending'];
+            $userSpending['juneSpending'] = $row['juneSpending'];
+            $userSpending['julySpending'] = $row['julySpending'];
+            $userSpending['augustSpending'] = $row['augustSpending'];
+            $userSpending['septemberSpending'] = $row['septemberSpending'];
+            $userSpending['octoberSpending'] = $row['octoberSpending'];
+            $userSpending['novemberSpending'] = $row['novemberSpending'];
+            $userSpending['decemberSpending'] = $row['decemberSpending'];
+        }
+        return $userSpending;
+    }
+    else {
+        echo "User not found";
+    }
+}
+
+
+
 ?>
