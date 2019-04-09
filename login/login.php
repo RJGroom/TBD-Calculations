@@ -46,6 +46,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../navbar/navbarstyle.css">
     <title>Login</title>
 </head>
 
@@ -106,7 +107,7 @@
 </div>
 <div class="register-div">
     <form class="loginForm" action= "login.php" method= "post">
-        <p class="loginHeader">Login</p>
+        <p class="loginParagraph loginHeader">Login</p>
         <p class="login-input-title">Username:</p>
         <input class= "loginInput" type= "text" name= "username" placeholder= "Username" size= "27"/><br/>
         <p class= "login-input-title">Password:</p>
