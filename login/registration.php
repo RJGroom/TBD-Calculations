@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway|Roboto" rel="stylesheet">
     <title>Register</title>
-    <link rel="stylesheet" href="../navbar/navbarstyle.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="registrationPage">
+    <div class="registration-div">
     <p class="registrationHeader">Register</p>
     <form class= "registrationForm" name="register" method="GET" action="register.php">
         <!--<input type = "text" name = "email" placeholder = "Email Address"/><br/>-->
@@ -30,5 +30,6 @@
         <input class="registerBtn" type="submit" value="Register"/>
         <p class="gap"></p>
     </form>
+    </div>
 </body>
 </html>
