@@ -10,6 +10,7 @@ if(isset($_SESSION['username']))
 {
     $userInfo = getUserInfo($conn, $_SESSION['username']);
     $userData = getUserData($conn, $_SESSION['username']);
+    $userSpending = getUserSpending($conn, $_SESSION['username']);
 }
 ?>
 
@@ -140,6 +141,19 @@ if(isset($_SESSION['username']))
     let secondaryExpenses = monthlySubscriptions + miscellaneous;
     let savings = primarySavings + emergencyFunds + vacationFunds;
 
+    let januarySpending = <?php echo $userSpending['januarySpending'] ?>;
+    let februarySpending = <?php echo $userSpending['februarySpending'] ?>;
+    let marchSpending = <?php echo $userSpending['marchSpending'] ?>;
+    let aprilSpending = <?php echo $userSpending['aprilSpending'] ?>;
+    let maySpending = <?php echo $userSpending['maySpending'] ?>;
+    let juneSpending = <?php echo $userSpending['juneSpending'] ?>;
+    let julySpending = <?php echo $userSpending['julySpending'] ?>;
+    let augustSpending = <?php echo $userSpending['augustSpending'] ?>;
+    let septemberSpending = <?php echo $userSpending['septemberSpending'] ?>;
+    let octoberSpending = <?php echo $userSpending['octoberSpending'] ?>;
+    let novemberSpending = <?php echo $userSpending['novemberSpending'] ?>;
+    let decemberSpending = <?php echo $userSpending['decemberSpending'] ?>;
+
    
 
     google.charts.load('current', {packages: ['corechart']});
@@ -169,10 +183,18 @@ sampleChart.draw(data, options);
 function drawChart2() {
     let data = google.visualization.arrayToDataTable([
       ['Month', 'Target Spending Goal', 'Your Spending'],
-      ['Jan',  30,      20],
-      ['Feb',  60,      70],
-      ['Mar',  90,       100],
-      ['Apr',  120,      110]
+      ['Jan',  30,      januarySpending],
+      ['Feb',  60,      februarySpending],
+      ['Mar',  90,      marchSpending],
+      ['Apr',  120,     aprilSpending],
+      ['May',  30,      maySpending],
+      ['Jun',  60,      juneSpending],
+      ['Jul',  90,      julySpending],
+      ['Aug',  120,     augustSpending],
+      ['Sep',  30,      septemberSpending],
+      ['Oct',  60,      octoberSpending],
+      ['Nov',  90,      novemberSpending],
+      ['Dec',  120,    decemberSpending]
     ]);
     let options = {
       title: 'Target Spending Goal vs. Your Spending',
@@ -331,20 +353,110 @@ function drawChart2() {
                 size= "10"
                 />
 
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" name="submit" />
             </form>
         </p>
 
         <!-- WORK IN THISSSS -->
         <?php 
+
+            if(isset($_POST['spending'])) {
             $spending = $_POST['spending'];
+            $leftoverExcessFunds = $userData['leftoverExcessFunds'] - $spending;
 
-            $leftoverExcessFunds = $leftoverExcessFunds - $spending;
+            echo $leftoverExcessFunds;
 
-            $sql = "INSERT INTO expenses (leftoverExcessFunds)
-            VALUE ('$leftoverExcessFunds')";
+            $sql = "UPDATE expenses SET
+            leftoverExcessFunds = $leftoverExcessFunds
+            WHERE username = '" . $_SESSION['username'] . "'";
 
-            $result = mysqli_query($conn, $sql);
+            $januarySpending = $userSpending['januarySpending'] + $spending;
+            $februarySpending = $userSpending['februarySpending'] + $spending;
+            $marchSpending = $userSpending['marchSpending'] + $spending;
+            $aprilSpending = $userSpending['aprilSpending'] + $spending;
+            $maySpending = $userSpending['maySpending'] + $spending;
+            $juneSpending = $userSpending['juneSpending'] + $spending;
+            $julySpending = $userSpending['julySpending'] + $spending;
+            $augustSpending = $userSpending['augustSpending'] + $spending;
+            $septemberSpending = $userSpending['septemberSpending'] + $spending;
+            $octoberSpending = $userSpending['octoberSpending'] + $spending;
+            $novemberSpending = $userSpending['novemberSpending'] + $spending;
+            $decemberSpending = $userSpending['decemberSpending'] + $spending;
+
+            if (date('m') == 1) {
+                $sql2 = "UPDATE spending SET
+                januarySpending = $januarySpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 2) {
+                $sql2 = "UPDATE spending SET
+                februarySpending = $februarySpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 3) {
+                $sql2 = "UPDATE spending SET
+                marchSpending = $marchSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 4) {
+                $sql2 = "UPDATE spending SET
+                aprilSpending = $aprilSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 5) {
+                $sql2 = "UPDATE spending SET
+                maySpending = $maySpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 6) {
+                $sql2 = "UPDATE spending SET
+                juneSpending = $juneSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 7) {
+                $sql2 = "UPDATE spending SET
+                julySpending = $julySpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 8) {
+                $sql2 = "UPDATE spending SET
+                augustSpending = $augustSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 9) {
+                $sql2 = "UPDATE spending SET
+                septemberSpending = $septemberSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 10) {
+                $sql2 = "UPDATE spending SET
+                octoberSpending = $octoberSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 11) {
+                $sql2 = "UPDATE spending SET
+                novemberSpending = $novemberSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+            else if (date('m') == 12) {
+                $sql2 = "UPDATE spending SET
+                decemberSpending = $decemberSpending
+                WHERE username = '" . $_SESSION['username'] . "'";
+            }
+
+
+
+            $resultOne = mysqli_query($conn, $sql);
+            $resultTwo = mysqli_query($conn, $sql2);
+
+
+            if($resultOne) {
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
+            else {
+            }
+
+        }
         ?>
 
         </div>
@@ -461,6 +573,7 @@ function drawChart2() {
                         echo "You currently have more than 20% of your total income leftover, you may want to consider investing
                         more into your savings or emergency funds";
                     }
+
                 ?>
             </p>
 

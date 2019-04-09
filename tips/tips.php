@@ -119,7 +119,7 @@ if (mysqli_num_rows($result) > 0) {
                     echo 'Economics Minor <br />';
                 }
                 else if ($blogData[0]['author'] == 'Jonah Downs') {
-                    echo 'Jonah Downs';
+                    echo 'Jonah Downs <br />';
                     echo 'Indiana University of Pennsylvania <br />';
                     echo 'Computer Science Major <br />';
                     echo 'Communications Media Minor <br />';
@@ -163,7 +163,7 @@ if (mysqli_num_rows($result) > 0) {
                     echo 'Economics Minor <br />';
                 }
                 else if ($blogData[1]['author'] == 'Jonah Downs') {
-                    echo 'Jonah Downs';
+                    echo 'Jonah Downs <br />';
                     echo 'Indiana University of Pennsylvania <br />';
                     echo 'Computer Science Major <br />';
                     echo 'Communications Media Minor <br />';
@@ -207,7 +207,7 @@ if (mysqli_num_rows($result) > 0) {
                     echo 'Economics Minor <br />';
                 }
                 else if ($blogData[2]['author'] == 'Jonah Downs') {
-                    echo 'Jonah Downs';
+                    echo 'Jonah Downs <br />';
                     echo 'Indiana University of Pennsylvania <br />';
                     echo 'Computer Science Major <br />';
                     echo 'Communications Media Minor <br />';
@@ -250,7 +250,7 @@ if (mysqli_num_rows($result) > 0) {
                     echo 'Economics Minor <br />';
                 }
                 else if ($blogData[3]['author'] == 'Jonah Downs') {
-                    echo 'Jonah Downs';
+                    echo 'Jonah Downs <br />';
                     echo 'Indiana University of Pennsylvania <br />';
                     echo 'Computer Science Major <br />';
                     echo 'Communications Media Minor <br />';
@@ -294,7 +294,7 @@ if (mysqli_num_rows($result) > 0) {
                     echo 'Economics Minor <br />';
                 }
                 else if ($blogData[4]['author'] == 'Jonah Downs') {
-                    echo 'Jonah Downs';
+                    echo 'Jonah Downs <br />';
                     echo 'Indiana University of Pennsylvania <br />';
                     echo 'Computer Science Major <br />';
                     echo 'Communications Media Minor <br />';
