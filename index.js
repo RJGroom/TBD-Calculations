@@ -1,4 +1,3 @@
-
 //Open Menu Function
 function toggleNav() {
     let nav = document.getElementById('navBar');
@@ -36,22 +35,37 @@ function toggleNav() {
 }
 
 //Multi-lingual Dictionary
+let language = "English";
 
 var languages = [
     {
         English: "Menu",
-        Spanish: "",
         Portuguese: "Menu",
     },
     {
-        English: "Login",
-        Spanish: "",
-        Portuguese: "Iniciar Sess" + "&atilda;" + "o"
+        English: "Go back to our homepage",
+        Portuguese: "voltar para a nossa página inicial"
     },
     {
-        English: "Logout",
-        Spanish: "",
-        Portuguese: "Terminar Sess" + "&atilda;" + "o"
+        English: "Log in to save your records and keep track of your spending habits",
+        Portuguese: "Faça o login para salvar seus registros e acompanhar seus hábitos de consumo"
+    },
+    {
+       English: "View a graphical representation of your spending and saving habits",
+       Portuguese: "Veja uma representação gráfica dos seus gastos e hábitos de poupança"
+    },
+    {
+        English: "View a list of budgeting tips and advice to help improve your spending habits",
+        Portuguese: "Veja uma lista de dicas e conselhos sobre orçamentos para ajudar a melhorar seus hábitos de consumo"
+    },
+    {
+        English: "Contact TBD Calculations with any of your questions, comments, or concerns",
+        Portuguese: "contate os cálculos da TBG com qualquer uma das suas perguntas, comentários ou preocupações"
+    },
+    {
+        English: "View a list of the different language and currency preferences available",
+        Portuguese: "Veja uma lista das diferentes preferências de idioma e moeda disponíveis"
     }
 ];
+
 

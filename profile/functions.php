@@ -4,7 +4,7 @@ require('../login/comm.php');
 
 function getUserInfo($conn, $username) {
     $userInfo;
-    $sql = "SELECT username, password, id, isAdmin, fName, lName, email FROM Users WHERE username ='" . $username . "'";
+    $sql = "SELECT username, password, id, isAdmin, fName, lName, email, languagePreference FROM Users WHERE username ='" . $username . "'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -16,6 +16,7 @@ function getUserInfo($conn, $username) {
             $userInfo['fName'] = $row['fName'];
             $userInfo['lName'] = $row['lName'];
             $userInfo['email'] = $row['email'];
+            $userInfo['languagPreference'] = $row['languagePreference'];
         }
         return $userInfo;
     }

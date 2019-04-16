@@ -10,6 +10,7 @@ else
     echo "Welcome, Guest";
 }
 **/
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +27,42 @@ else
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="Charts.js"></script>
+
+    <script>
+            let languagePreference = "Portuguese"
+
+            window.onload = function languageChoice() {
+                console.log(languagePreference);
+                if (languagePreference == "English") {
+                    document.getElementById('menuText').innerHTML = languages[0].English;
+                    document.getElementById('navTextOne').innerHTML = languages[1].English;
+                    document.getElementById('navTextTwo').innerHTML = languages[2].English;
+                    document.getElementById('navTextThree').innerHTML = languages[3].English;
+                    document.getElementById('navTextFour').innerHTML = languages[4].English;
+                    document.getElementById('navTextFive').innerHTML = languages[5].English;
+                    document.getElementById('navTextSix').innerHTML = languages[6].English;
+                }
+                else if (languagePreference == "Portuguese") {
+                    document.getElementById('menuText').innerHTML = languages[0].Portuguese;
+                    document.getElementById('navTextOne').innerHTML = languages[1].Portuguese;
+                    document.getElementById('navTextTwo').innerHTML = languages[2].Portuguese;
+                    document.getElementById('navTextThree').innerHTML = languages[3].Portuguese;
+                    document.getElementById('navTextFour').innerHTML = languages[4].Portuguese;
+                    document.getElementById('navTextFive').innerHTML = languages[5].Portuguese;
+                    document.getElementById('navTextSix').innerHTML = languages[6].Portuguese;
+                }
+                else {
+                    document.getElementById('menuText').innerHTML = languages[0].English;
+                    document.getElementById('navTextOne').innerHTML = languages[1].English;
+                    document.getElementById('navTextTwo').innerHTML = languages[2].English;
+                    document.getElementById('navTextThree').innerHTML = languages[3].English;
+                    document.getElementById('navTextFour').innerHTML = languages[4].English;
+                    document.getElementById('navTextFive').innerHTML = languages[5].English;
+                    document.getElementById('navTextSix').innerHTML = languages[6].English;
+                }
+            }
+    </script>
+
 </head>
 <body>
     <div class="logo">tbg</div>
@@ -33,7 +70,7 @@ else
     <div class="navBar" id="navBar">
 
         <div class="navSection">
-            <h3 class="menu-text">Menu</h3>
+            <h3 class="menu-text" id="menuText">Menu</h3>
             <div class="menuIcon" onclick="toggleNav()" title = "Open Menu">
                 <div class="menuBar topBar" id="topBar"></div>
                 <div class="menuBar middleBar" id="middleBar"></div>
@@ -42,42 +79,42 @@ else
         </div>
 
         <div class="navSection">
-            <p class="navDescription">Go back to our <span style="font-weight:bold">homepage</span></p>
+            <p class="navDescription" id="navTextOne">Go back to our <span style="font-weight:bold">homepage</span></p>
             <a href="./index.php" class="navLink">
                 <img class="navIcon" src="Icons/house-outline.svg" title="Home">
             </a>
         </div>
 
         <div class="navSection">
-            <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
+            <p class="navDescription" id="navTextTwo"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
             <a href="./login/login.php" class="navLink">
                 <img class="navIcon" src="Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>
 
         <div class="navSection">
-            <p class="navDescription">View a <span style="font-weight:bold">graphical representation</span> of your spending and saving habits</p>
+            <p class="navDescription" id="navTextThree">View a <span style="font-weight:bold">graphical representation</span> of your spending and saving habits</p>
             <a href="./graphs/graphs.php" class="navLink">
                 <img class="navIcon" src="Icons/005-graph-1.svg" title="View-Graph">
             </a>
         </div>
 
         <div class="navSection">
-            <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
+            <p class="navDescription" id="navTextFour">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
             <a href="./tips/tips.html" class="navLink">
                 <img class="navIcon" src="Icons/007-elemental-tip.svg" title="Budgeting-Tips">
             </a>
         </div>
 
         <div class="navSection">
-            <p class="navDescription"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your questions, comments, or concerns</p>
+            <p class="navDescription" id="navTextFive"><span style="font-weight:bold">Contact</span> TBD Calculations with any of your questions, comments, or concerns</p>
             <a href ="./contact/contact.php" class="navLink">
                 <img class="navIcon" src="Icons/001-contact.svg" title="Contact">
             </a>
         </div>
 
         <div class="navSection">
-            <p class="navDescription">View a list of the different <span style="font-weight:bold">language and currency</span> preferences available</p>
+            <p class="navDescription" id="navTextSix">View a list of the different <span style="font-weight:bold">language and currency</span> preferences available</p>
             <img class="navIcon" src="Icons/008-worlwide.svg" title="Language-Currency">
         </div>
 
