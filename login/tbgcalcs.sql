@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 09, 2019 at 07:35 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.1.27
+-- Host: 127.0.0.1
+-- Generation Time: Apr 16, 2019 at 02:23 AM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -54,6 +54,26 @@ INSERT INTO `blog` (`title`, `subtitle`, `date`, `author`, `article`, `id`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `ContactName` varchar(40) NOT NULL,
+  `ContactEmail` varchar(60) NOT NULL,
+  `ContactComment` varchar(1000) NOT NULL,
+  `ContactId` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`ContactName`, `ContactEmail`, `ContactComment`, `ContactId`) VALUES
+('Jim Beam', 'jimbeam@buttsex.info', 'Please delete your site pls', 9);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `expenses`
 --
 
@@ -86,12 +106,23 @@ CREATE TABLE `expenses` (
 --
 
 INSERT INTO `expenses` (`username`, `primaryIncome`, `secondaryIncome`, `housing`, `loans`, `healthInsurance`, `transportation`, `cellphoneBill`, `groceries`, `clothing`, `gas`, `electric`, `water`, `cableInternet`, `monthlySubscriptions`, `miscellaneous`, `primarySavings`, `emergencyFunds`, `vacationFunds`, `excessFunds`, `leftoverExcessFunds`) VALUES
-('', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -100),
-('Austin', 5, 50000, 2, 3, 4, 555, 666, 231, 6, 4, 2, 1, 1, 5316, 0, 1, 2, 300, 42911, 42911),
-('jonah_downs', 4000, 1000, 400, 100, 300, 200, 100, 100, 100, 100, 300, 400, 200, 100, 100, 300, 200, 100, 1900, 1900),
+('jonah_downs', 5000, 500, 400, 100, 300, 200, 100, 100, 100, 300, 300, 400, 200, 100, 100, 700, 200, 100, 1800, 1800),
 ('NewUser', 1000, 1000, 500, 400, 100, 200, 100, 400, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 0, 0),
-('ritchey_rich', 2000, 1000, 100, 400, 200, 100, 100, 200, 100, 100, 40, 40, 20, 40, 20, 200, 100, 100, 1140, 1090),
-('ryan_groom', 3000, 1000, 500, 500, 500, 300, 200, 300, 300, 100, 100, 50, 100, 30, 200, 400, 200, 100, 120, 120);
+('ritchey_rich', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('ryan_groom', 4000, 1000, 500, 500, 500, 300, 200, 300, 300, 100, 100, 50, 100, 30, 200, 400, 200, 100, 1120, 1120),
+('newUser2', 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60000, 60000),
+('dd', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('bigFatAsshole', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('dfd', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('dfdkdffd', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('fsdasdf', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('eric', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('my', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('fuck', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('please', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('will', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('this', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+('imran_ghani', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -148,24 +179,23 @@ INSERT INTO `users` (`username`, `password`, `id`, `isAdmin`, `fName`, `lName`, 
 ('jonah_downs', 'password', 1, 1, 'Jonah', 'Downs', 'jonah.c.downs@gmail.com'),
 ('ritchey_rich', 'animetitties', 4, 1, 'Eric', 'Ritchey', ''),
 ('ryan_groom', 'epicfortnitekill', 6, 1, 'Ryan', 'Groom', 'RJGroomy@yahoo.com'),
-('NewUser', 'password', 21, 0, 'Jim', 'Johnson', 'JJ@Gmail,gov'),
-('Austin', 'Austin', 22, 0, 'Austiun', 'Austin', 'Austin');
+('the_room', 'ohhimark', 7, 0, 'Tommy', 'Wisseau', 'wisseau@tommy.gov'),
+('', '', 9, 0, '', '', ''),
+('tingle', 'tingle', 10, 0, 'Tingle', 'Man', 'tingle@tingle.ting'),
+('newUser2', 'lll', 11, 0, 'John', 'Doe', 'dfhgjsdk'),
+('will', 'not', 21, 0, 'this', 'work', 'maybe'),
+('this', 'not', 22, 0, 'this', 'work', 'maybe'),
+('imran_ghani', 'COSC473', 23, 0, 'Imrahn', 'Ghani', 'ghani@iup.edu');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `blog`
+-- Indexes for table `contact`
 --
-ALTER TABLE `blog`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `expenses`
---
-ALTER TABLE `expenses`
-  ADD UNIQUE KEY `username` (`username`);
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`ContactId`);
 
 --
 -- Indexes for table `spending`
@@ -184,16 +214,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `blog`
+-- AUTO_INCREMENT for table `contact`
 --
-ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `contact`
+  MODIFY `ContactId` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
