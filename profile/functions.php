@@ -16,7 +16,7 @@ function getUserInfo($conn, $username) {
             $userInfo['fName'] = $row['fName'];
             $userInfo['lName'] = $row['lName'];
             $userInfo['email'] = $row['email'];
-            $userInfo['languagPreference'] = $row['languagePreference'];
+            $userInfo['languagePreference'] = $row['languagePreference'];
         }
         return $userInfo;
     }

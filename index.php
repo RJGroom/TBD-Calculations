@@ -1,16 +1,10 @@
  <?php
-/*
+ require('functions.php');
 session_start();
-if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == TRUE)
-{
-    echo "Welcome, " . $_SESSION['username'] . "!<br/>";
-}
-else
-{
-    echo "Welcome, Guest";
-}
-**/
-session_start();
+if(isset($_SESSION['username'])) 
+    {
+        $userInfo = getUserInfo($conn, $_SESSION['username']);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +23,15 @@ session_start();
     <script src="Charts.js"></script>
 
     <script>
-            let languagePreference = "Portuguese"
+            let languagePreference = <?php 
+            if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] == TRUE) 
+                {
+                echo "'" . $userInfo['languagePreference'] . "'";
+                }
+            else {
+                echo "'English'";
+            }
+                ?>
 
             window.onload = function languageChoice() {
                 console.log(languagePreference);
