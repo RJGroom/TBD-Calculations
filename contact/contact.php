@@ -126,22 +126,22 @@
         <div class="contact-image">
 
         </div>
-        <form class="contact-form">
+        <form class="contact-form" action="contactConfirm.php" method="get">
             <h3 class="contact-form-heading">Questions, Comments, Concerts? Contact Us.</h3>
             <p class="contact-form-line">
                 Hello, my name is
-                <input class="contact-form-input" type="text" placeholder="Enter Name" />
+                <input class="contact-form-input" name="contactName" type="text" placeholder="Enter Name" />
             </p>
             <p class="contact-form-line">
                 You can reach me at
-                <input class="contact-form-input" type="text" placeholder="Enter E-mail" />
+                <input class="contact-form-input" name="contactEmail" type="text" placeholder="Enter E-mail" />
             </p>
             <p class="contact-form-line">
                 I am contacting you because...
             </p>
-            <textarea class="contact-form-textarea" placeholder="Enter your message"></textarea>
+            <textarea class="contact-form-textarea" name="contactComment" placeholder="Enter your message"></textarea>
             <div class="contact-submit-wrapper">
-                <button class="contact-submit">Send Message</button>
+                <button class="contact-submit" type="submit">Send Message</button>
             </div>
         </form>
     </div>

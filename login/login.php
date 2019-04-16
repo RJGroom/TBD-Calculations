@@ -20,12 +20,14 @@
         $query = mysqli_query($conn, $sql);
         $row =  mysqli_fetch_array($query);
         $id = $row['id'];
+        $isAdmin  = $row['isAdmin'];
         $db_password = $row['password'];
         
         if($Password == $db_password)
         {
             $_SESSION['username'] = $Username;
             $_SESSION['id'] = $id;
+            $_SESSION['isAdmin'] = $isAdmin;
             $_SESSION['isLoggedIn'] = TRUE;
             header("Location: ../profile/profile.php");
         }
