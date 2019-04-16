@@ -97,16 +97,16 @@
     <div class="form-container">
         <form class="blog-form" method="POST" action="">
             <label class="blog-label">Title</label>
-            <input type="text" name="title" placeholder="Title" />
+            <input class="blog-input" type="text" name="title" placeholder="Title" />
             <label class="blog-label">Subtitle</label> 
-            <input type="text" name="subtitle" placeholder="Subtitle" />
+            <input class="blog-input" type="text" name="subtitle" placeholder="Subtitle" />
             <label class="blog-label">Date</label>
-            <input type="date" name="date" />
+            <input class="blog-input" type="date" name="date"/>
             <label class="blog-label">Author</label>
-            <input type="text" name="author" placeholder="Author" />
-            <label class="blog-label">Article</label>
-            <textarea class="blog-post" name="article">Write article here</textarea>
-            <input type="submit" value="Post Article"/>
+            <input class="blog-input" type="text" name="author" placeholder="Author" />
+            <label class="blog-label article-label">Article</label>
+            <textarea class="blog-post" name="article">Write Article Here</textarea>
+            <input class="submit" type="submit" value="Post Article"/>
         </form>
 
     </div>
