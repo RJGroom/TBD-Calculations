@@ -338,6 +338,14 @@ function drawChart2() {
 
         <br />
         <br />
+        <?php
+        if($_SESSION['isAdmin'] == 1)
+        {
+            ?>
+            <a href = "contactUsComments.php">View user comments</a>
+            <?php
+        }
+        ?>
         <br />
         <h3 class="info-header">Funds Calculator</h3>
         <div class="spending-calculator">
