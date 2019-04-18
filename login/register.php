@@ -29,7 +29,9 @@ else
 {
     $sql = "INSERT into users (username, password, fName, lName, email) VALUES ('$Username', '$InitPassword', '$FirstName', '$LastName', '$Email')  ";
     $sql2 = "INSERT into expenses (username) VALUE ('$Username')";
+    $sql3 = "INSERT INTO spending (username) VALUE ('$Username')";
     $result = $conn->query($sql2);
+    $result = $conn->query($sql3);
     if($conn->query($sql) === TRUE)
     {
         session_start();
@@ -39,10 +41,12 @@ else
         $query = mysqli_query($conn, $sql);
         $row =  mysqli_fetch_array($query);
         $id = $row['id'];
+        $isAdmin  = $row['isAdmin'];
         $db_password = $row['password'];
 
             $_SESSION['username'] = $Username;
             $_SESSION['id'] = $id;
+            $_SESSION['isAdmin'] = $isAdmin;
             $_SESSION['isLoggedIn'] = TRUE;
             header("Location: ../profile/profile.php");
        // header("Location: ../index.php");
