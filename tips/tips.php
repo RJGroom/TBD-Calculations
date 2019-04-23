@@ -110,7 +110,7 @@ if (mysqli_num_rows($result) > 0) {
     <div class="about-author-container">
         <h3 class="about-author-header">About the author</h3>
 
-        <p>
+        <p class="about-author-info">
             <?php 
                 if ($blogData[0]['author'] == 'Ryan Groom') {
                     echo 'Ryan Groom <br />';
@@ -154,7 +154,7 @@ if (mysqli_num_rows($result) > 0) {
     <div class="about-author-container">
         <h3 class="about-author-header">About the author</h3>
 
-        <p>
+        <p class="about-author-info">
             <?php 
                 if ($blogData[1]['author'] == 'Ryan Groom') {
                     echo 'Ryan Groom <br />';
@@ -198,7 +198,7 @@ if (mysqli_num_rows($result) > 0) {
     <div class="about-author-container">
         <h3 class="about-author-header">About the author</h3>
 
-        <p>
+        <p class="about-author-info">
             <?php 
                 if ($blogData[2]['author'] == 'Ryan Groom') {
                     echo 'Ryan Groom <br />';
@@ -241,7 +241,7 @@ if (mysqli_num_rows($result) > 0) {
     <div class="about-author-container">
         <h3 class="about-author-header">About the author</h3>
 
-        <p>
+        <p class="about-author-info">
             <?php 
                 if ($blogData[3]['author'] == 'Ryan Groom') {
                     echo 'Ryan Groom <br />';
@@ -285,7 +285,7 @@ if (mysqli_num_rows($result) > 0) {
     <div class="about-author-container">
         <h3 class="about-author-header">About the author</h3>
 
-        <p>
+        <p class="about-author-info">
             <?php 
                 if ($blogData[4]['author'] == 'Ryan Groom') {
                     echo 'Ryan Groom <br />';
