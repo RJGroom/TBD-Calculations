@@ -140,9 +140,9 @@ CREATE TABLE `spending` (
 --
 
 INSERT INTO `spending` (`username`, `januarySpending`, `februarySpending`, `marchSpending`, `aprilSpending`, `maySpending`, `juneSpending`, `julySpending`, `augustSpending`, `septemberSpending`, `octoberSpending`, `novemberSpending`, `decemberSpending`) VALUES
-('jonah_downs', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-('ritchey_rich', 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0),
-('ryan_groom', 40, 50, 30, 190, 40, 50, 32, 34, 52, 21, 42, 50);
+('jonah_downs', 10, 30, 40, 70, 80, 0, 0, 0, 0, 0, 0, 0),
+('ritchey_rich', 60, 40, 20, 50, 0, 0, 0, 0, 0, 0, 0, 0),
+('ryan_groom', 40, 50, 30, 70, 40, 50, 32, 34, 52, 21, 42, 50);
 
 -- --------------------------------------------------------
 

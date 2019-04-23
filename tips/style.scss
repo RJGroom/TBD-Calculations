@@ -14,15 +14,18 @@ body{
 
 .tips-page-header {
     background-color: #465C8B;
+    color: white;
 }
 
 .tips-page-header-text {
+    color: white;
     background-color:  #465C8B;
     margin: 0;
     text-align: center;
     font-family: 'Raleway';
     font-size: 2em;
     margin-bottom: 2em;
+    
 }
 
 .blog-container {
@@ -46,16 +49,19 @@ body{
     display: flex;
     flex-direction: column;
     width: 70%;
+    color: white;s
 }
 
 .blog-title {
     font-family: 'Raleway';
-  margin: 0;
+    margin: 0;
+    color: white;
 }
 
 .blog-subtitle {
     font-family: 'Raleway';
     margin: 0;
+    color: white;
 }
 
 .date-author-container {
@@ -67,16 +73,18 @@ body{
     font-family: 'Raleway';
     margin: 0;
     margin-right: 1em;
+    color: white;
 }
 
 .blog-author {
     font-family: 'Raleway';
     margin: 0;
+    color: white;
 }
 
 .blog-text {
     font-family: 'Raleway';
-  
+    color: white;
 }
 
 .about-author-container {
@@ -88,6 +96,7 @@ body{
 .about-author-header {
     font-family: 'Raleway';
     margin: 0;
+    color: white;
 }
 
 .form-container {
@@ -126,10 +135,12 @@ body{
 .article-label {
     margin-bottom: 5px;
     font-family: 'Raleway';
+    color: white;
 }
 
 .about-author-info {
     font-family: 'Raleway';
+    color: white;
 }
 
 .submit {
