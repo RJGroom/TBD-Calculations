@@ -89,7 +89,7 @@
 
     <div class="navSection">
         <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
-        <a href="../tips/tips.html" class="navLink">
+        <a href="../tips/tips.php" class="navLink">
             <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
         </a>
     </div>

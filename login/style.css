@@ -168,6 +168,7 @@ p {
 
 .registerBtnLogin {
   position: relative;
+  left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   text-decoration: none;
