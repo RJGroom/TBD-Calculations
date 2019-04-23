@@ -175,7 +175,9 @@ if(isset($_SESSION['username']))
                         will assist you in developing a budget that is financially viable and tailored to help you make the most
                         of your money.
                     </p>
-                    <button class="btn">Take Our Advice</button>
+                    <a href="./tips/tips.php">
+                        <button class="btn">Take Our Advice</button>
+                    </a>
                 </div>
             </div>
 
@@ -217,33 +219,28 @@ if(isset($_SESSION['username']))
                 <h3 class="footer-title">Navigation</h3>
                 <a href="./index.php">Home</a>
                 <br>
-                <a href="./login/login.html">Login</a>
+                <a href="./login/login.php">Login</a>
                 <br>
-                <a href="./graphs/graphs.html">Graphs</a>
+                <a href="./graphs/graphs.php">Graphs</a>
                 <br>
-                <a href="./tips/tips.html">Tips</a>
+                <a href="./tips/tips.php">Tips</a>
                 <br>
-                <a href="./contact/contact.html">Contact</a>
             </div>
 
             <div class="footer-section">
                 <h3 class="footer-title">Languages</h3>
                 <a href="#">English</a>
                 <br>
-                <a href="#">Spanish</a>
-                <br>
-                <a href="#">French</a>
-                <br>
                 <a href="#">Portuguese</a>
             </div>
 
             <div class="footer-section">
                 <h3 class="footer-title">Contact</h3>
-                <a href="#">Contact Us</a>
+                <a href="./contact/contact.php">Contact Us</a>
                 <br>
                 <a href="#">Subscribe To Email</a>
                 <br>
-                <a href="#">FAQ</a>
+                <a href="./contact/contact.php">FAQ</a>
                 <br>
             </div>
 

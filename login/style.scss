@@ -130,7 +130,8 @@ p {
 }
 
 .registerBtnLogin {
-    position: relative;  
+    position: relative; 
+    left: 50%;
     transform: translateX(-50%);
     text-decoration: none;
     background-color: #ffb515;
