@@ -1,4 +1,52 @@
-.comments-content {
+body {
+  background-color: #465C8B;
+}
+
+.comments-div {
+  margin-left: 25px;
+}
+
+.comments-header {
   font-family: 'Raleway';
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+li {
+  font-family: 'Raleway';
+  margin-left: 10px;
+  color: white;
+}
+
+.user-comment {
+  margin-left: 25px;
+}
+
+.back-btn {
+  margin-top: 10px;
+  margin-left: 90px;
+  margin-bottom: 15px;
+  position: relative;
+  height: 50px;
+  color: black;
+  background-color: #ffb515;
+  font-family: "Raleway";
+  font-weight: bold;
+  border: 2px solid #ffb515;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  cursor: pointer;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.back-btn:hover {
+  background: none;
+  color: #ffb515;
+}
+
+.back-btn:focus {
+  outline: none;
 }
 /*# sourceMappingURL=commentsstyle.css.map */
