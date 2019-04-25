@@ -350,20 +350,20 @@ function drawChart2() {
         <h3 class="info-header">Funds Calculator</h3>
         <div class="spending-calculator">
         <p class="main-info-para">Input recent spendings: </p>
-        <p class="main-info-para">$
-            <form method="POST" action="">
-                <input
-                class="spending-input"
-                name="spending"
-                type="number"
-                value="0"
-                min="0"
-                size= "10"
-                />
+        <p class="main-info-input">$</p>
+        <form class="spending-input-field" method="POST" action=""> 
+            <input
+            class="spending-input"
+            name="spending"
+            type="number"
+            value="0"
+            min="0"
+            size= "10"
+            />
 
-                <input type="submit" value="Submit" name="submit" />
-            </form>
-        </p>
+            <input class="submit" type="submit" value="Submit" name="submit" />
+        </form>
+        
 
         <!-- WORK IN THISSSS -->
         <?php 

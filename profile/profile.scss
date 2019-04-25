@@ -53,6 +53,39 @@
     font-size: 1em;
 }
 
+.main-info-input{
+    margin-left: 15px;
+    font-family:'Raleway';
+    font-size: 1em;
+    display: inline;
+}
+
+.spending-input-field{
+    display: inline;  
+    margin-bottom: 10px;  
+}
+
+.spending-input{
+    font-family: 'Raleway';
+}
+
+.submit {
+    width: 30%;
+    color: black;
+    background-color: #ffb515;
+    font-family: "Raleway";
+    font-weight: bold;
+    border: 2px solid #ffb515;
+    transition: 500ms ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.submit:hover {
+    background: none;
+    color: #ffb515;
+}
+
 .spending-calculator {
     position: relative;
     width: 90%;
