@@ -33,7 +33,7 @@
         }
         else
         {
-            echo "Login failed. Please check that your username and password are both correct.";
+            //echo "Login failed. Please check that your username and password are both correct.";
         }
     }
 
