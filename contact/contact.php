@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +42,14 @@
         <div class="navSection">
             <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track
                 of your spending habits</p>
-            <a href="../login/login.php" class="navLink">
+            <a href="
+            <?php
+                if(isset($_SESSION['username'])){       
+                    echo "../profile/profile.php";
+                }
+                else echo "../login/login.php";
+                ?>
+            " class="navLink">
                 <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>
@@ -54,7 +65,7 @@
         <div class="navSection">
             <p class="navDescription">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to
                 help improve your spending habits</p>
-            <a href="../tips/tips.html" class="navLink">
+            <a href="../tips/tips.php" class="navLink">
                 <img class="navIcon" src="../Icons/007-elemental-tip.svg" title="Budgeting-Tips">
             </a>
         </div>
@@ -127,7 +138,7 @@
 
         </div>
         <form class="contact-form" action="contactConfirm.php" method="get">
-            <h3 class="contact-form-heading">Questions, Comments, Concerts? Contact Us.</h3>
+            <h3 class="contact-form-heading">Questions, Comments, Concerns?</h3>
             <p class="contact-form-line">
                 Hello, my name is
                 <input class="contact-form-input" name="contactName" type="text" placeholder="Enter Name" />
@@ -186,7 +197,7 @@
             <br>
             <a href="./graphs/graphs.html">Graphs</a>
             <br>
-            <a href="./tips/tips.html">Tips</a>
+            <a href="./tips/tips.php">Tips</a>
             <br>
             <a href="./contact/contact.html">Contact</a>
         </div>

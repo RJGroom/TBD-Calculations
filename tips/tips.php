@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('../login/comm.php');
 
 $blogData;
@@ -54,7 +55,14 @@ if (mysqli_num_rows($result) > 0) {
 
         <div class="navSection">
             <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
-            <a href="../login/login.php" class="navLink">
+            <a href="
+            <?php
+                if(isset($_SESSION['username'])){       
+                    echo "../profile/profile.php";
+                }
+                else echo "../login/login.php";
+                ?>
+            " class="navLink">
                 <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>

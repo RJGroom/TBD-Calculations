@@ -89,7 +89,15 @@ if(isset($_SESSION['username']))
 
         <div class="navSection">
             <p class="navDescription" id="navTextTwo"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
-            <a href="./login/login.php" class="navLink">
+            <a href=
+            "
+            <?php
+                if(isset($_SESSION['username'])){       
+                    echo "./profile/profile.php";
+                }
+                else echo "./login/login.php";
+                ?>
+            " class="navLink">
                 <img class="navIcon" src="Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>
@@ -103,7 +111,7 @@ if(isset($_SESSION['username']))
 
         <div class="navSection">
             <p class="navDescription" id="navTextFour">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
-            <a href="./tips/tips.html" class="navLink">
+            <a href="./tips/tips.php" class="navLink">
                 <img class="navIcon" src="Icons/007-elemental-tip.svg" title="Budgeting-Tips">
             </a>
         </div>

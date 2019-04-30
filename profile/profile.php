@@ -276,7 +276,14 @@ function drawChart2() {
     
         <div class="navSection">
             <p class="navDescription"><span style="font-weight:bold">Log in</span> to save your records and keep track of your spending habits</p>
-            <a href="./login.php" class="navLink">
+            <a href="
+            <?php
+                if(isset($_SESSION['username'])){       
+                    echo "./profile.php";
+                }
+                else echo "../login/login.php";
+                ?>
+            " class="navLink">
                 <img class="navIcon" src="../Icons/006-login-square-arrow-button-outline.svg" title="Login">
             </a>
         </div>
@@ -555,9 +562,22 @@ function drawChart2() {
     </div>
         <div class="profile-tips-section">
             <h3 class="profile-tips-header">Profile tips section</h3>
-            <p class="profile-tips">According to the 20% rule, you should save at least 20% of your total income.</p>
-            <p class="profile-tips"> You are currently saving <?php echo round(($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 0) ?>% of your income. </p>
+            <p class="profile-tips">
+                <?php
+                if ($userData['primaryIncome'] > 0){
+            echo "According to the 20% rule, you should save at least 20% of your total income.";
+                }
+                ?>
+            </p>
+            <p class="profile-tips"> 
+            <?php 
+            if ($userData['primaryIncome'] > 0){
+                echo "You are currently saving " . round(($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100, 0) . "% of your income.";
+                }
+                ?> 
+            </p>
             <p class="profile-tips"> <?php 
+            if ($userData['primaryIncome'] > 0){
                     if (($userData['primarySavings']/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100 < 20) {
                         echo "You need to save $" . ((($userData['primaryIncome'] + $userData['secondaryIncome']) * 0.2) - $userData['primarySavings']) . " more each month to satisfy the 20% rule.";
                     }
@@ -565,7 +585,7 @@ function drawChart2() {
                     {
                         echo "Your current savings rate is efficient";
                     }
-            
+                }
                  ?>
             </p>
 
@@ -576,16 +596,28 @@ function drawChart2() {
                     $userData['clothing'] - $userData['gas'] - $userData['electric'] - $userData['water'] - 
                     $userData['cableInternet'] - $userData['monthlySubscriptions'] - $userData['miscellaneous'] - 
                     $userData['primarySavings'] - $userData['emergencyFunds'] - $userData['vacationFunds'];
+
+                if ($userData['primaryIncome'] > 0){
                     if (($excessFunds/($userData['primaryIncome'] + $userData['secondaryIncome'])) * 100 > 20)
                     {
                         echo "You currently have more than 20% of your total income leftover, you may want to consider investing
                         more into your savings or emergency funds";
                     }
-
+            }
                 ?>
             </p>
 
-            <p class="profile-tips">Always keep your budgeting information up to date</p>
+            <p class="profile-tips">
+                <?php
+                if ($userData['primaryIncome'] > 0){
+                    echo "Always keep your budgeting information up to date";
+                }
+                else {
+                    echo "Please click on the update data tab on right right of the page to input your information";
+                    echo "All values should be recorded as monthly income and expenses";
+                }
+                ?>
+                    </p>
         </div>
 
    </div>
