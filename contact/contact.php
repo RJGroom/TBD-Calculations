@@ -193,7 +193,7 @@ session_start();
             </div>
             <div class="profile profile3">
                 <div class="profile-overlay">
-                    <h3 class="profile-name">Eric Ritchie</h3>
+                    <h3 class="profile-name">Eric Ritchey</h3>
                     <p class="profile-about">Senior at Indiana University of Pennslyvania</p>
                     <p class="profile-about">Favors java programming</p>
                     <p class="profile-about">E-mail: email@example.com</p>

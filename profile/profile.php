@@ -184,17 +184,17 @@ function drawChart2() {
     let data = google.visualization.arrayToDataTable([
       ['Month', 'Target Spending Goal', 'Your Spending'],
       ['Jan',  30,      januarySpending],
-      ['Feb',  60,      februarySpending],
-      ['Mar',  90,      marchSpending],
-      ['Apr',  120,     aprilSpending],
+      ['Feb',  30,      februarySpending],
+      ['Mar',  30,      marchSpending],
+      ['Apr',  30,     aprilSpending],
       ['May',  30,      maySpending],
-      ['Jun',  60,      juneSpending],
-      ['Jul',  90,      julySpending],
-      ['Aug',  120,     augustSpending],
+      ['Jun',  30,      juneSpending],
+      ['Jul',  30,      julySpending],
+      ['Aug',  30,     augustSpending],
       ['Sep',  30,      septemberSpending],
-      ['Oct',  60,      octoberSpending],
-      ['Nov',  90,      novemberSpending],
-      ['Dec',  120,    decemberSpending]
+      ['Oct',  30,      octoberSpending],
+      ['Nov',  30,      novemberSpending],
+      ['Dec',  30,    decemberSpending]
     ]);
     let options = {
       title: 'Target Spending Goal vs. Your Spending',
@@ -630,6 +630,7 @@ function drawChart2() {
                 }
                 else {
                     echo "Please click on the update data tab on right right of the page to input your information";
+                    echo "<br />";
                     echo "All values should be recorded as monthly income and expenses";
                 }
                 ?>

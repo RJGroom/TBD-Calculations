@@ -229,7 +229,7 @@ textarea:focus {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  background-image: url("./Images/PersonAnon.png");
+  background-image: url("./Images/CaptainAmerica.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -241,7 +241,7 @@ textarea:focus {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  background-image: url("./Images/PersonAnon.jpg");
+  background-image: url("./Images/Hulk.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -253,7 +253,7 @@ textarea:focus {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  background-image: url("./Images/PersonAnon.png");
+  background-image: url("./Images/Spidey.png");
   background-size: cover;
   background-position: center;
 }

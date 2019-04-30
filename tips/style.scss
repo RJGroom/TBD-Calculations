@@ -107,6 +107,9 @@ body{
     grid-template-columns: 70px 1fr 70px;
 }
 
+label{
+    color: white;
+}
 .blog-form {
     background-color:  #465C8B;
     grid-column: 2/3;
@@ -116,7 +119,8 @@ body{
 }
 
 .blog-label {
-    font-family: 'Raleway';
+    margin-top: 20px;
+    font-family: 'Raleway'; 
     width: 500px;
     font-weight: bolder;
 }
