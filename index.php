@@ -103,15 +103,31 @@ if(isset($_SESSION['username']))
         </div>
 
         <div class="navSection">
-            <p class="navDescription" id="navTextThree">View a <span style="font-weight:bold">graphical representation</span> of your spending and saving habits</p>
-            <a href="./graphs/graphs.php" class="navLink">
+        <p class="navDescription">Fill out your information for a <span style="font-weight:bold">one-time</span> assessment
+                of your budget</p>
+            <a href="./budgetAssessment/budgetAssessment.html" class="navLink">
                 <img class="navIcon" src="Icons/005-graph-1.svg" title="View-Graph">
             </a>
         </div>
 
         <div class="navSection">
             <p class="navDescription" id="navTextFour">View a list of <span style="font-weight:bold">budgeting tips</span> and advice to help improve your spending habits</p>
-            <a href="./tips/tips.php" class="navLink">
+            <a href="
+            <?php
+            if(isset($_SESSION['username'])){  
+                if ($userInfo['isAdmin'] == 1) {
+                    echo "./tips/tipsadmin.php";
+                }
+                else {
+                    echo "./tips/tips.php";
+                }
+            }
+            else {
+                echo "./tips/tips.php";
+            }
+            ?>
+            " 
+            class="navLink">
                 <img class="navIcon" src="Icons/007-elemental-tip.svg" title="Budgeting-Tips">
             </a>
         </div>
@@ -229,7 +245,7 @@ if(isset($_SESSION['username']))
                 <br>
                 <a href="./login/login.php">Login</a>
                 <br>
-                <a href="./graphs/graphs.php">Graphs</a>
+                <a href="./budgetAssessment/budgetAssessment.html">One-Time Budget</a>
                 <br>
                 <a href="./tips/tips.php">Tips</a>
                 <br>
