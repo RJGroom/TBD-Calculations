@@ -167,7 +167,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`username`, `password`, `id`, `isAdmin`, `fName`, `lName`, `email`, `languagePreference`) VALUES
 ('jonah_downs', 'password', 1, 1, 'Jonah', 'Downs', 'jonah.c.downs@gmail.com', 'Portuguese'),
-('ritchey_rich', 'animetitties', 4, 1, 'Eric', 'Ritchey', '', ''),
+('ritchey_rich', 'ericspassword', 4, 1, 'Eric', 'Ritchey', '', ''),
 ('ryan_groom', 'epicfortnitekill', 6, 1, 'Ryan', 'Groom', 'RJGroomy@yahoo.com', 'English'),
 ('NewUser', 'password', 21, 0, 'Jim', 'Johnson', 'JJ@Gmail,gov', ''),
 ('Austin', 'Austin', 22, 0, 'Austiun', 'Austin', 'Austin', '');
